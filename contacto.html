@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Quagenda &reg; | Contacto </title>
+	<!--Link CSS-->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Lustria&family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+     
+<body>
+	<div class="contenedor">
+
+		<header>
+
+			<div class="logo">
+
+				<a href="index.html" alt="logo" > 	<!--Logo/ 	link a Inicio-->
+				<img src="images/Logo-web-AM.svg" alt="logo"> <!-- 	IMG LOGO -->
+				</a>
+
+			</div>
+
+					<!--Menu de Navegacion/ Inicio-->
+			<nav>	
+				<ul>
+					<li> <a href="index.html"> Inicio </a></li>
+					<li> <a href="nosotros.html"> Nosotros </a></li>
+					<li> <a href="productos.html"> Productos</a>
+						<ul>
+							<li> <a href="/productos.html#quagenda">Quagendas</a></li>
+							<li> <a href="/productos.html#cuaderno">Cuadernos</a></li>
+							<li> <a href="/productos.html#bitacora">Bitacoras</a></li>
+						</ul>
+					</li>	
+					<li> <a href="blog.html"> Blog </a></li>
+					<li> <a href="contacto.html"> Contacto </a></li>
+				</ul>
+			</nav>
+			
+		
+		</header>
+
+		<!--Contenido principal-->
+		<main class="contenedor-main">	<!-- CONTENEDOR MAIN PARA TODOS-->	
+
+			<!--Banner-->
+			<div class="banner-contacto">
+				<div class="banner-img"> <!-- TODAS SECCIONES IGUALES -->
+
+					<a href="/productos.html#quagenda">
+						<button class="btn">quiero mi quagenda</button>
+					</a>
+				</div>
+			</div>
+			<!--Fin Banner-->
+
+			<!-- Contenido  -->
+			<div class="contenido-contacto">
+				
+				<!-- Titulo Main -->
+				<section class="titulos">
+					<div class="titulo1"> 
+						<h1> Destacate con tu Quagenda </h1>
+						<h3>Empeza a contar historias.</h3>
+						<h4>Empeza a escribir tu propia historia</h4>
+						<h4>Escribinos.</h4>
+					</div>
+
+				</section>
+				
+				<div class="formularios">
+ 					<!-- FORMULARIO DE CONTACTO -->
+					<form action="correo.php" method="post"> <!--Correo.php??-->
+
+						<!--Datos Personales-->
+						<label for="nombre">tu nombre</label>
+						<input type="text" name="nombreCliente" id="nombre" placeholder="Ingresa tu nombre"></input>
+
+
+						<label for="nombre">tu apellido</label>
+						<input type="text" name="apellidoCliente" id="apellido" 	placeholder="Ingresa con tu apellido"></input>
+
+						<!--Correo Electronico-->
+						<label for="correo_electronico">tu e-mail</label>
+						<input type="email" name="email" id="correo_electronico" placeholder="Ingresa tu correo electronico"></input>
+
+					
+						<!--Menu desplegable-->
+						<label for="menu">Estas interesado en...</label>
+						<select name="menuDesplegable" id="menu">
+							<option value="0">Elegi una opcion</option>
+							<option value="Quagenda">Quagenda</option>
+							<option value="bitacoras">Bitacoras</option>
+							<option value="Cuadernos">Cuadernos</option>
+							<option value="Reventa">Compra Mayorista</option>
+							<option value="Disenar para nosotros">Trabajar con uds</option>
+						</select>
+						
+					
+						<!--Checkbox- Pormociones-->
+						<input type="checkbox" name="newsletter" id="newsletter_id"> 
+						<label for="newsletter_id">quiero recibir promociones y nuevos 	ingresos</label>
+						
+						<!--Text Area-->
+						<label for="mensaje"></label> 
+						<textarea name="mensaje" id="mensaje_id" cols="30" rows="10" placeholder="Escribi un mensaje"></textarea>
+						
+						<!--Botones-->
+						<input type="submit" value="Enviar mensaje">
+						<input type="reset" value="Borrar mensaje">
+						
+					</form>	
+				</div>	
+			</div>
+		</main>
+		<!-- FIN Contenido principal-->
+		
+
+   		<!-- FOOTER -->
+		<footer class="container-footer">
+			<!--Pie de pagina para todas las paginas iguales-->
+		
+			<!--Suscripcion-->
+			<div class="formulario">
+				<form class="suscripcion-footer" action="gracias.php" method="post">
+					<!-- <fieldset> -->
+					<legend>De nosotros para vos</legend>
+
+					<label for="suscripcion"> Suscribite para articulos y promos que valgan la pena. Sin spam, te prometemos.</label>
+
+					<input type="email" name="mail.suscripcion" id="suscripcion" placeholder="Ingresa tu email.">
+
+					<input type="submit" value="De una!" class="boton">
+					<!-- </fieldset> -->
+				</form>
+			</div>
+
+			<div class="datos-footer">
+				<div class="txt-footer">
+					<h3>Veni a visitarnos. </h3>
+					<h3>Compartamos pensamientos. </h3>
+					<h3>Tomemos algo. </h3>
+				</div>
+				<div class="mail-quagenda">
+					<a href="gmail">quagenda@gmail.com </a><!-- CONVERIR EN 	LINK -->
+				</div>
+			</div>
+
+		<!-- 	<button>Instagram</button>
+			
+			<button>Facebook</button>
+			
+			<hr class="footer.hr"> -->
+
+
+			<!--Copyrights -->
+			<div class="copyright">
+				<h6>&copy; Quagenda 2020 - Todos los derechos reservados</h6>
+			</div>
+
+		</footer>
+	</div> <!-- FIN CONTENEDOR GRAL -->
+</body>
+
+</html>

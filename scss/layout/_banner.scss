@@ -1,0 +1,89 @@
+.banner{
+    
+    background-image: url(../images/1-BYN-inicio2.jpg);
+    @include bg-img();    
+    
+    &__cont{
+        height: 100vh;
+        @include flex-col-center();       
+    }
+    &__titulos{
+        text-align: center;
+        margin-top: 50px;
+
+        &__h1{
+            @include titulos-h1();   
+
+            &--nos{
+                @include titulos-h1();
+                color: $color-blanco;
+                font-size: 3.5rem;
+                margin-bottom: 50px;
+            }
+        }
+
+        &__h3{
+            @include titulos-h3();
+        }
+    }
+    &__btn{
+        margin-top: 50px;
+        
+        &__button{
+            @include button();
+        }
+    }
+    
+    &__banner-nos{
+        background-image: url(../images/banner222.jpg);
+        @include bg-img()    
+    }
+    &__banner-prod{
+        background-image: url(../images/banner-Prod.jpg);
+        @include bg-img()    
+    }
+    &__banner-blog{
+        background-image: url(../images/banner-blog-indio.jpg);
+        @include bg-img()    
+    }
+    
+}
+
+
+@media screen and (min-width: $bp_sm-phones){
+    .banner{
+        &__titulos {
+            &__h1{
+                font-size: 3.5rem;
+            }
+        } 
+    }
+} 
+/* Small devices y horiz entre 576px y 768px*/
+@media screen and (min-width: $bp_potrait-phones){
+
+    .banner{
+        &__titulos {
+            &__h1{  
+                font-size: 4rem;      
+            }
+        }
+        &__btn{
+            &__button{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $bp_tablets){
+    
+    .titulos{
+        &__h1{  
+            font-size: 5rem;      
+        }
+        &__h3{
+            font-size: 2.5rem;
+        }
+    }
+}

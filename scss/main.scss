@@ -1,0 +1,22 @@
+@import 'base/reset';
+@import 'base/typo';
+
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+@import 'layout/header';
+@import 'layout/general';
+@import 'layout/banner';
+@import 'layout/forms';
+@import 'layout/footer';
+
+@import 'views/nosotros';
+@import 'views/index';
+
+
+.imgBlog img{
+    width: 50rem;
+    height: auto;
+    margin: 1rem 2rem;
+    border-radius: 2rem;
+}

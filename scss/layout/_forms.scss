@@ -1,0 +1,42 @@
+.form{
+    
+    &__suscripcion{
+        @include flex-col-center();
+        width: 100%;
+        padding: 0 25px;
+        margin-bottom: 50px;
+    }
+    &__legend{
+        @include titulos-h1();
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+    }
+    &__label{
+        @include titulos-h3();
+        text-align: center;
+        font-weight: 300;
+    }
+    &__input{
+        padding: 23px;
+        text-align: center;
+        width: 100%;
+        margin-top: 50px;
+        border: 1px #bbb solid;    
+        
+        &--button{
+            @include button();
+            margin-top: 50px;
+            padding: 23px 50px;
+            background-color:$color-primario;
+            color:$color-blanco;
+            border: 2px solid;
+
+            &:hover{
+                color: $color-primario;
+                background-color: $color-blanco;
+                border: 2px solid;
+            }
+        }
+    } 
+    
+}

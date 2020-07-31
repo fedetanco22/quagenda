@@ -1,0 +1,236 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(250px,500px));
+    grid-template-areas: 
+    "titulo1" "foto12" "txt1" "txt2" "foto13"
+    "titulo2""foto1""foto2""foto10""foto3""foto4"
+    "foto5""foto5""foto6""foto7""foto7""foto8""foto9""foto11";
+
+    padding: 0 20px;
+    row-gap: 10px;
+
+    &__titulos{
+        @include flex-col-center(); 
+        text-align: center;
+    }
+    &__titulos1{
+        grid-area: titulo1;
+    }
+    &__titulos2{
+        grid-area: titulo2;
+        background-color:$color-primario; 
+        min-height: 300px;  
+    }
+    &__cont1{
+        grid-area: txt1;
+    }
+    &__cont2{
+        grid-area: txt2;
+    }
+    &__foto1{
+        grid-area:foto1;
+    }
+    &__foto2{
+        grid-area:foto2;        
+    }
+    &__foto3{
+        grid-area:foto3;
+    }
+    &__foto4{
+        grid-area:foto4;
+    }
+    &__foto5{
+        grid-area:foto5;
+    }
+    &__foto6{
+        grid-area:foto6;
+    }
+    &__foto7{
+        grid-area:foto7;
+    }
+    &__foto8{
+        grid-area:foto8;
+    }
+    &__foto9{
+        grid-area:foto9;
+    }
+    &__foto10{
+        grid-area:foto10;
+    }
+    &__foto11{
+        grid-area:foto11;
+    }
+    &__foto12{
+        grid-area:foto12;
+    }
+    &__foto13{
+        grid-area:foto13;
+    }
+    &__cont{
+        background-color: $color-cajas;
+        min-height: 500px;
+        @include flex-col-center(); 
+    }
+    &__h1{
+        @include titulos-h1();
+
+        &--blanco{
+            color: $color-blanco;
+        }
+    } 
+    &__h3{
+        @include titulos-h3();
+        color: $color-primario;
+    }
+    &__txt{
+        padding: 0 25px;
+        text-align: center;
+        font-family: $font-sec;
+        line-height: 2.5rem;
+        
+        &--destacado{
+            color: #000;
+            font-weight: bold;
+        }
+    }
+    &__img{
+        @include images();
+    }
+    &__foto{
+        position: relative;
+    }
+    &__frase{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #fff;
+        @include flex-col-center;
+        text-align: center;
+
+        &--link{
+            text-decoration: none;
+            color: #333;
+            position: absolute;
+            font-size: 2rem;
+            font-weight: bold;      
+        }
+    }
+    &__foto:hover &__frase {
+        opacity: 1;
+    }    
+}
+
+// Small devices y horiz entre 576px y 768px
+@media screen and (min-width: $bp_potrait-phones){
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "titulo1 titulo1"
+        "foto12 foto12"
+        "txt1 txt1"
+        "txt2 txt2"
+        "foto13 foto13"
+        "titulo2 titulo2" 
+        "foto1 foto1"
+        "foto2 foto2"
+        "foto4 foto3"
+        "foto6 foto6"
+        "foto5 foto7"
+        "foto8 foto9"
+        "foto10 foto10"
+        "foto11 foto11";
+    
+        padding: 0 50px;
+        row-gap: 0;
+
+        &__cont1{
+            border-bottom: 1px solid $color-quinto;
+        }
+        
+    } 
+}
+
+// entre landscape y tablets (768px a 992px)
+@media screen and (min-width: $bp_landscape-phones){
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "titulo1 titulo1"
+        "foto12 txt1"
+        "txt2 foto13"
+        "vacio vacio "
+        "titulo2 titulo2" 
+        "foto1 foto3"
+        "foto2 foto2"
+        "foto4 foto6"
+        "foto5 foto7"
+        "foto8 foto9"
+        "foto10 foto10"
+        "foto11 foto11";
+        
+        &__cont{
+            min-height: 300px;
+        }
+        &__vacio{
+            grid-area: vacio;
+            min-height: 100px;
+        }
+        
+    }
+}
+
+@media screen and (min-width: $bp_tablets){
+
+    .grid{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+        "titulo1 titulo1 titulo1 titulo1 titulo1 titulo1"
+        "vacio3 foto12 foto12 txt1 txt1 vacio4"
+        ". foto12 foto12 txt1 txt1 ."
+        ". txt2 txt2 foto13 foto13 ."
+        ". txt2 txt2 foto13 foto13 ."
+        "vacio1 vacio1 vacio1 vacio1 vacio1 vacio1"
+        "titulo2 titulo2 titulo2 titulo2 titulo2 titulo2"
+        "vacio foto1 foto1 foto2 foto2 vacio2"
+        ". foto1 foto1 foto3 foto4 ."
+        ". foto5 foto6 foto6 foto7 ."
+        ". foto5 foto6 foto6 foto7 ."
+        ". foto8 foto9 foto11 foto11 ."
+        ". foto10 foto10 foto11	foto11 .";
+
+        padding: 0;
+
+        &__h1{
+            font-size: 5rem;
+        } 
+        &__h3{
+            font-size: 2.5rem;
+        }
+        &__txt{
+            font-size: 1.5rem;   
+        }
+        &__vacio1{
+            grid-area: vacio1;
+            height: 100px;
+        }
+        &__vacio{
+            background-color: $color-primario;
+        }
+        &__vacio2{
+            grid-area: vacio2;
+            background-color: $color-primario;
+        }
+        &__vacio3{
+            grid-area: vacio3;
+        }
+        &__vacio4{
+            grid-area: vacio4;
+        }
+    }
+}

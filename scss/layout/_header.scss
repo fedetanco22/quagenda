@@ -1,0 +1,192 @@
+.header{
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    z-index: 100; 
+
+    &__contenedor{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    &__logo{
+        display: flex;
+        width: 100px;
+        height: 100px;
+        margin-left: 15px;
+    }
+}
+
+.hamb{
+    display: none;
+
+    &__label{
+        position: absolute;
+        font-size: 3.5rem;
+        color:$color-blanco;
+        text-shadow: 2px 2px 4px rgba(51, 51, 51, 0.61);
+        top: 0;
+        right: 0;
+        margin-right: 16px;
+        height: 100%;
+        display: flex;
+        align-items: center ;    
+    }  
+}
+
+.menu {
+    &__list{
+        position: fixed;
+        margin-top: 40px;
+        width: 100%;
+        height: 100vh;
+        padding: 50px;
+        background-color: $color-primario;
+        left: -150%;
+        transition: all .5s;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+    }
+
+    &__item{
+        margin-bottom: 15px;
+        margin-left: 15px;    
+    }
+    &__link{
+        text-decoration: none;
+        color: $color-blanco;
+        font-size: 3.5rem;
+        font-weight: 800;
+    }
+    &__link:hover{
+        color: $color-logo;
+        transition: ease-in .1s;
+    }
+
+    &__sub-list{
+        display: none;
+    }
+}
+
+.hamb:checked ~ .menu .menu__list{
+    left: 0;
+}
+
+/* Small devices y horiz entre 576px y 768px*/
+@media screen and (min-width: $bp_potrait-phones){
+    .menu {
+        &__list{
+            padding-left: 150px;
+        }
+    }
+}
+
+@media screen and (min-width: $bp_landscape-phones){
+    .menu {
+        &__list{
+            padding-left: 200px ;
+        }
+        &__link{
+            font-size: 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: $bp_tablets){
+    
+    .header{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 100%;
+        flex: 1 1 auto;
+    
+        &__logo{
+            margin-left: 50px;
+        }
+    }
+    .hamb__label{
+        display: none;
+    }
+    
+    .menu {
+        height: 60px;
+        background-color: rgba(51, 51, 51, 0.788) ;
+        border-radius: .5rem;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        flex: 0 1 auto;
+
+        &__list{
+            all:unset;
+            padding-left: 15px;
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        &__item{
+            padding: 1rem;
+            margin: 0;
+            position: relative;   
+        }
+        &__link{
+            text-decoration: none;
+            display: block;
+            padding: 1.5rem;
+            text-align: center;   
+            font-size: 1.5rem;
+            
+        }
+        &__link:hover{
+            background-color: rgba(255, 255, 255, 0.075);
+            padding: 15px;
+            border-radius: 5px;           
+        }
+    
+        &__sub-list{
+            position: absolute;
+            list-style-type: none;  
+        }
+        &__sub-item{
+            background-color: $color-primario;
+            margin: 0; 
+            padding: 10px; 
+            
+        }
+        &__item:hover &__sub-list{
+            display: block;
+        }
+        &__sub-link{
+            text-decoration: none;
+            font-family: $font-ppal;
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #fff;
+            display: block; 
+            padding: 20px; 
+            
+            &:hover{
+                color: $color-logo;
+                background-color:rgba(255, 255, 255, 0.075);
+                border-radius: 5px; 
+            }
+        }
+        &__link-insta{
+            display: none;
+        }
+    }
+    .articulo{
+        &--bg{
+            margin: 70px 0;
+        }
+    }
+}

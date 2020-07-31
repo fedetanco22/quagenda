@@ -1,0 +1,17 @@
+
+body {
+    margin: 0 auto;
+    max-width: 18000px;
+    font-family: $font-ppal;
+    font-size: 1.5rem;
+}
+
+.contenedor {
+    width: 100%; 
+}
+
+.main{
+    width: 100%;
+    @include flex-col-center;
+}
+

@@ -1,0 +1,76 @@
+@mixin flex-col-center {
+    display: flex;
+    flex-flow: column ;
+    align-items: center;
+    justify-content: center;       
+}
+
+@mixin titulos-h1{
+    font-family: $font-titulos;
+    font-size: 2.8rem;
+    color: $color-secundario;
+    font-weight: 800; 
+    text-align: center;
+}
+
+@mixin titulos-h2{
+    font-family: $font-titulos;
+    font-size: 2rem;
+    color: $color-terciario;
+    font-weight: 600;
+    margin-bottom: 15px; 
+}
+@mixin titulos-h3 {
+    @include titulos-h2();
+    color: $color-cuarto; 
+}
+@mixin titulos-h4{
+    font-family: $font-ppal;
+    font-size: 2rem;
+    color: $color-blanco;
+    margin: 2.5rem 0; 
+}
+@mixin txt{
+    font-size: 2rem;
+    color: $color-primario; 
+    font-family: $font-ppal;
+    text-align: center;
+    
+    
+}
+
+@mixin button {
+    display: inline-block;
+    font-family: $font-ppal;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 23px 30px;
+    background-color: #E4B937;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition-duration: 0.4s; 
+    color: $color-primario;
+    border: none;
+    font-weight: bolder;
+    width: auto;  
+    
+    &:hover{
+        background-color: #333;
+        color: #E4B937;
+    }
+}
+
+@mixin bg-img {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+}
+
+@mixin images{
+    width: 100%;
+    object-fit: cover;
+    display: block;     
+}

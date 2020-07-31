@@ -77,7 +77,13 @@
 }
 
 @media screen and (min-width: $bp_tablets){
-    
+    .banner{
+        &__titulos {
+            &__h1{  
+                font-size: 5rem;      
+            }
+        }
+    }
     .titulos{
         &__h1{  
             font-size: 5rem;      

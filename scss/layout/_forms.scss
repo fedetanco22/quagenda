@@ -1,10 +1,10 @@
 .form{
-    
+    margin-bottom: 50px;
     &__suscripcion{
         @include flex-col-center();
         width: 100%;
         padding: 0 25px;
-        margin-bottom: 50px;
+        
     }
     &__legend{
         @include titulos-h1();
@@ -25,7 +25,7 @@
         
         &--button{
             @include button();
-            margin-top: 50px;
+            margin: 50px 0;
             padding: 23px 50px;
             background-color:$color-primario;
             color:$color-blanco;
@@ -40,3 +40,28 @@
     } 
     
 }
+
+@media screen and (min-width: $bp_landscape-phones){
+
+    .form{
+        &__legend{
+            margin-bottom: 20px;
+            font-size: 4rem;
+        }
+        &__label{
+            width: 75%;
+        }
+        &__input{
+            width: 60%;
+        }
+    }
+}
+@media screen and (min-width: $bp_tablets){
+
+    .form{
+        &__input{
+            width: 40%;
+        }
+    }
+}
+

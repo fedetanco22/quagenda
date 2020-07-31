@@ -258,72 +258,85 @@ body {
     font-size: 1.5rem; } }
 
 @media screen and (min-width: 991.98px) {
+  .banner__titulos__h1 {
+    font-size: 5rem; }
   .titulos__h1 {
     font-size: 5rem; }
   .titulos__h3 {
     font-size: 2.5rem; } }
 
-.form__suscripcion {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 25px;
+.form {
   margin-bottom: 50px; }
-
-.form__legend {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.8rem;
-  color: #444;
-  font-weight: 800;
-  text-align: center;
-  font-size: 3.5rem;
-  margin-bottom: 30px; }
-
-.form__label {
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  color: #555;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #777;
-  text-align: center;
-  font-weight: 300; }
-
-.form__input {
-  padding: 23px;
-  text-align: center;
-  width: 100%;
-  margin-top: 50px;
-  border: 1px #bbb solid; }
-  .form__input--button {
-    display: inline-block;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1.5rem;
-    margin-top: 15px;
+  .form__suscripcion {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 25px; }
+  .form__legend {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    color: #444;
+    font-weight: 800;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 30px; }
+  .form__label {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: #555;
+    font-weight: 600;
     margin-bottom: 15px;
-    padding: 23px 30px;
-    background-color: #E4B937;
-    border-radius: .5rem;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    color: #333;
-    border: none;
-    font-weight: bolder;
-    width: auto;
+    color: #777;
+    text-align: center;
+    font-weight: 300; }
+  .form__input {
+    padding: 23px;
+    text-align: center;
+    width: 100%;
     margin-top: 50px;
-    padding: 23px 50px;
-    background-color: #333;
-    color: #f8f8f8;
-    border: 2px solid; }
-    .form__input--button:hover {
-      background-color: #333;
-      color: #E4B937; }
-    .form__input--button:hover {
+    border: 1px #bbb solid; }
+    .form__input--button {
+      display: inline-block;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1.5rem;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 23px 30px;
+      background-color: #E4B937;
+      border-radius: .5rem;
+      cursor: pointer;
+      transition-duration: 0.4s;
       color: #333;
-      background-color: #f8f8f8;
+      border: none;
+      font-weight: bolder;
+      width: auto;
+      margin: 50px 0;
+      padding: 23px 50px;
+      background-color: #333;
+      color: #f8f8f8;
       border: 2px solid; }
+      .form__input--button:hover {
+        background-color: #333;
+        color: #E4B937; }
+      .form__input--button:hover {
+        color: #333;
+        background-color: #f8f8f8;
+        border: 2px solid; }
+
+@media screen and (min-width: 767.98px) {
+  .form__legend {
+    margin-bottom: 20px;
+    font-size: 4rem; }
+  .form__label {
+    width: 75%; }
+  .form__input {
+    width: 60%; } }
+
+@media screen and (min-width: 991.98px) {
+  .form__input {
+    width: 40%; } }
 
 .footer {
   width: 100%;
@@ -380,15 +393,9 @@ body {
   .footer {
     padding-top: 50px;
     margin-top: 150px; }
-    .footer__form .form__legend {
-      margin-bottom: 20px;
-      font-size: 4rem; }
-    .footer__form .form__label {
-      width: 75%; }
-    .footer__form .form__input {
-      width: 60%; }
     .footer__txt, .footer .txt {
-      padding: 100px 70px 50px 70px; }
+      padding: 100px 70px 50px 70px;
+      margin-top: 150px; }
       .footer__txt__h3, .footer .txt__h3 {
         margin-bottom: 15px; }
       .footer__txt__links, .footer__txt .enlaces, .footer .txt__links, .footer .txt .enlaces {
@@ -398,10 +405,6 @@ body {
         .footer__txt__links__insta-link, .footer__txt .enlaces__insta-link, .footer .txt__links__insta-link, .footer .txt .enlaces__insta-link {
           font-size: 4rem;
           margin-top: 50px; } }
-
-@media screen and (min-width: 991.98px) {
-  .footer__form .form__input {
-    width: 40%; } }
 
 .main__contenedor-nos {
   width: 100%; }

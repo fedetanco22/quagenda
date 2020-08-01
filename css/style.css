@@ -434,7 +434,7 @@ body {
     color: #777; }
   .prod__card {
     width: 100%;
-    box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    /* box-shadow:-1px 3px 5px 0px rgba(0,0,0,0.75);  */
     margin: 10px; }
     .prod__card__item {
       padding: 10px; }
@@ -442,7 +442,20 @@ body {
         width: 100%;
         object-fit: cover;
         display: block;
-        border: 1px solid #333; }
+        /*  border: 1px solid $color-primario; */
+        box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75); }
+    .prod__card__titulo {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 2rem;
+      color: #f8f8f8;
+      margin: 2.5rem 0;
+      color: #333; }
+
+.carousel {
+  padding: 10px; }
+
+.carousel-control-next, .carousel-control-prev {
+  filter: invert(100%); }
 
 .main__contenedor-nos {
   width: 100%; }

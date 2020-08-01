@@ -245,6 +245,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: contain; }
+  .banner__banner-contacto {
+    background-image: url(../images/banner-contacto.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain; }
 
 @media screen and (min-width: 340px) {
   .banner__titulos__h1 {

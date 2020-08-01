@@ -46,6 +46,10 @@
         background-image: url(../images/banner-blog-indio.jpg);
         @include bg-img()    
     }
+    &__banner-contacto{
+        background-image: url(../images/banner-contacto.jpg);
+        @include bg-img()    
+    }
     
 }
 

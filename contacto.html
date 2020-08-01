@@ -3,8 +3,6 @@
 
 <head>
 
-	<head>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Empresa familiar dedicada a la venta de agendas, cuadernos y bitacoras diseñadas por artistas reconocidos. Quagenda es la union de una agenda y un cuaderno, optimizada para planear mejor el año.">
@@ -21,7 +19,7 @@
 	<script src="https://kit.fontawesome.com/8ee6cf5ee4.js" crossorigin="anonymous"></script>
 
 </head>
-     
+
 <body>
 	<div class="contenedor">
 
@@ -135,46 +133,45 @@
 		<!-- FIN Contenido principal-->
 		
 
-   		<!-- FOOTER -->
-		<footer class="container-footer">
-			<!--Pie de pagina para todas las paginas iguales-->
-		
+		<!-- FOOTER -->
+		<footer class="footer">
+	
 			<!--Suscripcion-->
-			<div class="formulario">
-				<form class="suscripcion-footer" action="gracias.php" method="post">
-					<!-- <fieldset> -->
-					<legend>De nosotros para vos</legend>
+			<div class="form footer__form">
+				<form class="form__suscripcion" action="gracias.php" method="post">
+					
+					<legend class="form__legend">De nosotros para vos.</legend>
 
-					<label for="suscripcion"> Suscribite para articulos y promos que valgan la pena. Sin spam, te prometemos.</label>
+					<label class="form__label" for="suscripcion"> Suscribite para articulos y promos que valgan la pena. Sin spam, te prometemos.</label>
 
-					<input type="email" name="mail.suscripcion" id="suscripcion" placeholder="Ingresa tu email.">
+					<input class="form__input" type="email" name="mail.suscripcion" id="suscripcion" placeholder="Ingresa tu email.">
 
-					<input type="submit" value="De una!" class="boton">
-					<!-- </fieldset> -->
+					<input class="form__input--button" type="submit" value="de una!">
+					
 				</form>
 			</div>
 
-			<div class="datos-footer">
-				<div class="txt-footer">
-					<h3>Veni a visitarnos. </h3>
-					<h3>Compartamos pensamientos. </h3>
-					<h3>Tomemos algo. </h3>
+			<div class="footer__txt txt">
+				<div class="txt__cont">
+					<h3 class="txt__h3">Veni a visitarnos. </h3>
+					<h3 class="txt__h3">Tomemos algo. </h3>
+					<h3 class="txt__h3">Compartamos pensamientos. </h3>
 				</div>
-				<div class="mail-quagenda">
-					<a href="gmail">quagenda@gmail.com </a><!-- CONVERIR EN 	LINK -->
+
+				<div class="txt__links enlaces">
+					<div class="enlaces__mail">
+						<a class="enlaces__mail-link" href="gmail">quagenda@gmail.com </a>
+					</div>
+
+					<span class="enlaces__instagram">
+						<a class="enlaces__insta-link" href="https://www.instagram.com/quagenda_/?hl=es-la"><i class="enlaces__insta-icon fab fa-instagram"></i></a>
+					</span>
 				</div>
 			</div>
 
-		<!-- 	<button>Instagram</button>
-			
-			<button>Facebook</button>
-			
-			<hr class="footer.hr"> -->
-
-
 			<!--Copyrights -->
-			<div class="copyright">
-				<h6>&copy; Quagenda 2020 - Todos los derechos reservados</h6>
+			<div class="footer__copyright">
+				<h6 class="footer__copyright__txt">&copy; Quagenda 2020 - Todos los derechos reservados</h6>
 			</div>
 
 		</footer>

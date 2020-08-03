@@ -12,46 +12,38 @@
         &__h3{
             @include titulos-h3();
             color: $color-blanco;
-            margin-bottom: 0;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
         }
-
-
-        &__links, .enlaces{
-            margin-top: 50px;
-            text-align: center;
-
-            &__mail-link{
-                color: #fff;
-                text-decoration: underline;
-                font-size: 2.25rem;
-                
-            }
-            &__instagram{
-                
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 30px;
-            }
+    }
+    &__enlaces{
+        margin-top: 50px;
+        text-align: center;
         
-            &__insta-link{
-                text-decoration: none;
-                color: $color-blanco;
-                font-size: 3.5rem;
-            } 
+        &__info{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 30px;
         }
-    } 
-
+    
+        &__link{
+            text-decoration: none;
+            color: $color-blanco;
+            font-size: 1.5rem;
+        } 
+    }
     &__copyright {
         background-color: #000;
         display: flex;
+        flex-flow: column;
         align-items: center;
         justify-content: center;
         height: 6rem;
 
         &__txt{
             color: white;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
         }
     }
     
@@ -60,12 +52,11 @@
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: $bp_potrait-phones){
     .footer{
-        &__txt, .txt{
-            &__links, .enlaces{
-                
-                &__mail-link{
-                    font-size: 4rem;   
-                }
+        
+        &__enlaces{
+            
+            &__link{
+                font-size: 4rem;   
             }
         } 
         &__copyright {
@@ -90,18 +81,14 @@
                 margin-bottom: 15px;  
             
             }
+        }
     
-            &__links, .enlaces{
-                text-align: left;
-                
-                &__mail-link{
-                    font-size: 6rem;
-                    
-                }            
-                &__insta-link{
-                    font-size: 4rem;
-                    margin-top: 50px;
-                } 
+        &__enlaces{
+            text-align: left;
+            
+            &__link{
+                font-size: 2rem;
+                margin-top: 10px;
             }
         }   
     }

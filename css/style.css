@@ -362,36 +362,34 @@ body {
       margin-bottom: 15px;
       color: #777;
       color: #f8f8f8;
-      margin-bottom: 0; }
-    .footer__txt__links, .footer__txt .enlaces, .footer .txt__links, .footer .txt .enlaces {
-      margin-top: 50px;
-      text-align: center; }
-      .footer__txt__links__mail-link, .footer__txt .enlaces__mail-link, .footer .txt__links__mail-link, .footer .txt .enlaces__mail-link {
-        color: #fff;
-        text-decoration: underline;
-        font-size: 2.25rem; }
-      .footer__txt__links__instagram, .footer__txt .enlaces__instagram, .footer .txt__links__instagram, .footer .txt .enlaces__instagram {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px; }
-      .footer__txt__links__insta-link, .footer__txt .enlaces__insta-link, .footer .txt__links__insta-link, .footer .txt .enlaces__insta-link {
-        text-decoration: none;
-        color: #f8f8f8;
-        font-size: 3.5rem; }
+      margin-bottom: 10px;
+      font-size: 1.5rem; }
+  .footer__enlaces {
+    margin-top: 50px;
+    text-align: center; }
+    .footer__enlaces__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 30px; }
+    .footer__enlaces__link {
+      text-decoration: none;
+      color: #f8f8f8;
+      font-size: 1.5rem; }
   .footer__copyright {
     background-color: #000;
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
     height: 6rem; }
     .footer__copyright__txt {
       color: white;
-      font-size: 1.25rem; }
+      font-size: 1.2rem; }
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {
-  .footer__txt__links__mail-link, .footer__txt .enlaces__mail-link, .footer .txt__links__mail-link, .footer .txt .enlaces__mail-link {
+  .footer__enlaces__link {
     font-size: 4rem; }
   .footer__copyright__txt {
     font-size: 1.5rem; } }
@@ -405,13 +403,11 @@ body {
       margin-top: 150px; }
       .footer__txt__h3, .footer .txt__h3 {
         margin-bottom: 15px; }
-      .footer__txt__links, .footer__txt .enlaces, .footer .txt__links, .footer .txt .enlaces {
-        text-align: left; }
-        .footer__txt__links__mail-link, .footer__txt .enlaces__mail-link, .footer .txt__links__mail-link, .footer .txt .enlaces__mail-link {
-          font-size: 6rem; }
-        .footer__txt__links__insta-link, .footer__txt .enlaces__insta-link, .footer .txt__links__insta-link, .footer .txt .enlaces__insta-link {
-          font-size: 4rem;
-          margin-top: 50px; } }
+    .footer__enlaces {
+      text-align: left; }
+      .footer__enlaces__link {
+        font-size: 2rem;
+        margin-top: 10px; } }
 
 .prod {
   display: flex;

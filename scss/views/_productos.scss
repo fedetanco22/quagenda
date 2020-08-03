@@ -1,0 +1,8 @@
+.main__contenedor-prod{
+    @include flex-col-center;
+    width: 100%;
+}
+.productos{
+    @include flex-col-center;
+    width: 100%;
+}

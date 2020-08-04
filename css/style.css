@@ -378,7 +378,7 @@ body {
     width: 100%;
     height: auto;
     background-color: #222;
-    padding: 50px 25px 25px 25px;
+    padding: 50px 50px 25px 50px;
     margin-top: 50px;
     display: flex;
     flex-direction: column; }
@@ -390,8 +390,17 @@ body {
       margin-bottom: 15px;
       color: #777;
       color: #f8f8f8;
-      margin-bottom: 15px;
+      margin-bottom: 12.5px;
+      margin-top: 12.5px;
       font-size: 1.5rem; }
+  .footer__titulo {
+    margin: 15px 0; }
+    .footer__titulo__txt {
+      color: #f8f8f8;
+      text-decoration: underline;
+      font-size: 2rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700; }
   .footer__enlaces {
     display: flex;
     flex-direction: column;
@@ -400,10 +409,17 @@ body {
     margin-top: 10px; }
     .footer__enlaces__info {
       margin-top: 10px;
-      justify-content: center; }
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center; }
     .footer__enlaces__link {
       text-decoration: none;
-      color: #f8f8f8; }
+      color: #f8f8f8;
+      font-size: 2.5rem; }
+    .footer__enlaces__txt {
+      color: #f8f8f8;
+      margin-left: 10px; }
   .footer__copyright {
     background-color: #000;
     display: flex;
@@ -412,13 +428,17 @@ body {
     justify-content: center;
     height: 6rem; }
     .footer__copyright__txt {
-      color: white;
-      font-size: 1.2rem; }
+      color: #999;
+      font-size: 1rem; }
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {
-  .footer__enlaces__link {
+  .footer__txt__h3, .footer .txt__h3 {
     font-size: 2rem; }
+  .footer__titulo__txt {
+    font-size: 2.25rem; }
+  .footer__enlaces__link {
+    font-size: 2.5rem; }
   .footer__copyright__txt {
     font-size: 1.5rem; } }
 
@@ -427,15 +447,27 @@ body {
     padding-top: 50px;
     margin-top: 150px; }
     .footer__txt, .footer .txt {
-      padding: 100px 70px 50px 70px;
-      margin-top: 150px; }
+      padding: 100px 50px 100px 50px;
+      margin-top: 100px;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center; }
       .footer__txt__h3, .footer .txt__h3 {
         margin-bottom: 15px; }
+    .footer__titulo {
+      margin: 0; }
     .footer__enlaces {
-      text-align: left; }
-      .footer__enlaces__link {
-        font-size: 4rem;
-        margin-top: 10px; } }
+      margin-top: 0; } }
+
+@media screen and (min-width: 991.98px) {
+  .footer__txt__h3, .footer .txt__h3 {
+    font-size: 2.5rem; }
+  .footer__titulo__txt {
+    margin-bottom: 15px; }
+  .footer__enlaces__link {
+    font-size: 3.25rem; }
+  .footer__enlaces__txt {
+    font-size: 2rem; } }
 
 .prod {
   display: flex;

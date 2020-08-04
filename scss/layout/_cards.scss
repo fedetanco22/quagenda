@@ -1,35 +1,55 @@
+.main{
+    &__prod{
+        @include flex-col-center;
+        padding: 0 25px;
+    }
+}
+
 .prod{
     @include flex-col-center;
     width: 100%;
+
     &__cont{
         @include flex-col-center();
         width: 100%;
     }
+    
     &__titulo{
 
-        
         &__h3{
         @include titulos-h3();
         }
     }
     &__card{
         width: 100%;
-        /* box-shadow:-1px 3px 5px 0px rgba(0,0,0,0.75);  */
+        /* box-shadow:-1px 3px 5px 0px rgba(0,0,0,0.75); */ 
         margin:10px;
 
-        &__item{
+        &__txt{
             padding: 10px;
-            &__img{
-                @include images();
-               /*  border: 1px solid $color-primario; */
-                box-shadow:-1px 3px 5px 0px rgba(0,0,0,0.75); 
+        }
+
+        &__titulo{
+
+            &__h4{
+                font-family: $font-ppal;
+                color: $color-primario;
+                font-size: 1.5rem;
+                font-weight: 600;
+                
             }
         }
-        &__titulo{
-            @include titulos-h4;
-            color: $color-primario;
+        &__autor{
+
+            &__h5{
+                font-size: 1.5rem;
+                margin: 5px 0;
+            }
         }
     }
+}
+.productos{
+    max-width: 350px;
 }
 
 .carousel{

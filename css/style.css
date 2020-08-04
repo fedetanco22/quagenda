@@ -469,6 +469,13 @@ body {
   .footer__enlaces__txt {
     font-size: 2rem; } }
 
+.main__prod {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px; }
+
 .prod {
   display: flex;
   flex-flow: column;
@@ -490,22 +497,21 @@ body {
     color: #777; }
   .prod__card {
     width: 100%;
-    /* box-shadow:-1px 3px 5px 0px rgba(0,0,0,0.75);  */
+    /* box-shadow:-1px 3px 5px 0px rgba(0,0,0,0.75); */
     margin: 10px; }
-    .prod__card__item {
+    .prod__card__txt {
       padding: 10px; }
-      .prod__card__item__img {
-        width: 100%;
-        object-fit: cover;
-        display: block;
-        /*  border: 1px solid $color-primario; */
-        box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75); }
-    .prod__card__titulo {
+    .prod__card__titulo__h4 {
       font-family: "Ubuntu", sans-serif;
-      font-size: 2rem;
-      color: #f8f8f8;
-      margin: 2.5rem 0;
-      color: #333; }
+      color: #333;
+      font-size: 1.5rem;
+      font-weight: 600; }
+    .prod__card__autor__h5 {
+      font-size: 1.5rem;
+      margin: 5px 0; }
+
+.productos {
+  max-width: 350px; }
 
 .carousel {
   padding: 10px; }

@@ -20,6 +20,9 @@
         @include titulos-h3();
         }
     }
+    &__section{
+        max-width: 350px;
+    }
     &__card{
         width: 100%;
         /* box-shadow:-1px 3px 5px 0px rgba(0,0,0,0.75); */ 
@@ -47,9 +50,6 @@
             }
         }
     }
-}
-.productos{
-    max-width: 350px;
 }
 
 .carousel{

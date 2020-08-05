@@ -12,6 +12,7 @@
     &__cont{
         @include flex-col-center();
         width: 100%;
+        margin: 25px 0;
     }
     
     &__titulo{
@@ -21,11 +22,16 @@
         }
     }
     &__section{
-        max-width: 350px;
+        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
     }
     &__cards, .cards{
+        max-width: 350px;
         width: 100%;
-        margin:10px;
+        padding: 10px;
         
 
         &__txt{
@@ -33,13 +39,13 @@
         }
 
         &__titulo{
-
+            
             &__h4{
                 font-family: $font-ppal;
-                color: $color-primario;
+                color: $color-cuarto;
                 font-size: 1.5rem;
                 font-weight: 600;
-                
+                text-align: justify;               
             }
         }
         &__autor{
@@ -47,6 +53,18 @@
             &__h5{
                 font-size: 1.5rem;
                 margin: 5px 0;
+            }
+        }
+        &__caract{
+            padding: 5px 0;
+
+            &__titulo{
+                padding: 5px 0;
+                color: $color-quinto;
+            }
+            &__list{
+                list-style: none;
+                
             }
         }
     }

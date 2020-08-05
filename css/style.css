@@ -497,18 +497,17 @@ body {
     color: #777; }
   .prod__section {
     max-width: 350px; }
-  .prod__card {
+  .prod__cards, .prod .cards {
     width: 100%;
-    /* box-shadow:-1px 3px 5px 0px rgba(0,0,0,0.75); */
     margin: 10px; }
-    .prod__card__txt {
+    .prod__cards__txt, .prod .cards__txt {
       padding: 10px; }
-    .prod__card__titulo__h4 {
+    .prod__cards__titulo__h4, .prod .cards__titulo__h4 {
       font-family: "Ubuntu", sans-serif;
       color: #333;
       font-size: 1.5rem;
       font-weight: 600; }
-    .prod__card__autor__h5 {
+    .prod__cards__autor__h5, .prod .cards__autor__h5 {
       font-size: 1.5rem;
       margin: 5px 0; }
 

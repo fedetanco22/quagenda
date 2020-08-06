@@ -5,11 +5,13 @@
     
     &__cont{
         height: 100vh;
-        @include flex-col-center();       
+        @include flex-col-center();
+        justify-content: flex-end;       
     }
     &__titulos{
         text-align: center;
-        margin-top: 50px;
+        margin-bottom: 10vh;
+        
 
         &__h1{
             @include titulos-h1();   
@@ -27,7 +29,7 @@
         }
     }
     &__btn{
-        margin-top: 50px;
+        margin-bottom: 25vh ;
         
         &__button{
             @include button();
@@ -57,6 +59,7 @@
 @media screen and (min-width: $bp_sm-phones){
     .banner{
         &__titulos {
+            
             &__h1{
                 font-size: 3.5rem;
             }

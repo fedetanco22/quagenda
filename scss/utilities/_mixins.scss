@@ -45,7 +45,7 @@
     font-size: 1.5rem;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding: 23px 30px;
+    padding: 15px 20px;
     background-color: #E4B937;
     border-radius: .5rem;
     cursor: pointer;
@@ -58,6 +58,10 @@
     &:hover{
         background-color: #333;
         color: #E4B937;
+    }
+    @media screen and (min-width: $bp_potrait-phones){
+        padding: 23px 30px;
+        
     }
 }
 

@@ -204,10 +204,11 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    justify-content: flex-end; }
   .banner__titulos {
     text-align: center;
-    margin-top: 50px; }
+    margin-bottom: 10vh; }
     .banner__titulos__h1 {
       font-family: "Poppins", sans-serif;
       font-size: 2.8rem;
@@ -231,14 +232,14 @@ body {
       margin-bottom: 15px;
       color: #777; }
   .banner__btn {
-    margin-top: 50px; }
+    margin-bottom: 25vh; }
     .banner__btn__button {
       display: inline-block;
       font-family: "Ubuntu", sans-serif;
       font-size: 1.5rem;
       margin-top: 15px;
       margin-bottom: 15px;
-      padding: 23px 30px;
+      padding: 15px 20px;
       background-color: #E4B937;
       border-radius: .5rem;
       cursor: pointer;
@@ -250,6 +251,9 @@ body {
       .banner__btn__button:hover {
         background-color: #333;
         color: #E4B937; }
+      @media screen and (min-width: 575.98px) {
+        .banner__btn__button {
+          padding: 23px 30px; } }
   .banner__banner-nos {
     background-image: url(../images/banner222.jpg);
     width: 100%;
@@ -336,7 +340,7 @@ body {
       font-size: 1.5rem;
       margin-top: 15px;
       margin-bottom: 15px;
-      padding: 23px 30px;
+      padding: 15px 20px;
       background-color: #E4B937;
       border-radius: .5rem;
       cursor: pointer;
@@ -346,13 +350,19 @@ body {
       font-weight: bolder;
       width: auto;
       margin: 50px 0;
-      padding: 23px 50px;
+      padding: 15px 45px;
       background-color: #333;
       color: #f8f8f8;
       border: 2px solid; }
       .form__input--button:hover {
         background-color: #333;
         color: #E4B937; }
+      @media screen and (min-width: 575.98px) {
+        .form__input--button {
+          padding: 23px 30px; } }
+      @media screen and (min-width: 575.98px) {
+        .form__input--button {
+          padding: 23px 50px; } }
       .form__input--button:hover {
         color: #333;
         background-color: #f8f8f8;
@@ -378,7 +388,7 @@ body {
     width: 100%;
     height: auto;
     background-color: #222;
-    padding: 50px 50px 25px 50px;
+    padding: 50px 50px 50px 50px;
     margin-top: 50px;
     display: flex;
     flex-direction: column; }
@@ -408,16 +418,17 @@ body {
     justify-content: center;
     margin-top: 10px; }
     .footer__enlaces__info {
-      margin-top: 10px;
+      margin-top: 10px; }
+    .footer__enlaces__link {
       display: flex;
       flex-flow: row;
       justify-content: center;
-      align-items: center; }
-    .footer__enlaces__link {
+      align-items: center;
       text-decoration: none;
       color: #f8f8f8;
       font-size: 2.5rem; }
     .footer__enlaces__txt {
+      font-size: 1.5rem;
       color: #f8f8f8;
       margin-left: 10px; }
   .footer__copyright {
@@ -433,12 +444,20 @@ body {
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {
-  .footer__txt__h3, .footer .txt__h3 {
-    font-size: 2rem; }
+  .footer__txt, .footer .txt {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end; }
+    .footer__txt__h3, .footer .txt__h3 {
+      font-size: 2rem;
+      margin-bottom: 0;
+      margin-top: 25px; }
   .footer__titulo__txt {
     font-size: 2.25rem; }
-  .footer__enlaces__link {
-    font-size: 2.5rem; }
+  .footer__enlaces {
+    margin-left: 20px; }
+    .footer__enlaces__link {
+      font-size: 2.5rem; }
   .footer__copyright__txt {
     font-size: 1.5rem; } }
 
@@ -448,14 +467,9 @@ body {
     margin-top: 150px; }
     .footer__txt, .footer .txt {
       padding: 100px 50px 100px 50px;
-      margin-top: 100px;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center; }
-      .footer__txt__h3, .footer .txt__h3 {
-        margin-bottom: 15px; }
+      margin-top: 100px; }
     .footer__titulo {
-      margin: 0; }
+      margin: 15px 0; }
     .footer__enlaces {
       margin-top: 0; } }
 
@@ -463,7 +477,7 @@ body {
   .footer__txt__h3, .footer .txt__h3 {
     font-size: 2.5rem; }
   .footer__titulo__txt {
-    margin-bottom: 15px; }
+    margin-bottom: 10px; }
   .footer__enlaces__link {
     font-size: 3.25rem; }
   .footer__enlaces__txt {

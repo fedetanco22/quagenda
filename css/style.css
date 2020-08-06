@@ -521,7 +521,11 @@ body {
   .prod__cards, .prod .cards {
     max-width: 350px;
     width: 100%;
-    padding: 10px; }
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; }
     .prod__cards__txt, .prod .cards__txt {
       padding: 10px; }
     .prod__cards__titulo__h4, .prod .cards__titulo__h4 {
@@ -546,6 +550,18 @@ body {
 
 .carousel-control-next, .carousel-control-prev {
   filter: invert(100%); }
+
+@media screen and (min-width: 340px) {
+  __cards__txt, .cards__txt {
+    width: 250px; } }
+
+@media screen and (min-width: 767.98px) {
+  __cards, .cards {
+    margin: 5px; } }
+
+@media screen and (min-width: 991.98px) {
+  __cards, .cards {
+    margin: 25px; } }
 
 .main__contenedor-nos {
   width: 100%; }

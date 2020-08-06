@@ -32,6 +32,7 @@
         max-width: 350px;
         width: 100%;
         padding: 10px;
+        @include flex-col-center();
         
 
         &__txt{
@@ -78,5 +79,24 @@
 }
 
 @media screen and (min-width: 340px){
-    
+    &__cards, .cards{
+        
+        &__txt{
+            width: 250px;
+        }
+    }
 }
+
+
+@media screen and (min-width: $bp_landscape-phones){
+    &__cards, .cards{
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width: $bp_tablets){
+    &__cards, .cards{
+        margin: 25px;
+    }
+}
+

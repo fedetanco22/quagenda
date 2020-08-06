@@ -89,14 +89,24 @@
 
 
 @media screen and (min-width: $bp_landscape-phones){
-    &__cards, .cards{
-        margin: 5px;
+    .prod{
+        &__titulo{
+            &__h3{
+                font-size: 2.75rem;
+            }
+        }
+    
+        &__cards, .cards{
+            margin: 5px;
+        }
     }
 }
 
 @media screen and (min-width: $bp_tablets){
-    &__cards, .cards{
-        margin: 25px;
+    .prod{
+        &__cards, .cards{
+            margin: 0 50px;
+        }
     }
 }
 

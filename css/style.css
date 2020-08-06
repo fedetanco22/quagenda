@@ -333,7 +333,8 @@ body {
     text-align: center;
     width: 100%;
     margin-top: 50px;
-    border: 1px #bbb solid; }
+    border: 1px #bbb solid;
+    font-size: 1.75rem; }
     .form__input--button {
       display: inline-block;
       font-family: "Ubuntu", sans-serif;
@@ -477,6 +478,8 @@ body {
   .footer__txt__h3, .footer .txt__h3 {
     font-size: 2.5rem; }
   .footer__titulo__txt {
+    margin-bottom: 10px; }
+  .footer__enlaces__info {
     margin-bottom: 10px; }
   .footer__enlaces__link {
     font-size: 3.25rem; }

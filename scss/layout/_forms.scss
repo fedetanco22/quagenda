@@ -21,7 +21,8 @@
         text-align: center;
         width: 100%;
         margin-top: 50px;
-        border: 1px #bbb solid;    
+        border: 1px #bbb solid; 
+        font-size: 1.75rem;   
         
         &--button{
             @include button();

@@ -1,0 +1,24 @@
+.blog{
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    &__art{
+        margin-top: 1rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;      
+    }
+    &__imagen{
+        
+        &__img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 2rem;
+        }
+    }
+}
+

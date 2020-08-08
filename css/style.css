@@ -882,7 +882,7 @@ body {
   align-items: center;
   justify-content: center; }
   .blog__art {
-    margin-top: 1rem;
+    margin: 50px 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -903,12 +903,15 @@ body {
       font-size: 2rem;
       color: #f8f8f8;
       margin: 2.5rem 0;
-      color: #777; }
+      color: #777;
+      font-size: 1.75rem; }
   .blog__txt {
     text-align: justify; }
+    .blog__txt--none {
+      display: none; }
   .blog__btn {
     display: block;
-    padding: 2rem;
+    padding: 1.5rem;
     margin-top: 20px;
     background-color: #355070;
     border-radius: .5rem; }

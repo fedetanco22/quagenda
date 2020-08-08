@@ -3,7 +3,7 @@
     @include flex-col-center();
 
     &__art{
-        margin-top: 1rem;
+        margin:50px 0;
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
@@ -26,15 +26,19 @@
             text-transform: uppercase;
             @include titulos-h4();
             color: $color-cuarto;
+            font-size: 1.75rem;
         }
     }
     &__txt{
         text-align: justify;
+        &--none{
+            display: none;
+        }
     }
 
     &__btn{
         display: block;
-        padding: 2rem;
+        padding: 1.5rem;
         margin-top: 20px;
         background-color: #355070;
         border-radius: .5rem;

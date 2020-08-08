@@ -1,9 +1,6 @@
 .blog{
-    padding: 10px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    padding: 0 15px;
+    @include flex-col-center();
 
     &__art{
         margin-top: 1rem;
@@ -18,6 +15,38 @@
             width: 100%;
             object-fit: cover;
             border-radius: 2rem;
+        }
+    }
+
+    &__cont{
+        @include flex-col-center();
+        padding: 0 5px;
+
+        &--titulo{
+            text-transform: uppercase;
+            @include titulos-h4();
+            color: $color-cuarto;
+        }
+    }
+    &__txt{
+        text-align: justify;
+    }
+
+    &__btn{
+        display: block;
+        padding: 2rem;
+        margin-top: 20px;
+        background-color: #355070;
+        border-radius: .5rem;
+        &:hover {
+            transform: scale(1.15);
+        }
+
+        &--a{
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bolder;
         }
     }
 }

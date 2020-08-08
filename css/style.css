@@ -875,6 +875,23 @@ body {
   justify-content: center;
   width: 100%; }
 
+.blog {
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center; }
+  .blog__art {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center; }
+  .blog__imagen__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem; }
+
 .imgBlog img {
   width: 50rem;
   height: auto;

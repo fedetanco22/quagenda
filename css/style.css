@@ -884,21 +884,23 @@ body {
   .blog__art {
     margin: 50px 0;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: flex-start;
     align-items: center; }
-  .blog__imagen__img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 2rem; }
+  .blog__imagen {
+    max-width: 350px; }
+    .blog__imagen__img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 2rem; }
   .blog__cont {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    padding: 0 5px; }
+    padding: 0 5px;
+    max-width: 350px; }
     .blog__cont--titulo {
-      text-transform: uppercase;
       font-family: "Ubuntu", sans-serif;
       font-size: 2rem;
       color: #f8f8f8;
@@ -911,7 +913,7 @@ body {
       display: none; }
   .blog__btn {
     display: block;
-    padding: 1.5rem;
+    padding: 1rem;
     margin-top: 20px;
     background-color: #355070;
     border-radius: .5rem; }
@@ -919,9 +921,27 @@ body {
       transform: scale(1.15); }
     .blog__btn--a {
       text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-      font-weight: bolder; }
+      color: white; }
+
+@media screen and (min-width: 767.98px) {
+  .blog__art {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .blog__art--izq {
+      display: flex;
+      flex-flow: row-reverse wrap;
+      justify-content: flex-start;
+      align-items: center; }
+  .blog__cont {
+    padding: 0 20px; }
+  .blog__imagen--der {
+    margin-right: 15px; }
+  .blog__imagen__img--der:hover {
+    transform: rotate(-10deg); }
+  .blog__imagen__img--izq:hover {
+    transform: rotate(10deg); } }
 
 .imgBlog img {
   width: 50rem;

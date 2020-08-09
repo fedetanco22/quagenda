@@ -5,12 +5,12 @@
     &__art{
         margin:50px 0;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         justify-content: flex-start;
         align-items: center;      
     }
     &__imagen{
-        
+        max-width: 350px;
         &__img{
             width: 100%;
             object-fit: cover;
@@ -21,9 +21,10 @@
     &__cont{
         @include flex-col-center();
         padding: 0 5px;
+        max-width: 350px;
+        
 
         &--titulo{
-            text-transform: uppercase;
             @include titulos-h4();
             color: $color-cuarto;
             font-size: 1.75rem;
@@ -38,7 +39,7 @@
 
     &__btn{
         display: block;
-        padding: 1.5rem;
+        padding: 1rem;
         margin-top: 20px;
         background-color: #355070;
         border-radius: .5rem;
@@ -49,8 +50,49 @@
         &--a{
             text-decoration: none;
             color: white;
-            text-transform: uppercase;
-            font-weight: bolder;
+            ;
         }
     }
+}
+
+
+@media screen and (min-width: $bp_potrait-phones){
+
+}
+@media screen and (min-width: $bp_landscape-phones){
+    .blog{
+        &__art{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            &--izq{
+                display: flex;
+                flex-flow: row-reverse wrap;
+                justify-content: flex-start;
+                align-items: center; 
+            }
+            
+        }
+        &__cont{
+            padding: 0 20px;
+        }
+        &__imagen{
+            &--der{
+                margin-right: 15px;
+            }
+            &__img{
+                &--der{  
+                    &:hover{
+                    transform: rotate(-10deg);
+                    }
+                }
+                &--izq:hover{
+                    transform: rotate(10deg);
+                }
+            }
+        }
+    }
+    
 }

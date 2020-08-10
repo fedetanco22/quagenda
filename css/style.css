@@ -191,6 +191,63 @@ body {
   flex-flow: column;
   align-items: center;
   justify-content: center; }
+  .main__contenedor-nos {
+    width: 100%; }
+  .main__articulo {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px; }
+  .main__titulos {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 300px; }
+    .main__titulos--h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.8rem;
+      color: #444;
+      font-weight: 800;
+      text-align: center; }
+    .main__titulos--h3 {
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      color: #555;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #777; }
+    .main__titulos--claro {
+      color: #fcfcfc; }
+  .main__txt {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background-color: #DEDEDE; }
+    .main__txt--p {
+      font-size: 2rem;
+      color: #333;
+      font-family: "Ubuntu", sans-serif;
+      text-align: center;
+      padding: 0 25px; }
+  .main__prod {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px; }
+  .main__contenedor-cont {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #333; }
 
 .banner {
   background-image: url(../images/1-BYN-inicio2.jpg);
@@ -369,6 +426,82 @@ body {
         background-color: #f8f8f8;
         border: 2px solid; }
 
+.contacto {
+  width: 95%;
+  padding: 5px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 4px 5px 5px 0px rgba(122, 122, 122, 0.61); }
+  .contacto__form {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; }
+  .contacto__icono {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+    .contacto__icono__img {
+      width: 12%; }
+  .contacto__input {
+    font-family: "Lustria", serif;
+    font-size: 2rem;
+    font-weight: 800;
+    width: 100%;
+    padding: 25px 0 10px 10px;
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 2px solid #999;
+    color: #444; }
+  .contacto__text {
+    width: 100%; }
+  .contacto__desplegable {
+    width: max-content;
+    margin: 15px 0;
+    padding: 10px;
+    font-family: "Lustria", serif;
+    font-weight: 800;
+    color: #555; }
+    .contacto__desplegable__opcion {
+      font-family: "Lustria", serif;
+      font-weight: 800;
+      color: #555; }
+  .contacto__check {
+    width: 100%;
+    padding: 15px 0; }
+  .contacto__text {
+    font-family: "Lustria", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 15px 0 0 15px; }
+  .contacto__btn {
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background-color: #E4B937;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    color: #333;
+    border: none;
+    font-weight: bolder;
+    width: auto; }
+    .contacto__btn:hover {
+      background-color: #333;
+      color: #E4B937; }
+    @media screen and (min-width: 575.98px) {
+      .contacto__btn {
+        padding: 23px 30px; } }
+
 @media screen and (min-width: 767.98px) {
   .form__legend {
     margin-bottom: 20px;
@@ -486,13 +619,6 @@ body {
   .footer__enlaces__txt {
     font-size: 2rem; } }
 
-.main__prod {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 25px; }
-
 .prod {
   display: flex;
   flex-flow: column;
@@ -564,52 +690,6 @@ body {
 @media screen and (min-width: 991.98px) {
   .prod__cards, .prod .cards {
     margin: 0 50px; } }
-
-.main__contenedor-nos {
-  width: 100%; }
-
-.main__articulo {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 25px; }
-
-.main__titulos {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 300px; }
-  .main__titulos--h1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 2.8rem;
-    color: #444;
-    font-weight: 800;
-    text-align: center; }
-  .main__titulos--h3 {
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    color: #555;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #777; }
-
-.main__txt {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-  background-color: #DEDEDE; }
-  .main__txt--p {
-    font-size: 2rem;
-    color: #333;
-    font-family: "Ubuntu", sans-serif;
-    text-align: center;
-    padding: 0 25px; }
 
 .articulo {
   width: 100%; }
@@ -942,9 +1022,3 @@ body {
     transform: rotate(-10deg); }
   .blog__imagen__img--izq:hover {
     transform: rotate(10deg); } }
-
-.imgBlog img {
-  width: 50rem;
-  height: auto;
-  margin: 1rem 2rem;
-  border-radius: 2rem; }

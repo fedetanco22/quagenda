@@ -72,61 +72,50 @@
 			<!--Fin Banner-->
 
 			<!-- Contenido  -->
-			<div class="contenido-contacto">
+			<div class="main__contenedor-cont">
 				
 				<!-- Titulo Main -->
-				<section class="titulos ">
-					<div class="titulo1"> 
-						<h1> Destacate con tu Quagenda </h1>
-						<h3>Empeza a contar historias.</h3>
-						<h4>Empeza a escribir tu propia historia</h4>
-						<h4>Escribinos.</h4>
-					</div>
-
-				</section>
+				<div class="main__titulos">
+					<h1 class="main__titulos--h1 main__titulos--claro"> Mandanos una postal.</h1>
+					<h3 class="main__titulos--h3 ">Est&eacute;s donde est&eacute;s.</h3>
+				</div>
 				
-				<div class="formularios">
- 					<!-- FORMULARIO DE CONTACTO -->
-					<form action="correo.php" method="post"> <!--Correo.php??-->
+				<div class="contacto">
+						<form class="contacto__form" action="correo.php" method="post"> <!--Correo.php??-->
+							<div class="contacto__icono">
+								<img class="contacto__icono__img" src="/images/stamp.svg" alt="estampilla">
+							</div>
+							
+							<input class="contacto__input" type="text" name="nombreCliente" id="nombre" placeholder="nombre"></input>
+							<input class="contacto__input" type="text" name="apellidoCliente" id="apellido" placeholder="apellido"></input>
+							<input class="contacto__input" type="email" name="email" id="correo_electronico" placeholder="correo electronico"></input>
 
-						<!--Datos Personales-->
-						<label for="nombre">tu nombre</label>
-						<input type="text" name="nombreCliente" id="nombre" placeholder="Ingresa tu nombre"></input>
-
-
-						<label for="nombre">tu apellido</label>
-						<input type="text" name="apellidoCliente" id="apellido" 	placeholder="Ingresa con tu apellido"></input>
-
-						<!--Correo Electronico-->
-						<label for="correo_electronico">tu e-mail</label>
-						<input type="email" name="email" id="correo_electronico" placeholder="Ingresa tu correo electronico"></input>
-
+							<select class="contacto__desplegable" name="menuDesplegable" id="menu">
+								<option class="contacto__desplegable__opcion" value="0">Elegi una opcion</option>
+								<option class="contacto__desplegable__opcion" value="Quagenda">Quagenda</option>
+								<option class="contacto__desplegable__opcion" value="bitacoras">Bitacora</option>
+								<option class="contacto__desplegable__opcion" value="Cuadernos">Cuaderno</option>
+								<option class="contacto__desplegable__opcion" value="Reventa">Compra Mayorista</option>
+								<option class="contacto__desplegable__opcion" value="Disenar para nosotros">Trabajar con uds</option>
+							</select>
+							
+						
+							<!--Checkbox- Pormociones-->
+							<div class="contacto__check">
+								<input type="checkbox" name="newsletter" id="newsletter_id"> 
+								<label for="newsletter_id">quiero recibir promociones y nuevos 	ingresos</label>
+							</div>
+							
+							<!--Text Area-->
+							<!-- <label for="mensaje"></label> --> 
+							<textarea class="contacto__text" name="mensaje" id="mensaje_id" cols="30" rows="10" placeholder="contanos todo..."></textarea>
+							
+							<!--Botones-->
+							<input class="contacto__btn" type="submit" value="Enviar mensaje">
+							<input type="reset" value="Borrar mensaje">
+							
+						</form>
 					
-						<!--Menu desplegable-->
-						<label for="menu">Estas interesado en...</label>
-						<select name="menuDesplegable" id="menu">
-							<option value="0">Elegi una opcion</option>
-							<option value="Quagenda">Quagenda</option>
-							<option value="bitacoras">Bitacoras</option>
-							<option value="Cuadernos">Cuadernos</option>
-							<option value="Reventa">Compra Mayorista</option>
-							<option value="Disenar para nosotros">Trabajar con uds</option>
-						</select>
-						
-					
-						<!--Checkbox- Pormociones-->
-						<input type="checkbox" name="newsletter" id="newsletter_id"> 
-						<label for="newsletter_id">quiero recibir promociones y nuevos 	ingresos</label>
-						
-						<!--Text Area-->
-						<label for="mensaje"></label> 
-						<textarea name="mensaje" id="mensaje_id" cols="30" rows="10" placeholder="Escribi un mensaje"></textarea>
-						
-						<!--Botones-->
-						<input type="submit" value="Enviar mensaje">
-						<input type="reset" value="Borrar mensaje">
-						
-					</form>	
 				</div>	
 			</div>
 		</main>

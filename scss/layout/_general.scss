@@ -13,5 +13,50 @@ body {
 .main{
     width: 100%;
     @include flex-col-center;
+    &__contenedor-nos{
+        width: 100%;
+        
+    }
+    &__articulo{
+        @include flex-col-center;
+        padding: 0 25px;
+    }
+    &__titulos{
+        @include flex-col-center(); 
+        text-align: center;
+        width: 100%;
+        height: 300px;
+    
+        &--h1{
+            @include titulos-h1();
+        }
+        &--h3{
+            @include titulos-h3();
+        }
+        &--claro{
+            color: #fcfcfc;
+        }
+    }
+    &__txt{
+        @include flex-col-center;
+        min-height: 300px;
+        background-color: $color-cajas;
+
+        &--p{
+            @include txt();
+            padding: 0 25px;
+        }
+    }
+    &__prod{
+        @include flex-col-center;
+        padding: 0 25px;
+    }
+    &__contenedor-cont{
+        @include flex-col-center;
+        width: 100%;
+        background-color: $color-primario;
+    }
+
 }
+
 

@@ -51,6 +51,9 @@ body {
         @include flex-col-center;
         padding: 0 25px;
     }
+    &__blog{
+        width: 100%;
+    }
     &__contenedor-cont{
         @include flex-col-center;
         width: 100%;

@@ -1,12 +1,18 @@
 .blog{
     padding: 0 15px;
     @include flex-col-center();
+    width: 100%;
+    
+    &__contenedor{
+        @include flex-col-center();
+        width: 100%;
+    }
 
     &__art{
         margin:50px 0;
         display: flex;
         flex-flow: column wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;      
     }
     &__imagen{
@@ -55,34 +61,28 @@
     }
 }
 
-
-@media screen and (min-width: $bp_potrait-phones){
-
-}
 @media screen and (min-width: $bp_landscape-phones){
     .blog{
         &__art{
             display: flex;
             flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: center;
-
+            
             &--izq{
                 display: flex;
                 flex-flow: row-reverse wrap;
-                justify-content: flex-start;
+                justify-content: space-between;
                 align-items: center; 
             }
             
         }
         &__cont{
             padding: 0 20px;
+            
         }
         &__imagen{
-            &--der{
-                margin-right: 15px;
-            }
+            
             &__img{
+                padding: 10px;
                 &--der{  
                     &:hover{
                     transform: rotate(-10deg);
@@ -90,6 +90,30 @@
                 }
                 &--izq:hover{
                     transform: rotate(10deg);
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: $bp_tablets){
+    .blog{
+        &__cont{
+            &--der{
+                margin-left: 50px;
+            }
+            &--izq{
+                margin-right: 50px;
+            }
+        }
+        &__imagen{
+            &__img{
+                &--izq{
+                    margin-left: 50px;
+                }
+                &--der{
+                    margin-right: 50px;
                 }
             }
         }

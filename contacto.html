@@ -81,39 +81,38 @@
 				</div>
 				
 				<div class="contacto">
-						<form class="contacto__form" action="correo.php" method="post"> <!--Correo.php??-->
+						<form class="contacto__form" action="correo.php" method="post"> 
 							<div class="contacto__icono">
 								<img class="contacto__icono__img" src="/images/stamp.svg" alt="estampilla">
 							</div>
-							
-							<input class="contacto__input" type="text" name="nombreCliente" id="nombre" placeholder="nombre"></input>
-							<input class="contacto__input" type="text" name="apellidoCliente" id="apellido" placeholder="apellido"></input>
-							<input class="contacto__input" type="email" name="email" id="correo_electronico" placeholder="correo electronico"></input>
+							<div class="contacto__postal">
+								<div class="contacto__contenedor">
+									<input class="contacto__input" type="text" name="nombreCliente" id="nombre" placeholder="nombre"></input>
+									<input class="contacto__input" type="text" name="apellidoCliente" id="apellido" placeholder="apellido"></input>
+									<input class="contacto__input" type="email" name="email" id="correo_electronico" placeholder="correo electronico"></input>
+								</div>
 
-							<select class="contacto__desplegable" name="menuDesplegable" id="menu">
-								<option class="contacto__desplegable__opcion" value="0">Elegi una opcion</option>
-								<option class="contacto__desplegable__opcion" value="Quagenda">Quagenda</option>
-								<option class="contacto__desplegable__opcion" value="bitacoras">Bitacora</option>
-								<option class="contacto__desplegable__opcion" value="Cuadernos">Cuaderno</option>
-								<option class="contacto__desplegable__opcion" value="Reventa">Compra Mayorista</option>
-								<option class="contacto__desplegable__opcion" value="Disenar para nosotros">Trabajar con uds</option>
-							</select>
-							
-						
-							<!--Checkbox- Pormociones-->
-							<div class="contacto__check">
-								<input type="checkbox" name="newsletter" id="newsletter_id"> 
-								<label for="newsletter_id">quiero recibir promociones y nuevos 	ingresos</label>
+								<select class="contacto__desplegable" name="menuDesplegable" id="menu">
+									<option class="contacto__desplegable__opcion" value="0">Elegi una opcion</option>
+									<option class="contacto__desplegable__opcion" value="Quagenda">Quagenda</option>
+									<option class="contacto__desplegable__opcion" value="bitacoras">Bitacora</option>
+									<option class="contacto__desplegable__opcion" value="Cuadernos">Cuaderno</option>
+									<option class="contacto__desplegable__opcion" value="Reventa">Compra Mayorista</option>
+									<option class="contacto__desplegable__opcion" value="Disenar para nosotros">Trabajar con uds</option>
+								</select>
 							</div>
-							
-							<!--Text Area-->
-							<!-- <label for="mensaje"></label> --> 
-							<textarea class="contacto__text" name="mensaje" id="mensaje_id" cols="30" rows="10" placeholder="contanos todo..."></textarea>
+							<div class="contacto__txt-box">
+								<textarea class="contacto__text" name="mensaje" id="mensaje_id" cols="30" rows="10" placeholder="contanos todo..."></textarea>
+							</div>
+
+							<div class="contacto__check">
+								<input class="contacto__check__box" type="checkbox" name="newsletter" id="newsletter_id"> 
+								<label class="contacto__check__label" for="newsletter_id">quiero recibir promociones y nuevos 	ingresos</label>
+							</div>
 							
 							<!--Botones-->
 							<input class="contacto__btn" type="submit" value="Enviar mensaje">
-							<input type="reset" value="Borrar mensaje">
-							
+													
 						</form>
 					
 				</div>	
@@ -125,9 +124,9 @@
 		<!-- inicio boton whatsapp -->
 		<a class="whatsapp-button" target="blank" href="https://wa.me/5493516367968"><i class="fab fa-whatsapp text-white"></i></a>
 		<!-- fin boton whatsapp -->
-		<footer class="footer">
+		<footer class="footer footer__contacto--mt0">
 
-			<div class="footer__txt txt">
+			<div class="footer__txt txt txt--contacto">
 				<div class="txt__cont">
 					<h3 class="txt__h3">Veni a visitarnos. </h3>
 					<h3 class="txt__h3">Tomemos algo. </h3>

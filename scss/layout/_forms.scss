@@ -53,8 +53,7 @@
     border: 1px solid $color-primario;
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 4px 5px 5px 0px rgba(122, 122, 122, 0.61);
-
+    
     &__form{
         padding: 10px;
         display: flex;
@@ -70,9 +69,15 @@
             width: 12%;
         }
     }
+    &__postal{
+        width: 100%;
+    }
+    &__contenedor{
+        width: 100%;
+    }
     &__input{
         font-family: $font-sec;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 800;
         width: 100%;
         padding: 25px 0 10px 10px;
@@ -81,8 +86,15 @@
         border-bottom: 2px solid $color-quinto;
         color: $color-secundario;
     }
+    &__txt-box{
+        width: 100%;
+    }
     &__text{
         width: 100%;
+        font-family: $font-sec;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 15px 0 0 15px;
     }
     &__desplegable{
         width: max-content;
@@ -102,20 +114,24 @@
     &__check{
         width: 100%;
         padding: 15px 0;
-        
-        
-    }
-    &__text{
-        font-family: $font-sec;
-        font-size: 2rem;
-        font-weight: 600;
-        padding: 15px 0 0 15px;
+        &__label{
+            font-family: $font-sec;            
+        }
     }
     &__btn{
         @include button();
+        width: 100%;
+        margin-top: 10px;
+        font-family: $font-sec;
     }
 }
-
+@media screen and (min-width: $bp_potrait-phones){
+    .contacto{
+        &__form{
+            padding: 0 70px;
+        }
+    }
+}
 @media screen and (min-width: $bp_landscape-phones){
 
     .form{
@@ -129,6 +145,53 @@
         &__input{
             width: 60%;
         }
+    }
+    .contacto{
+        max-width: 975px;
+        margin: 100px 0 125px 0;
+        &__form{
+            justify-content: space-around;
+            padding: 10px;
+        }
+        &__icono{
+            order: -1;
+            &__img{
+                width: 10%;
+            }
+        }
+        &__postal{
+            width: 45%;
+        }
+        &__input{
+            order: 2;
+            font-size: 1.5rem;
+            width: 100%;
+            padding: 25px 0 10px 10px;
+            margin: 10px 0 ;
+            
+        }
+        &__check{
+            order: 3;
+            padding: 25px;
+        }
+        &__txt-box{
+            order: -1;
+            width: 45%;
+            height: 300px;
+        }
+        &__text{
+            height: 100%;
+            border: 0;
+            border-right: 1px dashed $color-quinto;
+        }
+        &__desplegable{
+            order: 3;
+        }
+        &__btn{
+            order: 3;
+            margin:  0 25px 25px 25px;
+        }
+
     }
 }
 @media screen and (min-width: $bp_tablets){

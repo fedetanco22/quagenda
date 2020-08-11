@@ -55,8 +55,18 @@ body {
         @include flex-col-center;
         width: 100%;
         background-color: $color-primario;
+        padding: 0 10px 50px 10px ;
     }
 
+}
+
+@media screen and (min-width: $bp_landscape-phones){
+    .main{
+        &__contenedor-cont{
+            padding: 0 25px 100px 25px ;
+        }
+    }
+    
 }
 
 

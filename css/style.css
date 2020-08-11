@@ -247,7 +247,12 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #333; }
+    background-color: #333;
+    padding: 0 10px 50px 10px; }
+
+@media screen and (min-width: 767.98px) {
+  .main__contenedor-cont {
+    padding: 0 25px 100px 25px; } }
 
 .banner {
   background-image: url(../images/1-BYN-inicio2.jpg);
@@ -435,8 +440,7 @@ body {
   justify-content: center;
   border: 1px solid #333;
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 4px 5px 5px 0px rgba(122, 122, 122, 0.61); }
+  background-color: #fff; }
   .contacto__form {
     padding: 10px;
     display: flex;
@@ -449,9 +453,13 @@ body {
     justify-content: flex-end; }
     .contacto__icono__img {
       width: 12%; }
+  .contacto__postal {
+    width: 100%; }
+  .contacto__contenedor {
+    width: 100%; }
   .contacto__input {
     font-family: "Lustria", serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     width: 100%;
     padding: 25px 0 10px 10px;
@@ -459,8 +467,14 @@ body {
     border: 0;
     border-bottom: 2px solid #999;
     color: #444; }
-  .contacto__text {
+  .contacto__txt-box {
     width: 100%; }
+  .contacto__text {
+    width: 100%;
+    font-family: "Lustria", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 15px 0 0 15px; }
   .contacto__desplegable {
     width: max-content;
     margin: 15px 0;
@@ -475,11 +489,8 @@ body {
   .contacto__check {
     width: 100%;
     padding: 15px 0; }
-  .contacto__text {
-    font-family: "Lustria", serif;
-    font-size: 2rem;
-    font-weight: 600;
-    padding: 15px 0 0 15px; }
+    .contacto__check__label {
+      font-family: "Lustria", serif; }
   .contacto__btn {
     display: inline-block;
     font-family: "Ubuntu", sans-serif;
@@ -494,13 +505,20 @@ body {
     color: #333;
     border: none;
     font-weight: bolder;
-    width: auto; }
+    width: auto;
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Lustria", serif; }
     .contacto__btn:hover {
       background-color: #333;
       color: #E4B937; }
     @media screen and (min-width: 575.98px) {
       .contacto__btn {
         padding: 23px 30px; } }
+
+@media screen and (min-width: 575.98px) {
+  .contacto__form {
+    padding: 0 70px; } }
 
 @media screen and (min-width: 767.98px) {
   .form__legend {
@@ -509,7 +527,41 @@ body {
   .form__label {
     width: 75%; }
   .form__input {
-    width: 60%; } }
+    width: 60%; }
+  .contacto {
+    max-width: 975px;
+    margin: 100px 0 125px 0; }
+    .contacto__form {
+      justify-content: space-around;
+      padding: 10px; }
+    .contacto__icono {
+      order: -1; }
+      .contacto__icono__img {
+        width: 10%; }
+    .contacto__postal {
+      width: 45%; }
+    .contacto__input {
+      order: 2;
+      font-size: 1.5rem;
+      width: 100%;
+      padding: 25px 0 10px 10px;
+      margin: 10px 0; }
+    .contacto__check {
+      order: 3;
+      padding: 25px; }
+    .contacto__txt-box {
+      order: -1;
+      width: 45%;
+      height: 300px; }
+    .contacto__text {
+      height: 100%;
+      border: 0;
+      border-right: 1px dashed #999; }
+    .contacto__desplegable {
+      order: 3; }
+    .contacto__btn {
+      order: 3;
+      margin: 0 25px 25px 25px; } }
 
 @media screen and (min-width: 991.98px) {
   .form__input {
@@ -537,6 +589,8 @@ body {
       margin-bottom: 12.5px;
       margin-top: 12.5px;
       font-size: 1.5rem; }
+    .footer__txt--contacto, .footer .txt--contacto {
+      margin-top: 0px; }
   .footer__titulo {
     margin: 15px 0; }
     .footer__titulo__txt {
@@ -575,6 +629,8 @@ body {
     .footer__copyright__txt {
       color: #999;
       font-size: 1rem; }
+  .footer__contacto--mt0 {
+    margin-top: 0px; }
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {
@@ -602,10 +658,15 @@ body {
     .footer__txt, .footer .txt {
       padding: 100px 50px 100px 50px;
       margin-top: 100px; }
+      .footer__txt--contacto, .footer .txt--contacto {
+        margin-top: 0px; }
     .footer__titulo {
       margin: 15px 0; }
     .footer__enlaces {
-      margin-top: 0; } }
+      margin-top: 0; }
+    .footer__contacto--mt0 {
+      margin-top: 0px;
+      padding-top: 0px; } }
 
 @media screen and (min-width: 991.98px) {
   .footer__txt__h3, .footer .txt__h3 {

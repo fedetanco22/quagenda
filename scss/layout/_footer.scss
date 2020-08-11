@@ -19,7 +19,11 @@
             margin-top: 12.5px;
             font-size: 1.5rem;
         }
+        &--contacto{
+            margin-top: 0px;
+        }
     }
+    
     &__titulo{
         margin: 15px 0;
 
@@ -71,8 +75,13 @@
             font-size: 1rem;
         }
     }
+    &__contacto--mt0{
+        margin-top: 0px;
+    }
+    
     
 }
+
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: $bp_potrait-phones){
@@ -117,6 +126,9 @@
         &__txt, .txt{
             padding: 100px 50px 100px 50px;
             margin-top: 100px;
+            &--contacto{
+                margin-top: 0px;
+            }
         }
         &__titulo{
             margin: 15px 0;
@@ -124,7 +136,11 @@
     
         &__enlaces{
             margin-top: 0;
-        }   
+        } 
+        &__contacto--mt0{
+            margin-top: 0px;
+            padding-top: 0px;
+        }  
     }
 }
 

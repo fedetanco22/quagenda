@@ -176,6 +176,25 @@ html {
   .articulo--bg {
     margin: 70px 0; } }
 
+@media screen and (max-height: 280px) {
+  .menu__list {
+    margin-top: 20px;
+    padding: 15px 0 0 100px;
+    justify-content: flex-start; }
+  .menu__link {
+    font-size: 2rem;
+    line-height: 1rem; } }
+
+@media screen and (max-height: 470px) {
+  .menu__list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 0 0 100px;
+    justify-content: center; }
+  .menu__link {
+    font-size: 2rem;
+    line-height: 1rem; } }
+
 body {
   margin: 0 auto;
   max-width: 18000px;

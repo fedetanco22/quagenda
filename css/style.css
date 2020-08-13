@@ -54,7 +54,7 @@ html {
   .hamb__label {
     position: absolute;
     font-size: 3.5rem;
-    color: #f8f8f8;
+    color: #fff;
     text-shadow: 2px 2px 4px rgba(51, 51, 51, 0.61);
     top: 0;
     right: 0;
@@ -83,7 +83,7 @@ html {
 
 .menu__link {
   text-decoration: none;
-  color: #f8f8f8;
+  color: #fff;
   font-size: 3.5rem;
   font-weight: 800; }
 
@@ -285,7 +285,7 @@ body {
         color: #444;
         font-weight: 800;
         text-align: center;
-        color: #f8f8f8;
+        color: #fff;
         font-size: 3.5rem;
         margin-bottom: 50px; }
     .banner__titulos__h3 {
@@ -417,7 +417,7 @@ body {
       margin: 50px 0;
       padding: 15px 45px;
       background-color: #333;
-      color: #f8f8f8;
+      color: #fff;
       border: 2px solid; }
       .form__input--button:hover {
         background-color: #333;
@@ -430,7 +430,7 @@ body {
           padding: 23px 50px; } }
       .form__input--button:hover {
         color: #333;
-        background-color: #f8f8f8;
+        background-color: #fff;
         border: 2px solid; }
 
 .contacto {
@@ -558,7 +558,8 @@ body {
     .contacto__text {
       height: 100%;
       border: 0;
-      border-right: 1px dashed #999; }
+      border-right: 1px dashed #999;
+      padding: 30px 0 0 15px; }
     .contacto__desplegable {
       order: 3; }
     .contacto__btn {
@@ -587,7 +588,7 @@ body {
       font-weight: 600;
       margin-bottom: 15px;
       color: #777;
-      color: #f8f8f8;
+      color: #fff;
       margin-bottom: 12.5px;
       margin-top: 12.5px;
       font-size: 1.5rem; }
@@ -596,7 +597,7 @@ body {
   .footer__titulo {
     margin: 15px 0; }
     .footer__titulo__txt {
-      color: #f8f8f8;
+      color: #fff;
       text-decoration: underline;
       font-size: 2rem;
       font-family: "Poppins", sans-serif;
@@ -615,11 +616,11 @@ body {
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      color: #f8f8f8;
+      color: #fff;
       font-size: 2.5rem; }
     .footer__enlaces__txt {
       font-size: 1.5rem;
-      color: #f8f8f8;
+      color: #fff;
       margin-left: 10px; }
   .footer__copyright {
     background-color: #000;
@@ -774,7 +775,7 @@ body {
     .articulo__titulos--h4 {
       font-family: "Ubuntu", sans-serif;
       font-size: 2rem;
-      color: #f8f8f8;
+      color: #fff;
       margin: 2.5rem 0;
       margin: 10px 0; }
   .articulo__txt {
@@ -824,7 +825,7 @@ body {
       .main__txt--p-top {
         margin-top: 100px; }
   .articulo__titulos {
-    background-color: #f8f8f8;
+    background-color: #fff;
     width: 300px;
     height: 300px;
     margin: 15px; }
@@ -915,7 +916,7 @@ body {
     font-weight: 800;
     text-align: center; }
     .grid__h1--blanco {
-      color: #f8f8f8; }
+      color: #fff; }
   .grid__h3 {
     font-family: "Poppins", sans-serif;
     font-size: 2rem;
@@ -1053,7 +1054,7 @@ body {
     .blog__cont--titulo {
       font-family: "Ubuntu", sans-serif;
       font-size: 2rem;
-      color: #f8f8f8;
+      color: #fff;
       margin: 2.5rem 0;
       color: #777;
       font-size: 1.75rem; }
@@ -1076,27 +1077,40 @@ body {
 @media screen and (min-width: 767.98px) {
   .blog__art {
     display: flex;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center; }
     .blog__art--izq {
       display: flex;
       flex-flow: row-reverse wrap;
       justify-content: space-between;
       align-items: center; }
   .blog__cont {
-    padding: 0 20px; }
-  .blog__imagen__img {
-    padding: 10px; }
-    .blog__imagen__img--der:hover {
-      transform: rotate(-10deg); }
-    .blog__imagen__img--izq:hover {
-      transform: rotate(10deg); } }
+    padding: 0 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; }
+  .blog__imagen {
+    margin: 18px; }
+    .blog__imagen__img {
+      padding: 10px; }
+      .blog__imagen__img--der:hover {
+        transform: rotate(-10deg); }
+      .blog__imagen__img--izq:hover {
+        transform: rotate(10deg); } }
 
 @media screen and (min-width: 991.98px) {
-  .blog__cont--der {
-    margin-left: 50px; }
-  .blog__cont--izq {
-    margin-right: 50px; }
-  .blog__imagen__img--izq {
-    margin-left: 50px; }
-  .blog__imagen__img--der {
-    margin-right: 50px; } }
+  .blog__imagen {
+    max-width: 400px; }
+  .blog__cont {
+    max-width: 420px;
+    margin: 50px; } }
+
+@media screen and (min-width: 1199.98px) {
+  .blog__imagen {
+    max-width: 500px; }
+  .blog__cont {
+    max-width: 500px; }
+  .blog__txt--none {
+    display: inline-block; } }

@@ -38,6 +38,7 @@
     }
     &__txt{
         text-align: justify;
+        
         &--none{
             display: none;
         }
@@ -63,9 +64,12 @@
 
 @media screen and (min-width: $bp_landscape-phones){
     .blog{
+        
         &__art{
             display: flex;
             flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
             
             &--izq{
                 display: flex;
@@ -77,10 +81,11 @@
         }
         &__cont{
             padding: 0 20px;
+            @include flex-col-center;
             
         }
         &__imagen{
-            
+            margin: 18px;
             &__img{
                 padding: 10px;
                 &--der{  
@@ -99,24 +104,29 @@
 
 @media screen and (min-width: $bp_tablets){
     .blog{
-        &__cont{
-            &--der{
-                margin-left: 50px;
-            }
-            &--izq{
-                margin-right: 50px;
-            }
-        }
         &__imagen{
-            &__img{
-                &--izq{
-                    margin-left: 50px;
-                }
-                &--der{
-                    margin-right: 50px;
-                }
-            }
+            max-width: 400px;
+        }
+        &__cont{
+            max-width: 420px;
+            margin: 50px;
         }
     }
-    
+}
+@media screen and (min-width: $bp_desktops){
+    .blog{
+        &__imagen{
+            max-width: 500px;
+        }
+        &__cont{
+            max-width: 500px;
+        }
+        &__txt{
+            
+            &--none{
+                display: inline-block;
+            }
+        }
+        
+    }
 }

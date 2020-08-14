@@ -334,7 +334,7 @@ body {
       .banner__btn__button:hover {
         background-color: #333;
         color: #E4B937; }
-      @media screen and (min-width: 575.98px) {
+      @media screen and (min-width: 767.98px) {
         .banner__btn__button {
           padding: 23px 30px; } }
   .banner__banner-nos {
@@ -455,7 +455,7 @@ body {
       .form__input--button:hover {
         background-color: #333;
         color: #E4B937; }
-      @media screen and (min-width: 575.98px) {
+      @media screen and (min-width: 767.98px) {
         .form__input--button {
           padding: 23px 30px; } }
       @media screen and (min-width: 575.98px) {
@@ -547,7 +547,7 @@ body {
     .contacto__btn:hover {
       background-color: #333;
       color: #E4B937; }
-    @media screen and (min-width: 575.98px) {
+    @media screen and (min-width: 767.98px) {
       .contacto__btn {
         padding: 23px 30px; } }
 
@@ -998,7 +998,7 @@ body {
 @media screen and (min-width: 575.98px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "titulo1 titulo1" "foto12 foto12" "txt1 txt1" "txt2 txt2" "foto13 foto13" "titulo2 titulo2"  "foto1 foto1" "foto2 foto2" "foto4 foto3" "foto6 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11";
+    grid-template-areas: "titulo1 titulo1" "txt1 txt1" "foto12 foto13" "txt2 txt2" "titulo2 titulo2" "foto1 foto1" "foto2 foto2" "foto4 foto3" "foto6 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11";
     padding: 0 50px;
     row-gap: 0; }
     .grid__cont1 {
@@ -1007,7 +1007,7 @@ body {
 @media screen and (min-width: 767.98px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "titulo1 titulo1" "foto12 txt1" "txt2 foto13" "vacio vacio " "titulo2 titulo2"  "foto1 foto3" "foto2 foto2" "foto4 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11"; }
+    grid-template-areas: "titulo1 titulo1" "foto12 txt1" "txt2 foto13" "vacio vacio " "titulo2 titulo2" "foto1 foto3" "foto2 foto2" "foto4 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11"; }
     .grid__cont {
       min-height: 300px; }
     .grid__vacio {

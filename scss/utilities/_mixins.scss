@@ -1,42 +1,45 @@
 @mixin flex-col-center {
     display: flex;
-    flex-flow: column ;
+    flex-flow: column;
     align-items: center;
-    justify-content: center;       
+    justify-content: center;
 }
 
-@mixin titulos-h1{
+@mixin titulos-h1 {
     font-family: $font-titulos;
     font-size: 2.8rem;
     color: $color-secundario;
-    font-weight: 800; 
+    font-weight: 800;
     text-align: center;
 }
 
-@mixin titulos-h2{
+@mixin titulos-h2 {
     font-family: $font-titulos;
     font-size: 2rem;
     color: $color-terciario;
     font-weight: 600;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
+
 @mixin titulos-h3 {
     @include titulos-h2();
-    color: $color-cuarto; 
+    color: $color-cuarto;
 }
-@mixin titulos-h4{
+
+@mixin titulos-h4 {
     font-family: $font-ppal;
     font-size: 2rem;
     color: $color-blanco;
-    margin: 2.5rem 0; 
+    margin: 2.5rem 0;
 }
-@mixin txt{
+
+@mixin txt {
     font-size: 2rem;
-    color: $color-primario; 
+    color: $color-primario;
     font-family: $font-ppal;
     text-align: center;
-    
-    
+
+
 }
 
 @mixin button {
@@ -47,21 +50,22 @@
     margin-bottom: 15px;
     padding: 15px 20px;
     background-color: #E4B937;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    transition-duration: 0.4s; 
+    transition-duration: 0.4s;
     color: $color-primario;
     border: none;
     font-weight: bolder;
-    width: auto;  
-    
-    &:hover{
+    width: auto;
+
+    &:hover {
         background-color: #333;
         color: #E4B937;
     }
-    @media screen and (min-width: $bp_potrait-phones){
+
+    @media screen and(min-width: $bp_potrait-phones) {
         padding: 23px 30px;
-        
+
     }
 }
 
@@ -73,8 +77,8 @@
     background-attachment: contain;
 }
 
-@mixin images{
+@mixin images {
     width: 100%;
     object-fit: cover;
-    display: block;     
+    display: block;
 }

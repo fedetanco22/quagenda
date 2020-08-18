@@ -759,7 +759,7 @@ body {
       text-align: justify; }
     .prod__cards__autor__h5, .prod .cards__autor__h5 {
       font-size: 1.5rem;
-      margin: 5px 0; }
+      margin: 10px 0; }
     .prod__cards__caract, .prod .cards__caract {
       padding: 5px 0; }
       .prod__cards__caract__titulo, .prod .cards__caract__titulo {
@@ -790,13 +790,18 @@ body {
   font-weight: bolder;
   width: auto;
   padding: 15px 10px;
-  margin: 0; }
+  margin: 10px 0 0 0; }
   .btn:hover {
     background-color: #333;
     color: #E4B937; }
   @media screen and (min-width: 767.98px) {
     .btn {
       padding: 23px 30px; } }
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .modal-title {
   font-family: "Poppins", sans-serif;

@@ -6,7 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Quagenda &reg; | Blog </title>
-
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<!--Link CSS-->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Fonts -->
@@ -98,14 +100,36 @@
 							</div>
 							<div class="blog__cont blog__cont--der">
 								<h4 id="blog2" class="blog__cont--titulo">"Cualquier cosa que puedes imaginar, lo puedes crear."</h4>
-								<p class="blog__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-									minima quas libero maiores a ad ex eos, eligendi consequuntur atque assumenda,
-									voluptatum neque, ullam cupiditate. Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. <span class="blog__txt--none"> Voluptatem, enim! Quasi tempore,
-										eveniet minima rem eligendi cum distinctio doloremque, libero voluptatem,
-										reprehenderit numquam exercitationem quidem!</span></p>
-								<div class="blog__btn">
-									<a class="blog__btn--a" href="#">ver m&aacute;s</a>
+								<p class="blog__txt"> De esta manera podemos conseguir grandes cosas, partiendo de una idea, se imagina y se le ponen todas la ganas. El primer paso, es sin duda,<strong> imaginarlo</strong>, y no ponerte trabas ni excusas. Lo otro que necesitamos es tener la seguridad en uno mismo. <strong>Confi&aacute;</strong> en que lo puedes lograr. </p>
+				
+								<!-- Button trigger modal -->
+								<button type="button" class=" btn blog__btn blog__btn--a" data-toggle="modal"
+								data-target="#exampleModal" >
+								Ver m&aacute;s
+								</button>
+
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal" tabindex="-1"
+									aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel"></h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<p>"Tanto si crees que puedes, como si crees que no puedes, en ambos casos est&aacute;s en lo cierto". <em>Henry Ford</em></p>
+												
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary blog__btn blog__btn--a"
+													data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</article>
@@ -266,6 +290,18 @@
 			</div>
 		</footer>
 	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+	</script>
 </body>
 
 </html>

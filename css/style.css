@@ -824,7 +824,7 @@ body {
   .carousel.slide .carousel-control-prev {
     filter: invert(100%); }
   .carousel.slide .carousel-indicators .bg-img-1 {
-    background-image: url(../../images/Mock-ups/viajar-blanco-frente.jpg);
+    background-image: url(../../images/mock-ups/viajar-blanco-frente.jpg);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -833,7 +833,7 @@ body {
     width: 30px;
     height: 25px; }
   .carousel.slide .carousel-indicators .bg-img-2 {
-    background-image: url(../../images/Mock-ups/viajar-blanco-dorso.jpg);
+    background-image: url(../../images/mock-ups/viajar-blanco-dorso.jpg);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -842,7 +842,7 @@ body {
     width: 30px;
     height: 25px; }
   .carousel.slide .carousel-indicators .bg-img-3 {
-    background-image: url(../../images/Mock-ups/mock-viaje-cel2.jpg);
+    background-image: url(../../images/mock-ups/mock-viaje-cel2.jpg);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;

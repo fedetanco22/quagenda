@@ -42,33 +42,6 @@
 
 }
 
-@mixin button {
-    display: inline-block;
-    font-family: $font-ppal;
-    font-size: 1.5rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    background-color: #E4B937;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    color: $color-primario;
-    border: none;
-    font-weight: bolder;
-    width: auto;
-
-    &:hover {
-        background-color: #333;
-        color: #E4B937;
-    }
-
-    @media screen and(min-width: $bp_landscape-phones) {
-        padding: 23px 30px;
-
-    }
-}
-
 @mixin bg-img {
     width: 100%;
     background-size: cover;

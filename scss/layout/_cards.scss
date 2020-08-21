@@ -70,10 +70,13 @@
     margin: 10px 0 0 0;
     .btn:focus{
         outline: none;
+        border: none;
     }
-    .btn:active{
-        outline: none;
+    .btn-success:active{
+        border: 0px;
+        outline: 0px;
     }
+    
 }
 
 @media screen and (min-width: 340px) {

@@ -795,9 +795,11 @@ body {
     .btn {
       padding: 23px 30px; } }
   .btn .btn:focus {
-    outline: none; }
-  .btn .btn:active {
-    outline: none; }
+    outline: none;
+    border: none; }
+  .btn .btn-success:active {
+    border: 0px;
+    outline: 0px; }
 
 @media screen and (min-width: 340px) {
   __cards__txt,

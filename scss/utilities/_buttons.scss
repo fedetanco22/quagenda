@@ -1,0 +1,55 @@
+@mixin button {
+    display: inline-block;
+    font-family: $font-ppal;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background-color: #E4B937;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    color: $color-primario;
+    border: none;
+    font-weight: bolder;
+    width: auto;
+
+    &:hover {
+        background-color: #333;
+        color: #E4B937;
+    }
+
+    @media screen and(min-width: $bp_landscape-phones) {
+        padding: 23px 30px;
+
+    }
+}
+
+.banner {
+    &__btn {
+        margin-bottom: 25vh;
+
+        @media screen and(max-height: 340px) {
+            margin-bottom: 10vh;
+        }
+        @media screen and(max-height: 440px) {
+            margin-bottom: 15vh;
+        }
+
+        &__button {
+            @include button();
+
+            @media screen and(min-width: $bp_potrait-phones) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// CARDS
+
+.btn {
+    @include button;
+    padding: 15px 10px;
+    margin: 10px 0 0 0;
+}

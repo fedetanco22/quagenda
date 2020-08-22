@@ -785,18 +785,20 @@ body {
       width: 100%; }
     .prod__cards__txt,
     .prod .cards__txt {
-      padding: 10px; }
+      padding: 20px 0 10px 0;
+      width: 100%; }
     .prod__cards__titulo__h4,
     .prod .cards__titulo__h4 {
       font-family: "Ubuntu", sans-serif;
       color: #777;
       font-size: 1.5rem;
       font-weight: 600;
-      text-align: justify; }
+      text-align: center; }
     .prod__cards__autor__h5,
     .prod .cards__autor__h5 {
       font-size: 1.5rem;
-      margin: 10px 0; }
+      margin: 10px 0;
+      text-align: center; }
 
 @media screen and (min-width: 340px) {
   __cards__txt,
@@ -805,7 +807,8 @@ body {
 
 @media screen and (min-width: 767.98px) {
   .prod__titulo__h3 {
-    font-size: 2.75rem; }
+    font-size: 2.75rem;
+    margin-bottom: 50px; }
   .prod__cards,
   .prod .cards {
     margin: 5px; }
@@ -849,6 +852,98 @@ body {
     background-attachment: contain;
     width: 30px;
     height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-4 {
+    background-image: url(../../images/mock-ups/luna-blanco1.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-5 {
+    background-image: url(../../images/mock-ups/luna-blanco-dorso.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-6 {
+    background-image: url(../../images/mock-ups/mock-luna.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-7 {
+    background-image: url(../../images/mock-ups/cuaderno1-frente.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-8 {
+    background-image: url(../../images/mock-ups/cuaderno1.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-9 {
+    background-image: url(../../images/mock-ups/mock-cuaderno1.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+
+@media screen and (min-width: 767.98px) {
+  .carousel.slide .carousel-indicators .bg-img-1 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-2 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-3 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-4 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-5 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-6 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-7 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-8 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-9 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-10 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-11 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-12 {
+    width: 50px;
+    height: 35px; } }
 
 .modal .modal-body {
   padding: 0; }
@@ -856,7 +951,8 @@ body {
 .modal .modal-header {
   display: flex;
   align-items: center;
-  border-bottom: none; }
+  border-bottom: none;
+  height: 60px; }
 
 .modal .modal-logo {
   width: 20%; }

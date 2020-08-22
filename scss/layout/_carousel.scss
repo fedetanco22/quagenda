@@ -33,4 +33,106 @@
         height: 25px;
 
     }
+    .carousel-indicators .bg-img-4 {
+
+        background-image: url(../../images/mock-ups/luna-blanco1.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-5 {
+
+        background-image: url(../../images/mock-ups/luna-blanco-dorso.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-6 {
+
+        background-image: url(../../images/mock-ups/mock-luna.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-7 {
+
+        background-image: url(../../images/mock-ups/cuaderno1-frente.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-8 {
+
+        background-image: url(../../images/mock-ups/cuaderno1.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-9 {
+
+        background-image: url(../../images/mock-ups/mock-cuaderno1.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+}
+
+@media screen and (min-width: $bp_landscape-phones){
+    .carousel.slide{
+        .carousel-indicators .bg-img-1{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-2{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-3{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-4{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-5{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-6{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-7{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-8{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-9{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-10{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-11{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-12{
+            width: 50px;
+            height: 35px;
+        }
+    }
+    
 }

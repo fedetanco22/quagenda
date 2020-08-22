@@ -81,6 +81,78 @@
         height: 25px;
 
     }
+    .carousel-indicators .bg-img-10 {
+
+        background-image: url(../../images/mock-ups/cuaderno2.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-11 {
+
+        background-image: url(../../images/mock-ups/cuaderno2-dorso.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-12 {
+
+        background-image: url(../../images/mock-ups/mock-cuaderno2.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-13 {
+
+        background-image: url(../../images/mock-ups/bitacora1.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-14 {
+
+        background-image: url(../../images/mock-ups/bitacora1-dorso.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-15 {
+
+        background-image: url(../../images/mock-ups/mock-bitacora1.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-16 {
+
+        background-image: url(../../images/mock-ups/bitacora2.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-17 {
+
+        background-image: url(../../images/mock-ups/bitacora2-dorso.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
+    .carousel-indicators .bg-img-18 {
+
+        background-image: url(../../images/mock-ups/mock-bitacora2.jpg);
+        @include bg-img();
+        width: 30px;
+        height: 25px;
+
+    }
 }
 
 @media screen and (min-width: $bp_landscape-phones){
@@ -130,6 +202,30 @@
             height: 35px;
         }
         .carousel-indicators .bg-img-12{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-13{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-14{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-15{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-16{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-17{
+            width: 50px;
+            height: 35px;
+        }
+        .carousel-indicators .bg-img-18{
             width: 50px;
             height: 35px;
         }

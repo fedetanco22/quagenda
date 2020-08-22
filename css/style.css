@@ -906,6 +906,87 @@ body {
     background-attachment: contain;
     width: 30px;
     height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-10 {
+    background-image: url(../../images/mock-ups/cuaderno2.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-11 {
+    background-image: url(../../images/mock-ups/cuaderno2-dorso.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-12 {
+    background-image: url(../../images/mock-ups/mock-cuaderno2.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-13 {
+    background-image: url(../../images/mock-ups/bitacora1.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-14 {
+    background-image: url(../../images/mock-ups/bitacora1-dorso.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-15 {
+    background-image: url(../../images/mock-ups/mock-bitacora1.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-16 {
+    background-image: url(../../images/mock-ups/bitacora2.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-17 {
+    background-image: url(../../images/mock-ups/bitacora2-dorso.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-18 {
+    background-image: url(../../images/mock-ups/mock-bitacora2.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
 
 @media screen and (min-width: 767.98px) {
   .carousel.slide .carousel-indicators .bg-img-1 {
@@ -942,6 +1023,24 @@ body {
     width: 50px;
     height: 35px; }
   .carousel.slide .carousel-indicators .bg-img-12 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-13 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-14 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-15 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-16 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-17 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-18 {
     width: 50px;
     height: 35px; } }
 

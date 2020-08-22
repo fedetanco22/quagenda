@@ -46,6 +46,25 @@
     }
 }
 
+.blog {
+    &__btn{
+        display: block;
+        padding: 1rem;
+        margin-top: 20px;
+        background-color: #355070;
+        border-radius: .5rem;
+        &:hover {
+            transform: scale(1.15);
+        }
+
+        &--a{
+            text-decoration: none;
+            color: white;
+            ;
+        }
+    }
+}
+
 // CARDS
 
 .btn {

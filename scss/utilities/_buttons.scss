@@ -45,30 +45,29 @@
         }
     }
 }
-
-.blog {
-    &__btn{
-        display: block;
-        padding: 1rem;
-        margin-top: 20px;
-        background-color: #355070;
-        border-radius: .5rem;
-        &:hover {
-            transform: scale(1.15);
-        }
-
-        &--a{
-            text-decoration: none;
-            color: white;
-            ;
-        }
-    }
-}
-
-// CARDS
-
 .btn {
     @include button;
     padding: 15px 10px;
     margin: 10px 0 0 0;
+    
 }
+
+.blog {
+    &__btn{
+        padding: 10px 10px;
+        background-color: #355070;
+        color: #fff;
+        transition-duration: 0.1s;
+        margin: 10px 0;
+        
+        
+        &:hover {
+            background-color: #fff;
+            color: #355070;
+            border: 1px solid #355070;
+        }
+    }
+}
+
+
+

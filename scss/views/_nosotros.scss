@@ -61,32 +61,6 @@
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: $bp_potrait-phones){
 
-    .main{ 
-        &__titulos{
-                
-            &--h1{
-                font-size: 5rem;
-            }
-            &--h3{
-                font-size: 3rem;
-            } 
-        }   
-        &__txt{
-            width: 80%;
-
-            &--p{
-                font-size: 3rem;
-                color:$color-cuarto;
-                &-bot{
-                    margin-bottom: 100px;
-                }
-                &-top{
-                    margin-top: 100px;
-                }
-
-            }
-        }
-    }
     .articulo{
         &__titulos{
             background-color: $color-blanco;

@@ -66,18 +66,6 @@ html {
       .banner__btn__button {
         font-size: 1.5rem; } }
 
-.blog__btn {
-  display: block;
-  padding: 1rem;
-  margin-top: 20px;
-  background-color: #355070;
-  border-radius: .5rem; }
-  .blog__btn:hover {
-    transform: scale(1.15); }
-  .blog__btn--a {
-    text-decoration: none;
-    color: white; }
-
 .btn {
   display: inline-block;
   font-family: "Ubuntu", sans-serif;
@@ -101,6 +89,17 @@ html {
   @media screen and (min-width: 767.98px) {
     .btn {
       padding: 23px 30px; } }
+
+.blog__btn {
+  padding: 10px 10px;
+  background-color: #355070;
+  color: #fff;
+  transition-duration: 0.1s;
+  margin: 10px 0; }
+  .blog__btn:hover {
+    background-color: #fff;
+    color: #355070;
+    border: 1px solid #355070; }
 
 .header {
   text-align: left;
@@ -340,9 +339,26 @@ body {
     background-color: #333;
     padding: 0 10px 50px 10px; }
 
+@media screen and (min-width: 575.98px) {
+  .main__txt {
+    width: 80%; }
+    .main__txt--p {
+      font-size: 3rem;
+      color: #777; }
+      .main__txt--p-bot {
+        margin-bottom: 100px; }
+      .main__txt--p-top {
+        margin-top: 100px; } }
+
 @media screen and (min-width: 767.98px) {
   .main__contenedor-cont {
     padding: 0 25px 100px 25px; } }
+
+@media screen and (min-width: 991.98px) {
+  .main__titulos--h1 {
+    font-size: 5rem; }
+  .main__titulos--h3 {
+    font-size: 3rem; } }
 
 .banner {
   background-image: url("../images/1-BYN-inicio2.jpg");
@@ -514,7 +530,8 @@ body {
   justify-content: center;
   border: 1px solid #333;
   border-radius: 5px;
-  background-color: #fff; }
+  background-color: #fff;
+  box-shadow: 10px 10px 5px -1px black; }
   .contacto__form {
     padding: 10px;
     display: flex;
@@ -1078,6 +1095,9 @@ body {
   margin-bottom: 0;
   color: #fff; }
 
+.modal .modal-logo2 {
+  width: 15%; }
+
 .modal .modal-footer {
   padding: 0;
   justify-content: space-between; }
@@ -1088,6 +1108,13 @@ body {
     .modal .modal-footer__caract__list {
       padding: 0 10px;
       list-style: none; }
+
+.contenido-modal {
+  font-size: 2rem; }
+
+@media screen and (min-width: 991.98px) {
+  .modal .modal-header {
+    height: 80px; } }
 
 .articulo {
   width: 100%; }
@@ -1145,19 +1172,6 @@ body {
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {
-  .main__titulos--h1 {
-    font-size: 5rem; }
-  .main__titulos--h3 {
-    font-size: 3rem; }
-  .main__txt {
-    width: 80%; }
-    .main__txt--p {
-      font-size: 3rem;
-      color: #777; }
-      .main__txt--p-bot {
-        margin-bottom: 100px; }
-      .main__txt--p-top {
-        margin-top: 100px; }
   .articulo__titulos {
     background-color: #fff;
     width: 300px;
@@ -1355,10 +1369,6 @@ body {
 
 .blog {
   padding: 0 15px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
   width: 100%; }
   .blog__contenedor {
     display: flex;
@@ -1367,55 +1377,58 @@ body {
     justify-content: center;
     width: 100%; }
   .blog__art {
-    margin: 50px 0;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: center; }
+    padding: 30px; }
   .blog__imagen {
     max-width: 350px; }
     .blog__imagen__img {
       width: 100%;
       object-fit: cover;
-      border-radius: 2rem; }
+      border-radius: 3rem; }
   .blog__cont {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     padding: 0 5px;
-    max-width: 350px; }
+    max-width: 325px; }
     .blog__cont--titulo {
       font-family: "Ubuntu", sans-serif;
       font-size: 2rem;
       color: #fff;
       margin: 2.5rem 0;
       color: #777;
-      font-size: 1.75rem; }
+      font-size: 1.75rem;
+      margin: 20px 0;
+      text-align: center; }
   .blog__txt {
     text-align: justify; }
     .blog__txt--none {
       display: none; }
 
 @media screen and (min-width: 767.98px) {
+  .blog__imagen {
+    margin-bottom: 20px;
+    max-width: 500px; }
+  .blog__cont {
+    max-width: 500px;
+    padding: 0 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center; } }
+
+@media screen and (min-width: 991.98px) {
   .blog__art {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center; }
+    justify-content: space-around; }
     .blog__art--izq {
       display: flex;
       flex-flow: row-reverse wrap;
       justify-content: space-between;
       align-items: center; }
-  .blog__cont {
-    padding: 0 20px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center; }
   .blog__imagen {
-    margin: 18px; }
+    align-self: center; }
     .blog__imagen__img {
       padding: 10px; }
       .blog__imagen__img--der:hover {
@@ -1423,17 +1436,6 @@ body {
       .blog__imagen__img--izq:hover {
         transform: rotate(10deg); } }
 
-@media screen and (min-width: 991.98px) {
-  .blog__imagen {
-    max-width: 400px; }
-  .blog__cont {
-    max-width: 420px;
-    margin: 50px; } }
-
 @media screen and (min-width: 1199.98px) {
-  .blog__imagen {
-    max-width: 500px; }
-  .blog__cont {
-    max-width: 500px; }
-  .blog__txt--none {
-    display: inline-block; } }
+  .blog__cont--titulo {
+    margin: 0 0 20px 0; } }

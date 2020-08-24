@@ -126,6 +126,85 @@
         font-family: $font-sec;
     }
 }
+.modals{
+    width: 100%;
+    @include flex-col-center();
+
+    &__content{
+        max-width: 400px;
+        padding: 10px;
+        
+        border-top: 1px solid $color-quinto;
+    }
+    
+    &__form{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__titulos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--h3{
+            @include titulos-h3();
+        }
+    }
+    &__postal{
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+    }
+    &__contenedor{
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+    }
+    &__input{
+        font-family: $font-sec;
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 25px 0 10px 10px;
+        border: 0;
+        border-bottom: 2px solid $color-quinto;
+        color: $color-secundario;
+    }
+    &__desplegable{
+        width: 100%;
+        margin: 25px 0;
+        padding: 10px;
+        font-family: $font-sec;
+        color: $color-terciario;
+    
+        &__opcion{
+            font-family: $font-sec;
+            color: $color-terciario;
+        
+        }
+    }
+    &__txt-box{
+        width: 100%;
+    }
+    &__text{
+        width: 100%;
+        font-family: $font-sec;
+        font-size: 1.5rem;
+        padding: 10px 0 0 15px;
+    }
+    
+    &__btn{
+        @include button();
+        width: 100%;
+        margin-top: 10px;
+        font-family: $font-sec;
+    }
+}
+
+
 @media screen and (min-width: $bp_potrait-phones){
     .contacto{
         

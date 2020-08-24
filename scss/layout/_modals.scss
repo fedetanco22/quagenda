@@ -9,21 +9,24 @@
         border-bottom: none;
         height: 60px;
     }
+    .modal-header-color{
+        @extend .modal-header;
+        justify-content: space-between;
+        margin: 0 15px;
 
+    }
     .modal-logo {
-        width: 20%;
+        width: 15%;
     }
         .modal-title {
         @include titulos-h3;
         margin-bottom: 0;
         color: #fff;
     }
-    .modal-logo2{
-        width: 15%;
-    }
-
+    
     .modal-footer {
         padding: 0;
+        width: 100%;
         justify-content: space-between;
 
         &__caract {
@@ -32,7 +35,6 @@
             &__titulo {
                 padding: 5px 10px;
             }
-
             &__list {
                 padding: 0 10px;
                 list-style: none;
@@ -43,6 +45,10 @@
 
 .contenido-modal{
     font-size: 2rem;
+    text-align: justify;
+}
+.autor{
+    text-align: right;
 }
 
 

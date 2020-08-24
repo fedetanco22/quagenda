@@ -8,7 +8,7 @@
     }
 
     &__art {
-        padding: 30px;
+        padding: 0 0 30px 0;
     }
 
     &__imagen {
@@ -101,6 +101,13 @@
         &__cont {
             &--titulo {
                 margin: 0 0 20px 0;
+            }
+
+            &--der{
+                margin-left: 25px;
+            }
+            &--izq{
+                margin-right: 25px;
             }
         }
 

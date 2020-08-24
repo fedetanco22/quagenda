@@ -99,7 +99,8 @@ html {
   .blog__btn:hover {
     background-color: #fff;
     color: #355070;
-    border: 1px solid #355070; }
+    border: 1px solid #355070;
+    transform: scale(1.15); }
 
 .header {
   text-align: left;
@@ -607,6 +608,92 @@ body {
       .contacto__btn {
         padding: 23px 30px; } }
 
+.modals {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center; }
+  .modals__content {
+    max-width: 400px;
+    padding: 10px;
+    border-top: 1px solid #999; }
+  .modals__form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .modals__titulos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .modals__titulos--h3 {
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      color: #555;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #777; }
+  .modals__postal {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between; }
+  .modals__contenedor {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start; }
+  .modals__input {
+    font-family: "Lustria", serif;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 25px 0 10px 10px;
+    border: 0;
+    border-bottom: 2px solid #999;
+    color: #444; }
+  .modals__desplegable {
+    width: 100%;
+    margin: 25px 0;
+    padding: 10px;
+    font-family: "Lustria", serif;
+    color: #555; }
+    .modals__desplegable__opcion {
+      font-family: "Lustria", serif;
+      color: #555; }
+  .modals__txt-box {
+    width: 100%; }
+  .modals__text {
+    width: 100%;
+    font-family: "Lustria", serif;
+    font-size: 1.5rem;
+    padding: 10px 0 0 15px; }
+  .modals__btn {
+    display: inline-block;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background-color: #E4B937;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    color: #333;
+    border: none;
+    font-weight: bolder;
+    width: auto;
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Lustria", serif; }
+    .modals__btn:hover {
+      background-color: #333;
+      color: #E4B937; }
+    @media screen and (min-width: 767.98px) {
+      .modals__btn {
+        padding: 23px 30px; } }
+
 @media screen and (min-width: 575.98px) {
   .contacto__form {
     padding: 0 70px; } }
@@ -1076,14 +1163,18 @@ body {
 .modal .modal-body {
   padding: 0; }
 
-.modal .modal-header {
+.modal .modal-header, .modal .modal-header-color {
   display: flex;
   align-items: center;
   border-bottom: none;
   height: 60px; }
 
+.modal .modal-header-color {
+  justify-content: space-between;
+  margin: 0 15px; }
+
 .modal .modal-logo {
-  width: 20%; }
+  width: 15%; }
 
 .modal .modal-title {
   font-family: "Poppins", sans-serif;
@@ -1095,11 +1186,9 @@ body {
   margin-bottom: 0;
   color: #fff; }
 
-.modal .modal-logo2 {
-  width: 15%; }
-
 .modal .modal-footer {
   padding: 0;
+  width: 100%;
   justify-content: space-between; }
   .modal .modal-footer__caract {
     padding: 20px; }
@@ -1110,10 +1199,14 @@ body {
       list-style: none; }
 
 .contenido-modal {
-  font-size: 2rem; }
+  font-size: 2rem;
+  text-align: justify; }
+
+.autor {
+  text-align: right; }
 
 @media screen and (min-width: 991.98px) {
-  .modal .modal-header {
+  .modal .modal-header, .modal .modal-header-color {
     height: 80px; } }
 
 .articulo {
@@ -1377,7 +1470,7 @@ body {
     justify-content: center;
     width: 100%; }
   .blog__art {
-    padding: 30px; }
+    padding: 0 0 30px 0; }
   .blog__imagen {
     max-width: 350px; }
     .blog__imagen__img {
@@ -1438,4 +1531,8 @@ body {
 
 @media screen and (min-width: 1199.98px) {
   .blog__cont--titulo {
-    margin: 0 0 20px 0; } }
+    margin: 0 0 20px 0; }
+  .blog__cont--der {
+    margin-left: 25px; }
+  .blog__cont--izq {
+    margin-right: 25px; } }

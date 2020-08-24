@@ -55,16 +55,16 @@
 .blog {
     &__btn{
         padding: 10px 10px;
-        background-color: #355070;
+        background-color: $color-primario;
         color: #fff;
         transition-duration: 0.1s;
         margin: 10px 0;
         
         
         &:hover {
-            background-color: #fff;
-            color: #355070;
-            border: 1px solid #355070;
+            background-color: $color-logo;
+            color: $color-primario;
+            border: 1px solid $color-primario;
             transform: scale(1.15);
         }
     }

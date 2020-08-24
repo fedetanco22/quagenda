@@ -103,9 +103,7 @@
 									crear."</h4>
 								<p class="blog__txt"> De esta manera podemos conseguir grandes cosas, partiendo de una
 									idea, se imagina y se le ponen todas la ganas. El primer paso, es sin duda,<strong>
-										imaginarlo</strong>, y no ponerte trabas ni excusas. Lo otro que necesitamos es
-									tener la seguridad en uno mismo. <strong>Confi&aacute;</strong> en que lo puedes
-									lograr. </p>
+										imaginarlo</strong>, y no ponerte trabas...</p>
 
 								<!-- Button trigger modal -->
 								<button type="button" class="btn blog__btn" data-toggle="modal"
@@ -124,16 +122,22 @@
 												</button>
 											</div>
 											<div class="modal-body px-5">
-												<p class="contenido-modal"> <strong>"Tanto si crees que puedes, como si
+												<h4 class="modal-body__titulo">"Cualquier cosa que puedes imaginar, lo puedes
+													crear."</h4>
+												<p class="contenido-modal"> De esta manera podemos conseguir grandes cosas, partiendo de una
+													idea, se imagina y se le ponen todas la ganas. El primer paso, es sin duda,<strong>
+														imaginarlo</strong>, y no ponerte trabas ni excusas. Lo otro que necesitamos es
+													tener la seguridad en uno mismo. <strong>Confi&aacute;</strong> en que lo puedes
+													lograr. <br><br><strong>"Tanto si crees que puedes, como si
 														crees que no puedes, en ambos
-														casos est&aacute;s en lo cierto". <div class="autor"></strong><em>Henry Ford</em></div>
+														casos est&aacute;s en lo cierto".</strong> <em>-Henry Ford.-</em>
 												</p>
 											</div>
 											<div class="modals">
 												<div class="modals__content">
 													<form class="modals__form" action="correo.php" method="post">
 														<div class="modals__titulos">
-															<h3 class="modals__titulos--h3 "> Contactate!</h3>
+															<h3 class="modals__titulos--h3 ">Contactate!</h3>
 														</div>
 														<div class="modals__postal">
 															<div class="modals__contenedor">
@@ -146,8 +150,8 @@
 															
 																<select class="modals__desplegable" name="menuDesplegable" id="menu">
 																	<option class="modals__desplegable__opcion" value="0">Elegi una opcion</option>
-																	<option class="modals__desplegable__opcion" value="Quagenda">Quagenda</option>
-																	<option class="modals__desplegable__opcion" value="bitacoras">Bitacora</option>
+																	<option class="modals__desplegable__opcion" value="Quagenda">Quagendas</option>
+																	<option class="modals__desplegable__opcion" value="bitacoras">Bitacoras</option>
 																	<option class="modals__desplegable__opcion" value="Cuadernos">Cuaderno</option>
 																	<option class="modals__desplegable__opcion" value="Reventa">Compra Mayorista</option>
 																	<option class="modals__desplegable__opcion" value="Disenar para nosotros">Trabajar con
@@ -157,10 +161,11 @@
 														</div>
 														<div class="modals__txt-box">
 															<textarea class="modals__text" name="mensaje" id="mensaje_id" cols="30" rows="5"
-																placeholder="contanos todo..."></textarea>
+																placeholder="quiero saber sobre..."></textarea>
 														</div>
 														
-													<input class="modals__btn" type="submit" value="Consult&aacute; ">										
+														<input class="modals__btn" type="submit" value="Consult&aacute; ">	
+													</form>									
 												</div>
 											</div>
 										</div>
@@ -168,6 +173,7 @@
 								</div>
 							</div>
 						</article>
+
 						<article class="blog__art blog__art--izq">
 							<div class="blog__imagen">
 								<img class="blog__imagen__img blog__imagen__img--izq" src="images/blog-2.jpg"
@@ -186,15 +192,16 @@
 								<div class="modal fade" id="exampleModal2" tabindex="-1"
 									aria-labelledby="exampleModalLabel" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-centered ">
-										<div class="modal-content">
-											<div class="modal-header">
-												<img class="modal-logo2" src="images/Logo-web-AM.svg" alt="logo">
+										<div class="modal-content modals-content">
+											<div class="modal-header-color">
+												<img class="modal-logo" src="images/Logo-web-AM.svg" alt="logo">
 												<button type="button" class="close" data-dismiss="modal"
 													aria-label="Close">
 													<span aria-hidden="true">&times;</span>
 												</button>
 											</div>
 											<div class="modal-body pb-5 px-5">
+												<h4 id="blog3" class="modal-body__titulo">"Busca lo que enciende tu alma."</h4>
 												<p class="contenido-modal">Imagina por un instante como te sentirias haciendo lo que más te
 													gusta y poder disfrutar de hacerlo al mismo tiempo. Imagina la
 													energía e inspiración que tendrías viviendo y experimentandolo. Para
@@ -204,6 +211,41 @@
 													entregar tu alma y tu corazón a todo lo que haces y asi <strong>llenaras</strong> y
 													<strong>encenderas</strong> tu alma.
 												</p>
+											</div>
+											<div class="modals">
+												<div class="modals__content">
+													<form class="modals__form" action="correo.php" method="post">
+														<div class="modals__titulos">
+															<h3 class="modals__titulos--h3 ">Contactate!</h3>
+														</div>
+														<div class="modals__postal">
+															<div class="modals__contenedor">
+																<input class="modals__input" type="text" name="nombreCliente" id="nombre"
+																	placeholder="nombre"></input>
+																<input class="modals__input" type="text" name="apellidoCliente" id="apellido"
+																	placeholder="apellido"></input>
+																<input class="modals__input" type="email" name="email" id="correo_electronico"
+																	placeholder="correo electronico"></input>
+															
+																<select class="modals__desplegable" name="menuDesplegable" id="menu">
+																	<option class="modals__desplegable__opcion" value="0">Elegi una opcion</option>
+																	<option class="modals__desplegable__opcion" value="Quagenda">Quagendas</option>
+																	<option class="modals__desplegable__opcion" value="bitacoras">Bitacoras</option>
+																	<option class="modals__desplegable__opcion" value="Cuadernos">Cuaderno</option>
+																	<option class="modals__desplegable__opcion" value="Reventa">Compra Mayorista</option>
+																	<option class="modals__desplegable__opcion" value="Disenar para nosotros">Trabajar con
+																		uds</option>
+																</select>
+															</div>
+														</div>
+														<div class="modals__txt-box">
+															<textarea class="modals__text" name="mensaje" id="mensaje_id" cols="30" rows="5"
+																placeholder="quiero saber sobre..."></textarea>
+														</div>
+														
+														<input class="modals__btn" type="submit" value="Consult&aacute; ">	
+													</form>									
+												</div>
 											</div>
 										</div>
 									</div>
@@ -244,6 +286,41 @@
 														casos est&aacute;s en lo cierto". </strong><em>Henry Ford</em>
 												</p>
 											</div>
+											<div class="modals">
+												<div class="modals__content">
+													<form class="modals__form" action="correo.php" method="post">
+														<div class="modals__titulos">
+															<h3 class="modals__titulos--h3 ">Contactate!</h3>
+														</div>
+														<div class="modals__postal">
+															<div class="modals__contenedor">
+																<input class="modals__input" type="text" name="nombreCliente" id="nombre"
+																	placeholder="nombre"></input>
+																<input class="modals__input" type="text" name="apellidoCliente" id="apellido"
+																	placeholder="apellido"></input>
+																<input class="modals__input" type="email" name="email" id="correo_electronico"
+																	placeholder="correo electronico"></input>
+															
+																<select class="modals__desplegable" name="menuDesplegable" id="menu">
+																	<option class="modals__desplegable__opcion" value="0">Elegi una opcion</option>
+																	<option class="modals__desplegable__opcion" value="Quagenda">Quagendas</option>
+																	<option class="modals__desplegable__opcion" value="bitacoras">Bitacoras</option>
+																	<option class="modals__desplegable__opcion" value="Cuadernos">Cuaderno</option>
+																	<option class="modals__desplegable__opcion" value="Reventa">Compra Mayorista</option>
+																	<option class="modals__desplegable__opcion" value="Disenar para nosotros">Trabajar con
+																		uds</option>
+																</select>
+															</div>
+														</div>
+														<div class="modals__txt-box">
+															<textarea class="modals__text" name="mensaje" id="mensaje_id" cols="30" rows="5"
+																placeholder="quiero saber sobre..."></textarea>
+														</div>
+														
+														<input class="modals__btn" type="submit" value="Consult&aacute; ">	
+													</form>									
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -282,6 +359,41 @@
 														crees que no puedes, en ambos
 														casos est&aacute;s en lo cierto". </strong><em>Henry Ford</em>
 												</p>
+											</div>
+											<div class="modals">
+												<div class="modals__content">
+													<form class="modals__form" action="correo.php" method="post">
+														<div class="modals__titulos">
+															<h3 class="modals__titulos--h3 ">Contactate!</h3>
+														</div>
+														<div class="modals__postal">
+															<div class="modals__contenedor">
+																<input class="modals__input" type="text" name="nombreCliente" id="nombre"
+																	placeholder="nombre"></input>
+																<input class="modals__input" type="text" name="apellidoCliente" id="apellido"
+																	placeholder="apellido"></input>
+																<input class="modals__input" type="email" name="email" id="correo_electronico"
+																	placeholder="correo electronico"></input>
+															
+																<select class="modals__desplegable" name="menuDesplegable" id="menu">
+																	<option class="modals__desplegable__opcion" value="0">Elegi una opcion</option>
+																	<option class="modals__desplegable__opcion" value="Quagenda">Quagendas</option>
+																	<option class="modals__desplegable__opcion" value="bitacoras">Bitacoras</option>
+																	<option class="modals__desplegable__opcion" value="Cuadernos">Cuaderno</option>
+																	<option class="modals__desplegable__opcion" value="Reventa">Compra Mayorista</option>
+																	<option class="modals__desplegable__opcion" value="Disenar para nosotros">Trabajar con
+																		uds</option>
+																</select>
+															</div>
+														</div>
+														<div class="modals__txt-box">
+															<textarea class="modals__text" name="mensaje" id="mensaje_id" cols="30" rows="5"
+																placeholder="quiero saber sobre..."></textarea>
+														</div>
+														
+														<input class="modals__btn" type="submit" value="Consult&aacute; ">	
+													</form>									
+												</div>
 											</div>
 										</div>
 									</div>
@@ -322,6 +434,41 @@
 														casos est&aacute;s en lo cierto". </strong><em>Henry Ford</em>
 												</p>
 											</div>
+											<div class="modals">
+												<div class="modals__content">
+													<form class="modals__form" action="correo.php" method="post">
+														<div class="modals__titulos">
+															<h3 class="modals__titulos--h3 ">Contactate!</h3>
+														</div>
+														<div class="modals__postal">
+															<div class="modals__contenedor">
+																<input class="modals__input" type="text" name="nombreCliente" id="nombre"
+																	placeholder="nombre"></input>
+																<input class="modals__input" type="text" name="apellidoCliente" id="apellido"
+																	placeholder="apellido"></input>
+																<input class="modals__input" type="email" name="email" id="correo_electronico"
+																	placeholder="correo electronico"></input>
+															
+																<select class="modals__desplegable" name="menuDesplegable" id="menu">
+																	<option class="modals__desplegable__opcion" value="0">Elegi una opcion</option>
+																	<option class="modals__desplegable__opcion" value="Quagenda">Quagendas</option>
+																	<option class="modals__desplegable__opcion" value="bitacoras">Bitacoras</option>
+																	<option class="modals__desplegable__opcion" value="Cuadernos">Cuaderno</option>
+																	<option class="modals__desplegable__opcion" value="Reventa">Compra Mayorista</option>
+																	<option class="modals__desplegable__opcion" value="Disenar para nosotros">Trabajar con
+																		uds</option>
+																</select>
+															</div>
+														</div>
+														<div class="modals__txt-box">
+															<textarea class="modals__text" name="mensaje" id="mensaje_id" cols="30" rows="5"
+																placeholder="quiero saber sobre..."></textarea>
+														</div>
+														
+														<input class="modals__btn" type="submit" value="Consult&aacute; ">	
+													</form>									
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -361,6 +508,41 @@
 														casos est&aacute;s en lo cierto". </strong><em>Henry Ford</em>
 												</p>
 											</div>
+											<div class="modals">
+												<div class="modals__content">
+													<form class="modals__form" action="correo.php" method="post">
+														<div class="modals__titulos">
+															<h3 class="modals__titulos--h3 ">Contactate!</h3>
+														</div>
+														<div class="modals__postal">
+															<div class="modals__contenedor">
+																<input class="modals__input" type="text" name="nombreCliente" id="nombre"
+																	placeholder="nombre"></input>
+																<input class="modals__input" type="text" name="apellidoCliente" id="apellido"
+																	placeholder="apellido"></input>
+																<input class="modals__input" type="email" name="email" id="correo_electronico"
+																	placeholder="correo electronico"></input>
+															
+																<select class="modals__desplegable" name="menuDesplegable" id="menu">
+																	<option class="modals__desplegable__opcion" value="0">Elegi una opcion</option>
+																	<option class="modals__desplegable__opcion" value="Quagenda">Quagendas</option>
+																	<option class="modals__desplegable__opcion" value="bitacoras">Bitacoras</option>
+																	<option class="modals__desplegable__opcion" value="Cuadernos">Cuaderno</option>
+																	<option class="modals__desplegable__opcion" value="Reventa">Compra Mayorista</option>
+																	<option class="modals__desplegable__opcion" value="Disenar para nosotros">Trabajar con
+																		uds</option>
+																</select>
+															</div>
+														</div>
+														<div class="modals__txt-box">
+															<textarea class="modals__text" name="mensaje" id="mensaje_id" cols="30" rows="5"
+																placeholder="quiero saber sobre..."></textarea>
+														</div>
+														
+														<input class="modals__btn" type="submit" value="Consult&aacute; ">	
+													</form>									
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -369,7 +551,6 @@
 					</div>
 				</section>
 			</div>
-
 		</main>
 
 		<!-- inicio boton whatsapp -->

@@ -1,6 +1,14 @@
 .modal {
     .modal-body {
-        padding: 0;
+        padding: 0 0 20px 0;
+        &__titulo{
+            @include titulos-h4();
+            color: $color-cuarto;
+            font-size: 1.6rem;
+            font-weight: 900;
+            margin: 20px 0;
+            text-align: center;
+        }
     }
 
     .modal-header {
@@ -8,17 +16,20 @@
         align-items: center;
         border-bottom: none;
         height: 60px;
+        background-color: #333;
     }
     .modal-header-color{
         @extend .modal-header;
         justify-content: space-between;
-        margin: 0 15px;
+        padding: 0 15px;
+        background-color: #333;
+        margin-bottom: 15px;
 
     }
     .modal-logo {
-        width: 15%;
+        width: 25%;
     }
-        .modal-title {
+    .modal-title {
         @include titulos-h3;
         margin-bottom: 0;
         color: #fff;
@@ -44,18 +55,30 @@
 }
 
 .contenido-modal{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: justify;
 }
 .autor{
     text-align: right;
 }
+.close{
+    color: #fff;
+}
 
 
+@media screen and (min-width: 400px){
+    .modal {
+        .modal-logo {
+            width: 15%;
+        }
+        
+    }
+}
 @media screen and (min-width: $bp_tablets){
     .modal {
         .modal-header {
             height: 80px;
         }
+        
     }
 }

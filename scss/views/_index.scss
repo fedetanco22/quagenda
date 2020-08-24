@@ -142,6 +142,9 @@
             position: absolute;
             font-size: 2rem;
             font-weight: bold;
+            &:hover{
+                color: #333;
+            }
         }
     }
 

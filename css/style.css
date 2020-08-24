@@ -1432,6 +1432,8 @@ a:hover {
       position: absolute;
       font-size: 2rem;
       font-weight: bold; }
+      .grid__frase--link:hover {
+        color: #333; }
   .grid__foto:hover .grid__frase {
     opacity: 1; }
 

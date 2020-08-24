@@ -8,7 +8,9 @@
     }
 
     &__art {
+
         padding: 0 0 30px 0;
+        @include flex-col-center();
     }
 
     &__imagen {
@@ -44,12 +46,13 @@
     }
 }
 
-@media screen and (min-width: $bp_landscape-phones){
+@media screen and (min-width: $bp_landscape-phones) {
     .blog {
-        &__imagen{
+        &__imagen {
             margin-bottom: 20px;
-            max-width: 500px;
+            max-width: 400px;
         }
+
         &__cont {
             max-width: 500px;
             padding: 0 50px;
@@ -58,26 +61,34 @@
 
     }
 }
+
 @media screen and (min-width: $bp_tablets) {
     .blog {
         &__art {
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-around;
-            
+            justify-content: space-evenly;
 
             &--izq {
                 display: flex;
                 flex-flow: row-reverse wrap;
                 justify-content: space-between;
-                align-items: center; 
+                align-items: center;
             }
+        }
 
+        &__cont {
+            align-self: flex-start;
+
+            &--titulo {
+                margin: 20px 0;
+
+            }
         }
 
         &__imagen {
             align-self: center;
-            
+
             &__img {
                 padding: 10px;
 
@@ -99,15 +110,34 @@
     .blog {
 
         &__cont {
+            align-self: center;
+
             &--titulo {
                 margin: 0 0 20px 0;
             }
 
-            &--der{
+            &--der {
+                padding: 0 0 0 50px;
                 margin-left: 25px;
             }
-            &--izq{
+
+            &--izq {
                 margin-right: 25px;
+            }
+        }
+
+        &__imagen {
+            max-width: 500px;
+
+            &__img {
+                &--der {
+                    margin-right: 25px;
+                }
+
+                &--izq {
+                    margin-left: 25px;
+                }
+
             }
         }
 

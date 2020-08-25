@@ -1,7 +1,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(auto-fit, minmax(250px, 500px));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 350px));
     grid-template-areas:
         "titulo1""foto12""txt1""txt2""foto13"
         "titulo2""foto1""foto2""foto10""foto3""foto4"
@@ -22,7 +22,7 @@
     &__titulos2 {
         grid-area: titulo2;
         background-color: $color-primario;
-        min-height: 300px;
+        min-height: 350px;
     }
 
     &__cont1 {
@@ -87,7 +87,7 @@
 
     &__cont {
         background-color: $color-cajas;
-        min-height: 500px;
+        min-height: 350px;
         @include flex-col-center();
     }
 
@@ -100,14 +100,20 @@
     }
 
     &__h3 {
-        @include titulos-h3();
+        font-family: $font-sec;
+        font-weight: 900;
         color: $color-primario;
+        font-size: 2.5rem;
+        text-align: right ;
+        padding: 0 50px;
+        line-height: 3.75rem;
     }
 
     &__txt {
-        padding: 0 25px;
-        text-align: center;
+        padding: 0 50px;
+        text-align: right;
         font-family: $font-sec;
+        font-size: 2rem;
         line-height: 2.5rem;
 
         &--destacado {
@@ -155,10 +161,12 @@
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(250px, 500px));
         grid-template-areas:
             "titulo1 titulo1"
+            "foto12 foto12"
             "txt1 txt1"
-            "foto12 foto13"
+            "foto13 foto13"
             "txt2 txt2"
             "titulo2 titulo2"
             "foto1 foto1"
@@ -171,10 +179,13 @@
             "foto11 foto11";
 
         padding: 0 50px;
-        row-gap: 0;
-
-        &__cont1 {
-            border-bottom: 1px solid $color-quinto;
+        
+        &__h3 {
+            text-align: left ;
+            
+        }
+        &__cont {
+            min-height: 500px;
         }
 
     }
@@ -197,9 +208,11 @@
             "foto8 foto9"
             "foto10 foto10"
             "foto11 foto11";
+        
+            row-gap: 0;
 
         &__cont {
-            min-height: 300px;
+            min-height: 350px;
         }
 
         &__vacio {
@@ -233,14 +246,6 @@
 
         &__h1 {
             font-size: 5rem;
-        }
-
-        &__h3 {
-            font-size: 2.5rem;
-        }
-
-        &__txt {
-            font-size: 1.5rem;
         }
 
         &__vacio1 {

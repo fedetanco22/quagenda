@@ -1329,7 +1329,7 @@ a:hover {
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(auto-fit, minmax(250px, 500px));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 350px));
   grid-template-areas: "titulo1" "foto12" "txt1" "txt2" "foto13" "titulo2" "foto1" "foto2" "foto10" "foto3" "foto4" "foto5" "foto5" "foto6" "foto7" "foto7" "foto8" "foto9" "foto11";
   padding: 0 20px;
   row-gap: 10px; }
@@ -1344,7 +1344,7 @@ a:hover {
   .grid__titulos2 {
     grid-area: titulo2;
     background-color: #333;
-    min-height: 300px; }
+    min-height: 350px; }
   .grid__cont1 {
     grid-area: txt1; }
   .grid__cont2 {
@@ -1377,7 +1377,7 @@ a:hover {
     grid-area: foto13; }
   .grid__cont {
     background-color: #DEDEDE;
-    min-height: 500px;
+    min-height: 350px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -1391,17 +1391,18 @@ a:hover {
     .grid__h1--blanco {
       color: #fff; }
   .grid__h3 {
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    color: #555;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #777;
-    color: #333; }
-  .grid__txt {
-    padding: 0 25px;
-    text-align: center;
     font-family: "Lustria", serif;
+    font-weight: 900;
+    color: #333;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 0 50px;
+    line-height: 3.75rem; }
+  .grid__txt {
+    padding: 0 50px;
+    text-align: right;
+    font-family: "Lustria", serif;
+    font-size: 2rem;
     line-height: 2.5rem; }
     .grid__txt--destacado {
       color: #000;
@@ -1438,18 +1439,21 @@ a:hover {
 @media screen and (min-width: 575.98px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "titulo1 titulo1" "txt1 txt1" "foto12 foto13" "txt2 txt2" "titulo2 titulo2" "foto1 foto1" "foto2 foto2" "foto4 foto3" "foto6 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11";
-    padding: 0 50px;
-    row-gap: 0; }
-    .grid__cont1 {
-      border-bottom: 1px solid #999; } }
+    grid-template-rows: repeat(auto-fit, minmax(250px, 500px));
+    grid-template-areas: "titulo1 titulo1" "foto12 foto12" "txt1 txt1" "foto13 foto13" "txt2 txt2" "titulo2 titulo2" "foto1 foto1" "foto2 foto2" "foto4 foto3" "foto6 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11";
+    padding: 0 50px; }
+    .grid__h3 {
+      text-align: left; }
+    .grid__cont {
+      min-height: 500px; } }
 
 @media screen and (min-width: 767.98px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "titulo1 titulo1" "foto12 txt1" "txt2 foto13" "vacio vacio " "titulo2 titulo2" "foto1 foto3" "foto2 foto2" "foto4 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11"; }
+    grid-template-areas: "titulo1 titulo1" "foto12 txt1" "txt2 foto13" "vacio vacio " "titulo2 titulo2" "foto1 foto3" "foto2 foto2" "foto4 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11";
+    row-gap: 0; }
     .grid__cont {
-      min-height: 300px; }
+      min-height: 350px; }
     .grid__vacio {
       grid-area: vacio;
       min-height: 100px; } }
@@ -1461,10 +1465,6 @@ a:hover {
     padding: 0; }
     .grid__h1 {
       font-size: 5rem; }
-    .grid__h3 {
-      font-size: 2.5rem; }
-    .grid__txt {
-      font-size: 1.5rem; }
     .grid__vacio1 {
       grid-area: vacio1;
       height: 100px; }

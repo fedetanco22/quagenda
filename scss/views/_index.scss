@@ -106,7 +106,7 @@
 
     &__txt {
         padding: 0 25px;
-        text-align: center;
+        text-align: justify;
         font-family: $font-sec;
         line-height: 2.5rem;
 
@@ -186,7 +186,7 @@
 // entre landscape y tablets (768px a 992px)
 @media screen and (min-width: $bp_landscape-phones) {
     .grid {
-        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             "titulo1 titulo1"
             "foto12 txt1"
@@ -199,8 +199,10 @@
             "foto5 foto7"
             "foto8 foto9"
             "foto10 foto10"
-            "foto11 foto11";
-
+            "foto11 foto11"; */
+        &__txt {
+            padding: 0 50px;
+        }
         &__cont {
             min-height: 300px;
         }

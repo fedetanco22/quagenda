@@ -532,7 +532,7 @@ body {
   border: 1px solid #333;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 10px 10px 5px -1px black; }
+  box-shadow: 15px 15px 5px -1px black; }
   .contacto__form {
     padding: 10px;
     display: flex;
@@ -1400,7 +1400,7 @@ a:hover {
     color: #333; }
   .grid__txt {
     padding: 0 25px;
-    text-align: center;
+    text-align: justify;
     font-family: "Lustria", serif;
     line-height: 2.5rem; }
     .grid__txt--destacado {
@@ -1448,8 +1448,22 @@ a:hover {
 
 @media screen and (min-width: 767.98px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "titulo1 titulo1" "foto12 txt1" "txt2 foto13" "vacio vacio " "titulo2 titulo2" "foto1 foto3" "foto2 foto2" "foto4 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11"; }
+    /* grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "titulo1 titulo1"
+            "foto12 txt1"
+            "txt2 foto13"
+            "vacio vacio "
+            "titulo2 titulo2"
+            "foto1 foto3"
+            "foto2 foto2"
+            "foto4 foto6"
+            "foto5 foto7"
+            "foto8 foto9"
+            "foto10 foto10"
+            "foto11 foto11"; */ }
+    .grid__txt {
+      padding: 0 50px; }
     .grid__cont {
       min-height: 300px; }
     .grid__vacio {

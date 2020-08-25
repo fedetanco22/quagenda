@@ -1400,7 +1400,7 @@ a:hover {
     color: #333; }
   .grid__txt {
     padding: 0 25px;
-    text-align: justify;
+    text-align: center;
     font-family: "Lustria", serif;
     line-height: 2.5rem; }
     .grid__txt--destacado {
@@ -1432,8 +1432,6 @@ a:hover {
       position: absolute;
       font-size: 2rem;
       font-weight: bold; }
-      .grid__frase--link:hover {
-        color: #333; }
   .grid__foto:hover .grid__frase {
     opacity: 1; }
 
@@ -1448,22 +1446,8 @@ a:hover {
 
 @media screen and (min-width: 767.98px) {
   .grid {
-    /* grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "titulo1 titulo1"
-            "foto12 txt1"
-            "txt2 foto13"
-            "vacio vacio "
-            "titulo2 titulo2"
-            "foto1 foto3"
-            "foto2 foto2"
-            "foto4 foto6"
-            "foto5 foto7"
-            "foto8 foto9"
-            "foto10 foto10"
-            "foto11 foto11"; */ }
-    .grid__txt {
-      padding: 0 50px; }
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "titulo1 titulo1" "foto12 txt1" "txt2 foto13" "vacio vacio " "titulo2 titulo2" "foto1 foto3" "foto2 foto2" "foto4 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11"; }
     .grid__cont {
       min-height: 300px; }
     .grid__vacio {

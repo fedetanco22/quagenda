@@ -87,7 +87,7 @@
 
     &__cont {
         background-color: $color-cajas;
-        min-height: 350px;
+        min-height: 330px;
         @include flex-col-center();
     }
 
@@ -101,10 +101,10 @@
 
     &__h3 {
         font-family: $font-sec;
-        font-weight: 900;
         color: $color-primario;
         font-size: 2.5rem;
-        text-align: right ;
+        font-weight: 200;
+        text-align: right;
         padding: 0 50px;
         line-height: 3.75rem;
     }
@@ -179,11 +179,11 @@
             "foto11 foto11";
 
         padding: 0 50px;
-        
+
         &__h3 {
-            text-align: left ;
-            
+            text-align: left;
         }
+
         &__cont {
             min-height: 500px;
         }
@@ -208,11 +208,11 @@
             "foto8 foto9"
             "foto10 foto10"
             "foto11 foto11";
-        
-            row-gap: 0;
+
+        row-gap: 0;
 
         &__cont {
-            min-height: 350px;
+            min-height: 330px;
         }
 
         &__vacio {
@@ -268,6 +268,16 @@
 
         &__vacio4 {
             grid-area: vacio4;
+        }
+    }
+}
+
+@media screen and (min-width: $bp_desktops) {
+    .grid {
+        &__h3 {
+            font-size: 3.5rem;
+            line-height: 5rem;
+
         }
     }
 }

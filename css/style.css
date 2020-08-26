@@ -1377,7 +1377,7 @@ a:hover {
     grid-area: foto13; }
   .grid__cont {
     background-color: #DEDEDE;
-    min-height: 350px;
+    min-height: 330px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -1392,9 +1392,9 @@ a:hover {
       color: #fff; }
   .grid__h3 {
     font-family: "Lustria", serif;
-    font-weight: 900;
     color: #333;
     font-size: 2.5rem;
+    font-weight: 200;
     text-align: right;
     padding: 0 50px;
     line-height: 3.75rem; }
@@ -1453,7 +1453,7 @@ a:hover {
     grid-template-areas: "titulo1 titulo1" "foto12 txt1" "txt2 foto13" "vacio vacio " "titulo2 titulo2" "foto1 foto3" "foto2 foto2" "foto4 foto6" "foto5 foto7" "foto8 foto9" "foto10 foto10" "foto11 foto11";
     row-gap: 0; }
     .grid__cont {
-      min-height: 350px; }
+      min-height: 330px; }
     .grid__vacio {
       grid-area: vacio;
       min-height: 100px; } }
@@ -1477,6 +1477,11 @@ a:hover {
       grid-area: vacio3; }
     .grid__vacio4 {
       grid-area: vacio4; } }
+
+@media screen and (min-width: 1199.98px) {
+  .grid__h3 {
+    font-size: 3.5rem;
+    line-height: 5rem; } }
 
 .main__contenedor-prod {
   display: flex;

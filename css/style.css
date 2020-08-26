@@ -488,6 +488,7 @@ body {
     border: 1px #bbb solid;
     font-size: 1.75rem; }
   .form__button {
+    -webkit-appearance: none;
     display: inline-block;
     font-family: "Ubuntu", sans-serif;
     font-size: 1.5rem;

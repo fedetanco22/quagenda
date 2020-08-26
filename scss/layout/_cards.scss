@@ -44,6 +44,10 @@
         }
 
         &__titulo {
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &__h4 {
                 font-family: $font-ppal;

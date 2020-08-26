@@ -22,27 +22,24 @@
         width: 100%;
         margin-top: 50px;
         border: 1px #bbb solid; 
-        font-size: 1.75rem;   
-        
-        &--button{
-            @include button();
-            margin: 50px 0;
-            padding: 15px 45px;
-            background-color:$color-primario;
-            color:$color-blanco;
-            border: 2px solid;
-            @media screen and (min-width: $bp_potrait-phones){
-                padding: 23px 50px;
-                
-            }
-
-            &:hover{
-                color: $color-primario;
-                background-color: $color-blanco;
-                border: 2px solid;
-            }
-        }
+        font-size: 1.75rem;  
     } 
+        
+    &__button{
+        @include button();
+        margin: 50px 0;
+        padding: 15px 45px;
+        background-color:$color-primario;
+        color:$color-blanco;
+        @media screen and (min-width: $bp_potrait-phones){
+            padding: 23px 50px;
+        }
+
+        &:hover{
+            color: $color-primario;
+            background-color: $color-logo;
+        }
+    }
     
 }
 
@@ -54,6 +51,7 @@
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 15px 15px 5px -1px rgba(0,0,0,1);
+    -webkit-box-shadow: 15px 15px 5px -1px rgba(0,0,0,1);
     
     &__form{
         padding: 10px;

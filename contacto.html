@@ -93,21 +93,21 @@
 				</div>
 
 				<div class="contacto">
-					<form class="contacto__form" action="correo.php" method="post">
+					<form class="contacto__form" action="mail.php" method="POST">
 						<div class="contacto__icono">
 							<img class="contacto__icono__img" src="images/stamp.svg" alt="estampilla">
 						</div>
 						<div class="contacto__postal">
 							<div class="contacto__contenedor">
-								<input class="contacto__input" type="text" name="nombreCliente" id="nombre"
-									placeholder="nombre"></input>
-								<input class="contacto__input" type="text" name="apellidoCliente" id="apellido"
-									placeholder="apellido"></input>
+								<input class="contacto__input" type="text" name="nombre" id="nombre"
+									placeholder="nombre" required></input>
+								<input class="contacto__input" type="text" name="apellido" id="apellido"
+									placeholder="apellido" required></input>
 								<input class="contacto__input" type="email" name="email" id="correo_electronico"
-									placeholder="correo electronico"></input>
+									placeholder="correo electronico" required></input>
 							</div>
 
-							<select class="contacto__desplegable" name="menuDesplegable" id="menu">
+							<select class="contacto__desplegable" name="rubro" id="menu" required>
 								<option class="contacto__desplegable__opcion" value="0">Elegi una opcion</option>
 								<option class="contacto__desplegable__opcion" value="Quagenda">Quagendas</option>
 								<option class="contacto__desplegable__opcion" value="bitacoras">Bitacoras</option>
@@ -119,7 +119,7 @@
 						</div>
 						<div class="contacto__txt-box">
 							<textarea class="contacto__text" name="mensaje" id="mensaje_id" cols="30" rows="10"
-								placeholder="contanos todo..."></textarea>
+								placeholder="contanos todo..." required></textarea>
 						</div>
 						<div class="contacto__check">
 							<input class="contacto__check__box" type="checkbox" name="newsletter" id="newsletter_id">

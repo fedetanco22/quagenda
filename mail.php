@@ -15,8 +15,9 @@ $mail = new PHPMailer(true);
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $email = $_POST['email'];
-$rubro = $_POST['rubro'];
+$interes = $_POST['interes'];
 $mensaje = $_POST['mensaje'];
+
 
 // OBTENEMOS EL IP 
 function getUserIpAddr(){
@@ -44,8 +45,8 @@ try {
     // $mail->Port       = 25;                                 // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('quagenda@gmail.com', 'Formulario Quagenda');
-    $mail->addAddress('quagenda@gmail.com', 'Info Quagenda');
+    $mail->setFrom('quagendaoficial@gmail.com', 'Formulario Quagenda');
+    $mail->addAddress('quagendaoficial@gmail.com', 'Info Quagenda');
     //$mail->addAddress('javipons22@gmail.com', 'Joe User');     // Add a recipient
     //$mail->addCC('cc@example.com');
     //$mail->addBCC('bcc@example.com');
@@ -57,21 +58,21 @@ try {
                     . '<div style="color:black;display:block;font-size:1.2em"><span style="font-weight:bold">Nombre: </span>'. $nombre . '</div>'
                     . '<div style="color:black;display:block;font-size:1.2em"><span style="font-weight:bold">Rubro: </span>'. $apellido . '</div>'
                     . '<div style="color:black;display:block;font-size:1.2em"><span style="font-weight:bold">Email: </span>'. $email . '</div>' 
-                    . '<div style="color:black;display:block;font-size:1.2em"><span style="font-weight:bold">rubro: </span>'. $rubro . '</div>' 
+                    . '<div style="color:black;display:block;font-size:1.2em"><span style="font-weight:bold">rubro: </span>'. $interes . '</div>' 
                     . '<div style="color:black;display:block;font-size:1.2em;margin: 25px 0;"><span style="font-weight:bold">Mensaje: </span>'. $mensaje . '</div>'
                     . '<div style="color:black;display:block;font-size:1.2em"><span style="font-weight:bold">IP: </span>' . getUserIpAddr() . '</div>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $status = $mail->send();
     if(!$status) {
-        echo'<script>window.location.href="https://quagenda.com/?error=true"; </script>';
+        echo'<script>window.location.href="https://quagenda.com/contacto.html/?error=true"; </script>';
         exit();
     } else {
-        echo'<script>window.location.href="https://quagenda.com/?error=false"; </script>';
+        echo'<script>window.location.href="https://quagenda.com/contacto.html/?error=false"; </script>';
         exit();
     }
 } catch (Exception $e) {
     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    echo'<script>window.location.href="https://quagenda.com/?error=true"; </script>';
+    echo'<script>window.location.href="https://quagenda.com/contacto.html/?error=true"; </script>';
     exit();
 }

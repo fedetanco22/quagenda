@@ -166,15 +166,15 @@
 
 			<!--Suscripcion-->
 			<div class="form footer__form">
-				<form class="form__suscripcion" action="gracias.php" method="post">
+				<form class="form__suscripcion" action="mail.php" method="POST">
 
 					<legend class="form__legend">De nosotros para vos.</legend>
 
 					<label class="form__label" for="suscripcion"> Suscribite para articulos y promos que valgan la pena.
 						Sin spam, te prometemos.</label>
 
-					<input class="form__input" type="email" name="mail.suscripcion" id="suscripcion"
-						placeholder="Ingresa tu email.">
+					<input class="form__input" type="email" name="email" id="suscripcion"
+						placeholder="Ingresa tu email." required>
 
 					<input class="form__button" type="submit" value="de una!">
 

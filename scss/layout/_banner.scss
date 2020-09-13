@@ -1,6 +1,6 @@
 .banner {
 
-    background-image: url('../images/1-BYN-inicio2.jpg');
+    background-image: url('../../images/1-BYN-inicio2.jpg');
     @include bg-img();
 
     &__cont {
@@ -31,22 +31,22 @@
     }
 
     &__banner-nos {
-        background-image: url('../images/banner-nosotros.jpg');
+        background-image: url('../../images/banner-nosotros.jpg');
         @include bg-img()
     }
 
     &__banner-prod {
-        background-image: url('../images/banner-Prod.jpg');
+        background-image: url('../../images/banner-Prod.jpg');
         @include bg-img()
     }
 
     &__banner-blog {
-        background-image: url('../images/banner-blog-indio.jpg');
+        background-image: url('../../images/banner-blog-indio.jpg');
         @include bg-img()
     }
 
     &__banner-contacto {
-        background-image: url('../images/banner-contacto.jpg');
+        background-image: url('../../images/banner-contacto.jpg');
         @include bg-img()
     }
 

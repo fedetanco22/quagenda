@@ -361,7 +361,7 @@ body {
     font-size: 3rem; } }
 
 .banner {
-  background-image: url("../images/1-BYN-inicio2.jpg");
+  background-image: url("../../images/1-BYN-inicio2.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -400,28 +400,28 @@ body {
       margin-bottom: 15px;
       color: #777; }
   .banner__banner-nos {
-    background-image: url("../images/banner-nosotros.jpg");
+    background-image: url("../../images/banner-nosotros.jpg");
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: contain; }
   .banner__banner-prod {
-    background-image: url("../images/banner-Prod.jpg");
+    background-image: url("../../images/banner-Prod.jpg");
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: contain; }
   .banner__banner-blog {
-    background-image: url("../images/banner-blog-indio.jpg");
+    background-image: url("../../images/banner-blog-indio.jpg");
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: contain; }
   .banner__banner-contacto {
-    background-image: url("../images/banner-contacto.jpg");
+    background-image: url("../../images/banner-contacto.jpg");
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;

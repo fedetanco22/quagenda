@@ -3,26 +3,30 @@
     justify-content: center;
     align-items: center;
     background: #00E676;
-    font-size: 35px;
-    height: 75px;
-    width: 75px;
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     right: 10px;
     border-radius: 50%;
     z-index: 10000;
     text-decoration: none;
     color: #fff;
 }
+
 .whatsapp-button:hover {
     outline: none;
     text-decoration: none;
 }
 
 /* Small devices y horiz entre 576px y 768px*/
-@media screen and (min-width: $bp_potrait-phones){
+@media screen and (min-width: $bp_potrait-phones) {
     .whatsapp-button {
-        bottom: 25px;
-        right: 25px;
+        font-size: 35px;
+        height: 75px;
+        width: 75px;
+        bottom: 50px;
+        right: 50px;
     }
 }

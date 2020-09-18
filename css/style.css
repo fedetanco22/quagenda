@@ -12,11 +12,11 @@ html {
   justify-content: center;
   align-items: center;
   background: #00E676;
-  font-size: 35px;
-  height: 75px;
-  width: 75px;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   right: 10px;
   border-radius: 50%;
   z-index: 10000;
@@ -30,8 +30,11 @@ html {
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {
   .whatsapp-button {
-    bottom: 25px;
-    right: 25px; } }
+    font-size: 35px;
+    height: 75px;
+    width: 75px;
+    bottom: 50px;
+    right: 50px; } }
 
 .banner__btn {
   margin-bottom: 25vh; }
@@ -100,6 +103,53 @@ html {
     background-color: #E4B937;
     color: #333;
     transform: scale(1.2); }
+
+.carrito-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #777;
+  font-size: 25px;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  border-radius: 50%;
+  z-index: 10000;
+  text-decoration: none;
+  color: #fff; }
+  .carrito-button:hover {
+    outline: none;
+    text-decoration: none; }
+
+.carrito-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  font-size: 15px;
+  height: 25px;
+  width: 25px;
+  position: fixed;
+  bottom: 140px;
+  right: 5px;
+  border-radius: 50%;
+  z-index: 10001;
+  text-decoration: none;
+  color: #fff; }
+
+/* Small devices y horiz entre 576px y 768px*/
+@media screen and (min-width: 575.98px) {
+  .carrito-button {
+    font-size: 35px;
+    height: 75px;
+    width: 75px;
+    bottom: 150px;
+    right: 50px; }
+  .carrito-items {
+    bottom: 205px;
+    right: 50px; } }
 
 .header {
   text-align: left;
@@ -883,13 +933,22 @@ a:hover {
     justify-content: center;
     width: 100%;
     margin: 25px 0; }
-  .prod__titulo__h3 {
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    color: #555;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #777; }
+  .prod__titulo {
+    text-align: center; }
+    .prod__titulo__h3 {
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      color: #555;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #777; }
+    .prod__titulo__h3-anio {
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      color: #555;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #777; }
   .prod__section {
     display: flex;
     flex-flow: row wrap;
@@ -907,6 +966,9 @@ a:hover {
     justify-content: center;
     background-color: #fcfcfc;
     box-shadow: 0px 0px 15px 5px rgba(51, 51, 51, 0.34); }
+    .prod__cards__link,
+    .prod .cards__link {
+      cursor: pointer; }
     .prod__cards__img,
     .prod .cards__img {
       width: 100%; }
@@ -932,6 +994,11 @@ a:hover {
       font-size: 1.5rem;
       margin: 10px 0;
       text-align: center; }
+    .prod__cards__precio,
+    .prod .cards__precio {
+      text-align: center;
+      color: #f50101;
+      font-size: 2rem; }
 
 @media screen and (min-width: 340px) {
   __cards__txt,
@@ -958,6 +1025,60 @@ a:hover {
   .carousel.slide .carousel-control-next,
   .carousel.slide .carousel-control-prev {
     filter: invert(100%); }
+  .carousel.slide .carousel-indicators .bg-img-sol1 {
+    background-image: url("../../images/quagenda-sol-frente.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-sol2 {
+    background-image: url("../../images/quagenda-sol-dorso.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-sol3 {
+    background-image: url("../../images/quagenda-sol-dorso.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-sol4 {
+    background-image: url("../../images/quagenda-sol2-frente.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-sol5 {
+    background-image: url("../../images/quagenda-sol2-dorso.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
+  .carousel.slide .carousel-indicators .bg-img-sol6 {
+    background-image: url("../../images/quagenda-sol2-dorso.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: contain;
+    width: 30px;
+    height: 25px; }
   .carousel.slide .carousel-indicators .bg-img-1 {
     background-image: url("../../images/viajar-blanco-frente.jpg");
     width: 100%;
@@ -1122,6 +1243,24 @@ a:hover {
     height: 25px; }
 
 @media screen and (min-width: 767.98px) {
+  .carousel.slide .carousel-indicators .bg-img-sol1 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-sol2 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-sol3 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-sol4 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-sol5 {
+    width: 50px;
+    height: 35px; }
+  .carousel.slide .carousel-indicators .bg-img-sol6 {
+    width: 50px;
+    height: 35px; }
   .carousel.slide .carousel-indicators .bg-img-1 {
     width: 50px;
     height: 35px; }

@@ -1,0 +1,63 @@
+.carrito {
+    &-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #777;
+        font-size: 25px;
+        height: 60px;
+        width: 60px;
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        border-radius: 50%;
+        z-index: 10000;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+            outline: none;
+            text-decoration: none;
+        }
+    }
+
+    &-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
+        font-size: 15px;
+        height: 25px;
+        width: 25px;
+        position: fixed;
+        bottom: 140px;
+        right: 5px;
+        border-radius: 50%;
+        z-index: 10001;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+
+
+
+/* Small devices y horiz entre 576px y 768px*/
+@media screen and (min-width: $bp_potrait-phones) {
+    .carrito {
+
+        &-button {
+            font-size: 35px;
+            height: 75px;
+            width: 75px;
+            bottom: 150px;
+            right: 50px;
+        }
+
+        &-items {
+            bottom: 205px;
+            right: 50px;
+        }
+
+    }
+}

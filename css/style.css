@@ -151,6 +151,27 @@ html {
     bottom: 205px;
     right: 50px; } }
 
+.preventa {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  transform: rotate(25deg);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: #ee0707;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%; }
+  .preventa-txt {
+    font-size: 15px;
+    line-height: normal;
+    font-weight: 600;
+    z-index: 10001;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase; }
+
 .header {
   text-align: left;
   width: 100%;
@@ -965,7 +986,8 @@ a:hover {
     align-items: center;
     justify-content: center;
     background-color: #fcfcfc;
-    box-shadow: 0px 0px 15px 5px rgba(51, 51, 51, 0.34); }
+    box-shadow: 0px 0px 15px 5px rgba(51, 51, 51, 0.34);
+    position: relative; }
     .prod__cards__link,
     .prod .cards__link {
       cursor: pointer; }
@@ -999,11 +1021,18 @@ a:hover {
       text-align: center;
       color: #f50101;
       font-size: 2rem; }
+      .prod__cards__precio--tachado,
+      .prod .cards__precio--tachado {
+        text-decoration: line-through;
+        font-size: 1.5rem; }
 
 @media screen and (min-width: 340px) {
-  __cards__txt,
-  .cards__txt {
-    width: 250px; } }
+  __cards,
+  .cards {
+    margin: 25px; }
+    __cards__txt,
+    .cards__txt {
+      width: 250px; } }
 
 @media screen and (min-width: 767.98px) {
   .prod__titulo__h3 {
@@ -1011,14 +1040,14 @@ a:hover {
     margin-bottom: 50px; }
   .prod__cards,
   .prod .cards {
-    margin: 5px; }
+    margin: 25px; }
   .btn {
     padding: 15px 15px; } }
 
 @media screen and (min-width: 991.98px) {
   .prod__cards,
   .prod .cards {
-    margin: 0 50px; } }
+    margin: 25px; } }
 
 .carousel.slide {
   padding: 0; }

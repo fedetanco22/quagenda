@@ -988,12 +988,42 @@ a:hover {
     background-color: #fcfcfc;
     box-shadow: 0px 0px 15px 5px rgba(51, 51, 51, 0.34);
     position: relative; }
+    .prod__cards__fotoPpal,
+    .prod .cards__fotoPpal {
+      position: relative; }
     .prod__cards__link,
     .prod .cards__link {
       cursor: pointer; }
     .prod__cards__img,
     .prod .cards__img {
       width: 100%; }
+    .prod__cards__zoom,
+    .prod .cards__zoom {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      right: 50%;
+      left: 50%;
+      opacity: 1;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      transition: .5s ease; }
+      .prod__cards__zoom--i,
+      .prod .cards__zoom--i {
+        position: absolute;
+        font-size: 2rem;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.315);
+        padding: 25px;
+        border-radius: 50%; }
+    .prod__cards__fotoPpal:hover .prod__cards__zoom,
+    .prod .cards__fotoPpal:hover .prod__cards__zoom, .prod__cards__fotoPpal:hover
+    .prod .cards__zoom,
+    .prod .cards__fotoPpal:hover
+    .prod .cards__zoom {
+      opacity: 1; }
     .prod__cards__txt,
     .prod .cards__txt {
       padding: 20px 0 10px 0;

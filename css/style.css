@@ -85,7 +85,12 @@ html {
   font-weight: bolder;
   width: auto;
   padding: 15px 10px;
-  margin: 10px 0 0 0; }
+  margin: 10px 5px 0 5px;
+  /* &-flexbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } */ }
   .btn:hover {
     background-color: #333;
     color: #E4B937; }
@@ -103,6 +108,16 @@ html {
     background-color: #E4B937;
     color: #333;
     transform: scale(1.2); }
+
+.swal-button {
+  background-color: #E4B937;
+  color: #333; }
+  .swal-button:not([disabled]):hover {
+    background-color: #333;
+    color: #E4B937; }
+
+.swal-overlay {
+  background-color: rgba(51, 51, 51, 0.932); }
 
 .carrito-button {
   display: flex;
@@ -1001,28 +1016,30 @@ a:hover {
     .prod .cards__zoom {
       position: absolute;
       top: 50%;
-      bottom: 50%;
-      right: 50%;
       left: 50%;
-      opacity: 1;
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
-      transition: .5s ease; }
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: .5s ease;
+      width: 100%;
+      height: 100%;
+      cursor: pointer; }
+      .prod__cards__zoom__item,
+      .prod .cards__zoom__item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
       .prod__cards__zoom--i,
       .prod .cards__zoom--i {
-        position: absolute;
         font-size: 2rem;
         color: #fff;
         background-color: rgba(0, 0, 0, 0.315);
         padding: 25px;
-        border-radius: 50%; }
-    .prod__cards__fotoPpal:hover .prod__cards__zoom,
-    .prod .cards__fotoPpal:hover .prod__cards__zoom, .prod__cards__fotoPpal:hover
-    .prod .cards__zoom,
-    .prod .cards__fotoPpal:hover
-    .prod .cards__zoom {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%; }
+    .prod__cards__zoom:hover,
+    .prod .cards__zoom:hover {
       opacity: 1; }
     .prod__cards__txt,
     .prod .cards__txt {

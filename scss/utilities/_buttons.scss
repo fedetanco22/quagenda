@@ -32,6 +32,7 @@
         @media screen and(max-height: 340px) {
             margin-bottom: 10vh;
         }
+
         @media screen and(max-height: 440px) {
             margin-bottom: 15vh;
         }
@@ -45,22 +46,31 @@
         }
     }
 }
+
 .btn {
     @include button;
     padding: 15px 10px;
-    margin: 10px 0 0 0;
-    
+    margin: 10px 5px 0 5px;
+
+    /* &-flexbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } */
+
+
+
 }
 
 .blog {
-    &__btn{
+    &__btn {
         padding: 10px 10px;
         background-color: $color-primario;
         color: #fff;
         transition-duration: 0.1s;
         margin: 10px 0;
-        
-        
+
+
         &:hover {
             background-color: $color-logo;
             color: $color-primario;
@@ -69,5 +79,16 @@
     }
 }
 
+.swal-button {
+    background-color: #E4B937;
+    color: #333;
 
+    &:not([disabled]):hover {
+        background-color: #333;
+        color: #E4B937;
+    }
+}
 
+.swal-overlay {
+    background-color: rgba(51, 51, 51, 0.932);
+}

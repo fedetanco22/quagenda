@@ -7,44 +7,64 @@ var productos = [
         autor: 'Sol Martinez',
         categoria: 'Quagenda',
         cantidad: 0,
-        img: "images/img-solchus.jpg",
+        img: {
+            img: "images/img-solchus.jpg",
+            img2: "images/quagenda-sol-frente.jpg",
+            img3: "images/quagenda-sol-dorso.jpg",
+            img4: "images/mock-viaje-cel2.jpg"
+        },
         caracteristicas: {
             tamanio: '14 x 21 cm',
-            interior: '160 p&aacute;ginas, impresa a dos colores',
-            encuadernacion: 'Encuadernacion: Tapa dura anillado.'
+            interior: '160 páginas, impresa a dos colores',
+            encuadernacion: 'Tapa dura anillado.',
+            papel: 'Bookcell 80grs.'
+
         }
 
     },
     {
         id: 2,
-        nombre: '"Estoy respirando. Estoy viviendo"',
+        nombre: '"Estoy respirando. Estoy viviendo."',
         precio: 1150,
         oferta: 1350,
         autor: 'Sol Martinez',
         categoria: 'Quagenda',
         cantidad: 0,
-        img: "images/img-respira-solchus.jpg",
+        img: {
+            img: "images/img-respira-solchus.jpg",
+            img2: "images/quagenda-sol2-frente.jpg",
+            img3: "images/quagenda-sol2-dorso.jpg",
+            img4: "images/mock-viaje-cel2.jpg"
+        },
         caracteristicas: {
             tamanio: '14 x 21 cm',
-            interior: '160 p&aacute;ginas, impresa a dos colores',
-            encuadernacion: 'Encuadernacion: Tapa dura anillado.'
+            interior: '160 páginas, impresa a dos colores',
+            encuadernacion: 'Tapa dura anillado.',
+            papel: 'Bookcell 80grs.'
         }
+
     },
     {
         id: 3,
-        nombre: '"Viajar es la respuesta, no importa cual sea la pregunta"',
+        nombre: '"Viajar es la respuesta, no importa cual sea la pregunta."',
         precio: 1150,
         oferta: 1350,
         autor: 'Kiki Viale',
         categoria: 'Quagenda',
         cantidad: 0,
-        img: "images/img-viajar.jpg",
+        img: {
+            img: "images/img-viajar.jpg",
+            img2: "images/quagenda-sol-frente.jpg",
+            img3: "images/quagenda-sol-dorso.jpg",
+            img4: "images/mock-viaje-cel2.jpg"
+        },
         caracteristicas: {
             tamanio: '14 x 21 cm',
-            interior: '160 p&aacute;ginas, impresa a dos colores',
-            encuadernacion: 'Encuadernacion: Tapa dura anillado.'
-        }
+            interior: '160 páginas, impresa a dos colores',
+            encuadernacion: 'Tapa dura anillado.',
+            papel: 'Bookcell 80grs.'
 
+        }
     },
     {
         id: 4,
@@ -54,26 +74,61 @@ var productos = [
         autor: 'Kiki Viale',
         categoria: 'Quagenda',
         cantidad: 0,
-        img: "images/img-luna.jpg",
+        img: {
+            img: "images/img-luna.jpg",
+            img2: "images/quagenda-sol-frente.jpg",
+            img3: "images/quagenda-sol-dorso.jpg",
+            img4: "images/mock-viaje-cel2.jpg"
+        },
         caracteristicas: {
             tamanio: '14 x 21 cm',
-            interior: '160 p&aacute;ginas, impresa a dos colores',
-            encuadernacion: 'Encuadernacion: Tapa dura anillado.'
+            interior: '160 páginas, impresa a dos colores',
+            encuadernacion: 'Tapa dura anillado.',
+            papel: 'Bookcell 80grs.'
+
+        }
+    }, {
+        id: 5,
+        nombre: '"Diseña una vida que ames."',
+        precio: 850,
+        oferta: 1000,
+        autor: 'Sol Martinez',
+        categoria: 'Cuaderno',
+        cantidad: 0,
+        img: {
+            img: "images/img-disenia-solchus.jpg",
+            img2: "images/quagenda-sol-frente.jpg",
+            img3: "images/quagenda-sol-dorso.jpg",
+            img4: "images/mock-viaje-cel2.jpg"
+        },
+        caracteristicas: {
+            tamanio: '14 x 21 cm',
+            interior: '160 páginas, impresa a dos colores',
+            encuadernacion: 'Tapa dura anillado.',
+            papel: 'Bookcell 80grs.'
+
         }
 
     }, {
         id: 5,
-        nombre: '"Diseña una vida que ames"',
-        precio: 1150,
-        oferta: 1350,
+        nombre: '"Hecho mejor que perfecto."',
+        precio: 850,
+        oferta: 1000,
         autor: 'Sol Martinez',
-        categoria: 'Quagenda',
+        categoria: 'Cuaderno',
         cantidad: 0,
-        img: "images/img-disenia-solchus.jpg",
+        img: {
+            img: "images/img-hechoosc-solchus.jpg",
+            img2: "images/quagenda-sol-frente.jpg",
+            img3: "images/quagenda-sol-dorso.jpg",
+            img4: "images/mock-viaje-cel2.jpg"
+        },
         caracteristicas: {
             tamanio: '14 x 21 cm',
-            interior: '160 p&aacute;ginas, impresa a dos colores',
-            encuadernacion: 'Encuadernacion: Tapa dura anillado.'
+            interior: '160 páginas, impresa a dos colores',
+            encuadernacion: 'Tapa dura anillado.',
+            papel: 'Bookcell 80grs.'
+
         }
 
     },

@@ -1,8 +1,18 @@
-.main__contenedor-prod{
+.main__contenedor-prod {
     @include flex-col-center;
     width: 100%;
+
+    @media screen and (min-width: $bp_potrait-phones) {
+        width: 95%;
+    }
+
+    @media screen and (min-width: $bp_landscape-phones) {
+        width: 95%;
+    }
 }
-.productos{
+
+
+.productos {
     @include flex-col-center;
     width: 100%;
 }

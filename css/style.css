@@ -126,6 +126,7 @@ html {
   bottom: 100px;
   right: 10px;
   border-radius: 50%;
+  border: none;
   z-index: 10000;
   text-decoration: none;
   color: #fff; }
@@ -148,6 +149,72 @@ html {
   z-index: 10001;
   text-decoration: none;
   color: #fff; }
+
+.overlay {
+  width: 100vmax;
+  height: 100vh;
+  background-color: rgba(85, 85, 85, 0.534);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 19000;
+  transition: all 0.3s linear;
+  /* visibility: hidden; */ }
+
+.navCart {
+  min-width: 400px;
+  height: 100vh;
+  position: fixed;
+  background-color: #d3d2d2;
+  top: 0;
+  right: 0;
+  z-index: 20000;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .navCart__titulo {
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+    margin-top: 5rem;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .navCart__titulo::after {
+      content: "";
+      background-color: #E4B937;
+      display: inline-block;
+      width: 125px;
+      height: 3px;
+      margin-top: 1rem; }
+  .navCart__close {
+    align-self: flex-start; }
+    .navCart__close--icon {
+      font-size: 3rem;
+      margin: 30px 0 0 30px; }
+  .navCart__items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem; }
+    .navCart__items--img {
+      width: 75px;
+      height: 100px; }
+      .navCart__items--img img {
+        width: 100px;
+        height: 100px; }
+    .navCart__items__producto {
+      text-align: left; }
+    .navCart__items__cantidad {
+      text-align: center; }
+      .navCart__items__cantidad--num {
+        margin-bottom: 0; }
+      .navCart__items__cantidad--flecha {
+        color: #E4B937; }
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {
@@ -1729,7 +1796,7 @@ a:hover {
       width: 95%; } }
   @media screen and (min-width: 767.98px) {
     .main__contenedor-prod {
-      width: 95%; } }
+      width: 85%; } }
 
 .productos {
   display: flex;

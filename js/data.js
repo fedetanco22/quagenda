@@ -54,7 +54,7 @@ var productos = [
         cantidad: 0,
         img: {
             img: "images/img-viajar.jpg",
-            img2: "images/quagenda-sol-frente.jpg",
+            img2: "images/img-viajar.jpg",
             img3: "images/quagenda-sol-dorso.jpg",
             img4: "images/mock-viaje-cel2.jpg"
         },
@@ -76,7 +76,7 @@ var productos = [
         cantidad: 0,
         img: {
             img: "images/img-luna.jpg",
-            img2: "images/quagenda-sol-frente.jpg",
+            img2: "images/img-viajar.jpg",
             img3: "images/quagenda-sol-dorso.jpg",
             img4: "images/mock-viaje-cel2.jpg"
         },
@@ -97,7 +97,7 @@ var productos = [
         cantidad: 0,
         img: {
             img: "images/img-disenia-solchus.jpg",
-            img2: "images/quagenda-sol-frente.jpg",
+            img2: "images/img-viajar.jpg",
             img3: "images/quagenda-sol-dorso.jpg",
             img4: "images/mock-viaje-cel2.jpg"
         },
@@ -110,7 +110,7 @@ var productos = [
         }
 
     }, {
-        id: 5,
+        id: 6,
         nombre: '"Hecho mejor que perfecto."',
         precio: 850,
         oferta: 1000,
@@ -119,7 +119,7 @@ var productos = [
         cantidad: 0,
         img: {
             img: "images/img-hechoosc-solchus.jpg",
-            img2: "images/quagenda-sol-frente.jpg",
+            img2: "images/img-viajar.jpg",
             img3: "images/quagenda-sol-dorso.jpg",
             img4: "images/mock-viaje-cel2.jpg"
         },

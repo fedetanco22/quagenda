@@ -90,10 +90,10 @@ function carritoAside() {
     tituloCarrito.className = 'navCart__titulo';
     tituloCarrito.textContent = 'Carrito'
 
-    // Descrption- Cant- Precio
+    /*  // Descrption- Cant- Precio
     const descipProducto = document.createElement('h4');
     descipProducto.className = 'navCart__nombre';
-    descipProducto.textContent = 'Carrito'
+    descipProducto.textContent = 'Carrito' */
 
 
     // ------------------ITEMS---------------
@@ -111,11 +111,10 @@ function carritoAside() {
     descripcionCarrito.className = 'navCart__items__producto';
     const nombreCarrito = document.createElement('h4');
     nombreCarrito.className = 'navCart__items--nombre';
-    nombreCarrito.textContent = 'Hecho Mejor que perfecto';
+    nombreCarrito.textContent = '"Hecho mejor que perfecto."'; // va dependiendo el producto ${prodctos.nombre}
     const precioProd = document.createElement('h5');
     precioProd.className = 'navCart__items--precio';
     precioProd.textContent = 'AR$ 1150'
-
 
     const quitarProd = document.createElement('span');
     quitarProd.className = 'remove-item';
@@ -139,12 +138,18 @@ function carritoAside() {
 
     // -----CART FOOTER---------
     const footerCarrito = document.createElement('div');
-    footerCarrito.className = 'navCart__footer'
+    footerCarrito.className = 'navCart__footer';
     const totalCarrito = document.createElement('h3');
     totalCarrito.className = 'navCart__footer--h3';
-    totalCarrito.textContent = 'total: AR$ '
+    totalCarrito.innerHTML = `total: ar$ <span class="navCart__cartTotal" > ${
+        productos.precio // Ver como poner esto
+    } </span>`
 
-    totalCarrito.setAttribute('span', 'cart-total')
+    const vaciarCarrito = document.createElement('button');
+    vaciarCarrito.className = 'navCart__footer--vaciarBtn btn';
+    vaciarCarrito.textContent = 'Vaciar carrito';
+
+    // separar con un span el total del $precio total
 
 
     cart.appendChild(overlayCarrito);
@@ -161,8 +166,10 @@ function carritoAside() {
     descripcionCarrito.appendChild(nombreCarrito);
     descripcionCarrito.appendChild(precioProd);
     descripcionCarrito.appendChild(quitarProd);
-    footerCarrito.appendChild(totalCarrito)
-    navCarrito.appendChild(footerCarrito)
+    footerCarrito.appendChild(totalCarrito);
+    navCarrito.appendChild(footerCarrito);
+
+    navCarrito.appendChild(vaciarCarrito);
 
 
     itemsCarrito.appendChild(cantidadCarrito);

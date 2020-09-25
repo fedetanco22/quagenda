@@ -44,7 +44,6 @@
 
         }
 
-
         &__link {
             cursor: pointer;
         }
@@ -124,9 +123,18 @@
             color: rgb(245, 1, 1);
             font-size: 2rem;
 
+            &-precio::before {
+                content: "AR$ ";
+
+            }
+
             &--tachado {
                 text-decoration: line-through;
                 font-size: 1.5rem;
+
+                &::before {
+                    content: "AR$ ";
+                }
             }
 
             &--modal {

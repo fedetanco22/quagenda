@@ -1,21 +1,18 @@
 var carrito = [];
 // ------------- Function declaration ------------------------------
-function agregarCarrito(id, nombre, precio, autor, categoria, cantidad, img) {
+function agregarCarrito(nombreProd, precioProd, imgProd, cantidadProd) {
 
-    var encontrarProd = carrito.find(producto => producto.id == id)
+    var encontrarProd = carrito.find(producto => producto.nombreProd == nombreProd)
 
     if (encontrarProd) {
-        encontrarProd.cantidad ++;
+        encontrarProd.cantidadProd ++
 
     } else {
         agregarProducto = {
-            id: id,
-            nombre: nombre,
-            precio: precio,
-            autor: autor,
-            categoria: categoria,
-            cantidad: 1,
-            img: img
+            nombreProd: nombreProd,
+            precioProd: precioProd,
+            imgProd: imgProd,
+            cantidadProd: 1
         }
         carrito.push(agregarProducto)
 
@@ -25,52 +22,24 @@ function agregarCarrito(id, nombre, precio, autor, categoria, cantidad, img) {
 
 };
 
-
-// CREAMOS UNA FUNCION PARA QUE en OPENMODAL Y CREAR CARDS se reconozcan los eventos!
-
-// ---------------------CARDS-----------------------------------
-
-function eventBotonAddToCart() {
-    const $eventoAgregarCarrito = document.querySelectorAll('.addToCart');
-    $eventoAgregarCarrito.forEach(addToCartButton => {
-        addToCartButton.addEventListener('click', clickAddToCart)
-    })
-};
-
-function clickAddToCart(e) { // capturamos el buttom y queremos todo el id del Prodcuto con el closest (elemento padre mas cercano con el id)
-    const button = e.target;
-    const producto = button.closest('.cards')
-    const tituloProd = producto.querySelector('.cards__titulo__h4').textContent;
-    const precioProd = producto.querySelector('.cards__precio-precio').textContent;
-    const imgProd = producto.querySelector('.cards__img').src;
-
-    // agregarCarritoClicked(tituloProd, precioProd, imgProd);
-};
-
-/* function agregarCarritoClicked(tituloProd, precioProd, imgProd) {}; */
+// ---------------------CARDS PRODs-----------------------------------
 
 
-// ---------------------MODAL----------------
-// function eventBotonAddToCartModal() {
-//    const $eventoAgregarCarrito = document.querySelectorAll('.addToCart');
-//    $eventoAgregarCarrito.forEach(addToCartButton => {
-//        addToCartButton.addEventListener('click', clickAddToCartModal)
-//    })
-// }
-// function clickAddToCartModal(e) { // capturamos el buttom y queremos todo el id del Prodcuto con el closest (elemento padre mas cercano con el id)
-//    const buttonModal = e.target;
-//    const productoModal = buttonModal.closest('.modal')
-//    console.log("clickAddToCartModal -> productoModal", productoModal)
-//
-//
-// }
-
-// -------------------------------------------------------------------------------------------------------------
 const cart = document.querySelector('.carrito');
-const botonCarrito = document.querySelector('.carrito-button').addEventListener('click', carritoAside);
+const botonCarrito = document.querySelector('.carrito-button').addEventListener('click', navCarritoCompras);
+const botonCerrarCarrito = document.querySelector('.navCart__close');
+const botonVaciarCarrito = document.querySelector('.navCart__footer--vaciarBtn');
+const overlayCarrito = document.querySelector('.overlay');
+const itemsCarrito = document.querySelector('.navCart__items__producto');
+const totalCarrito = document.querySelector('navCart__items__cantidad--num');
 
 
-function carritoAside() {
+// ------Navegador del Carrito de Compras------------------------
+
+function navCarritoCompras(event) { // Darle un target a un evento para generar la carga de los productos!
+    const button = event.target;
+    console.log("navCarritoCompras -> button", button)
+
     const overlayCarrito = document.createElement('div');
     overlayCarrito.className = 'overlay';
 
@@ -81,19 +50,12 @@ function carritoAside() {
 
     const navCarrito = document.createElement('div');
     navCarrito.className = 'navCart';
-
-
     const contenidoCarrito = document.createElement('div');
     contenidoCarrito.className = 'navCart__contenido';
 
     const tituloCarrito = document.createElement('h2');
     tituloCarrito.className = 'navCart__titulo';
-    tituloCarrito.textContent = 'Carrito'
-
-    /*  // Descrption- Cant- Precio
-    const descipProducto = document.createElement('h4');
-    descipProducto.className = 'navCart__nombre';
-    descipProducto.textContent = 'Carrito' */
+    tituloCarrito.textContent = 'Carrito';
 
 
     // ------------------ITEMS---------------
@@ -103,7 +65,7 @@ function carritoAside() {
     // Imagen
     const imgCarrito = document.createElement('div');
     imgCarrito.className = 'navCart__items--img';
-    imgCarrito.innerHTML = `<img src="images/img-solchus.jpg" >`
+    imgCarrito.innerHTML = ``
 
 
     // Nombre Productos
@@ -111,10 +73,10 @@ function carritoAside() {
     descripcionCarrito.className = 'navCart__items__producto';
     const nombreCarrito = document.createElement('h4');
     nombreCarrito.className = 'navCart__items--nombre';
-    nombreCarrito.textContent = '"Hecho mejor que perfecto."'; // va dependiendo el producto ${prodctos.nombre}
+    nombreCarrito.textContent = ''; // va dependiendo el producto ${prodctos.nombre}
     const precioProd = document.createElement('h5');
     precioProd.className = 'navCart__items--precio';
-    precioProd.textContent = 'AR$ 1150'
+    precioProd.textContent = '';
 
     const quitarProd = document.createElement('span');
     quitarProd.className = 'remove-item';
@@ -131,7 +93,7 @@ function carritoAside() {
     // Cantidad Productos
     const numCantCarrito = document.createElement('p');
     numCantCarrito.className = 'navCart__items__cantidad--num';
-    numCantCarrito.textContent = '1'
+    numCantCarrito.textContent = ''
     // flecha chevron abajo
     const chevAbajo = document.createElement('i');
     chevAbajo.className = 'navCart__items__cantidad--flecha fas fa-chevron-down';

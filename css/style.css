@@ -129,7 +129,8 @@ html {
   border: none;
   z-index: 10000;
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
   .carrito-button:hover {
     outline: none;
     text-decoration: none; }
@@ -193,7 +194,8 @@ html {
     align-self: flex-start; }
     .navCart__close--icon {
       font-size: 3rem;
-      margin: 30px 0 0 30px; }
+      margin: 30px 0 0 30px;
+      cursor: pointer; }
   .navCart__items {
     width: 100%;
     display: flex;
@@ -220,7 +222,8 @@ html {
       .navCart__items__cantidad--num {
         margin-bottom: 0; }
       .navCart__items__cantidad--flecha {
-        color: #E4B937; }
+        color: #E4B937;
+        cursor: pointer; }
   .navCart__footer {
     width: 85%;
     text-align: center; }
@@ -1148,10 +1151,16 @@ a:hover {
       text-align: center;
       color: #f50101;
       font-size: 2rem; }
+      .prod__cards__precio-precio::before,
+      .prod .cards__precio-precio::before {
+        content: "AR$ "; }
       .prod__cards__precio--tachado,
       .prod .cards__precio--tachado {
         text-decoration: line-through;
         font-size: 1.5rem; }
+        .prod__cards__precio--tachado::before,
+        .prod .cards__precio--tachado::before {
+          content: "AR$ "; }
       .prod__cards__precio--modal,
       .prod .cards__precio--modal {
         padding: 20px 0;

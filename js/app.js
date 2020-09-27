@@ -1,3 +1,4 @@
+// ---Button CARDS
 function eventBotonAddToCart() {
     const $eventoAgregarCarrito = document.querySelectorAll('.addToCart');
     $eventoAgregarCarrito.forEach(addToCartButton => {
@@ -5,11 +6,21 @@ function eventBotonAddToCart() {
     })
 };
 
+// ---Button MODAL
+function eventBotonAddToCartModal() {
+    const $eventoAgregarCarritoModal = document.querySelectorAll('.addToCartModal');
+    $eventoAgregarCarritoModal.forEach(addToCartButtonModal => {
+        addToCartButtonModal.addEventListener('click', clickAddToCartModal)
+    })
+};
+
 function clickAddToCart(event) { // capturamos el buttom y queremos todo el id del Prodcuto con el closest (elemento padre mas cercano con el id)
+    event.preventDefault();
     const button = event.target;
     const producto = button.closest('.cards');
     const nombreProd = producto.querySelector('.cards__titulo__h4').textContent;
-    const precioProd = producto.querySelector('.cards__precio-precio').textContent;
+    let precioProd = producto.querySelector('.cards__precio-precio').textContent;
+    precioProd = Number(precioProd)
     const imgProd = producto.querySelector('.cards__img').src;
     const cantidadProd = 0;
 
@@ -17,7 +28,52 @@ function clickAddToCart(event) { // capturamos el buttom y queremos todo el id d
     agregarCarrito(nombreProd, precioProd, imgProd, cantidadProd);
 };
 
-// ----CREAMOS EL NAV CART P[ARA EL CARRITO DE COMPRAS------
+// ---Button MODAL
+function clickAddToCartModal(event) {
+
+    const buttonModal = event.target;
+    const productoModal = buttonModal.closest('.modal-content')
+    console.log("clickAddToCartModal -> productoModal", productoModal)
+
+    // const nombreProdModal = producto.querySelector('.cards__titulo__h4').textContent;
+    // let precioProdModal = producto.querySelector('.cards__precio-precio').textContent;
+    // precioProdModal = Number(precioProd)
+    // const imgProdModal = producto.querySelector('.cards__img').src;
+    // const cantidadProdModal = 0;
+
+
+    // agregarCarrito(nombreProd, precioProd, imgProd, cantidadProd);
+};
+
+var carrito = [];
+
+// ------------- Function declaration ------------------------------
+function agregarCarrito(nombreProd, precioProd, imgProd, cantidadProd) {
+
+    var encontrarProd = carrito.find(producto => producto.nombreProd == nombreProd)
+
+    if (encontrarProd) {
+        encontrarProd.cantidadProd ++
+
+    } else {
+        agregarProducto = {
+            nombreProd: nombreProd,
+            precioProd: precioProd,
+            imgProd: imgProd,
+            cantidadProd: 1
+        }
+        carrito.push(agregarProducto);
+    }
+    // ------------- Alerta cuando agregamos al carrito --------------------
+    // swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
+
+    agregarItemsAlCarrito()
+
+
+};
+
+
+// ----CREAMOS EL NAV CART PARA EL CARRITO DE COMPRAS------
 const cart = document.querySelector('.carrito');
 const botonCarrito = document.querySelector('.carrito-button').addEventListener('click', navCarritoCompras);
 
@@ -78,35 +134,10 @@ function navCarritoCompras() { // Darle un target a un evento para generar la ca
 
 };
 
-var carrito = [];
-
-// ------------- Function declaration ------------------------------
-function agregarCarrito(nombreProd, precioProd, imgProd, cantidadProd) {
-
-    var encontrarProd = carrito.find(producto => producto.nombreProd == nombreProd)
-
-    if (encontrarProd) {
-        encontrarProd.cantidadProd ++
-
-    } else {
-        agregarProducto = {
-            nombreProd: nombreProd,
-            precioProd: precioProd,
-            imgProd: imgProd,
-            cantidadProd: 1
-        }
-        carrito.push(agregarProducto)
-
-    }
-    // ------------- Alerta cuando agregamos al carrito --------------------
-    swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
-
-    agregarItemsAlCarrito()
-
-
-};
 
 const itemsCarrito = document.createElement('div');
+itemsCarrito.className = 'navCart__items';
+
 const imgCarrito = document.createElement('div');
 const descripcionCarrito = document.createElement('div');
 const nombreCarrito = document.createElement('h4');
@@ -118,12 +149,10 @@ const numCantCarrito = document.createElement('p');
 const chevAbajo = document.createElement('i');
 
 
-function agregarItemsAlCarrito(nombreProd, precioProd, imgProd, cantidadProd) {
+function agregarItemsAlCarrito() {
 
     carrito.forEach(producto => {
         // ------------------ITEMS---------------
-        // Contenedor
-        itemsCarrito.className = 'navCart__items';
         // Imagen
         imgCarrito.className = 'navCart__items--img';
         imgCarrito.innerHTML = `<img src=" ${
@@ -134,7 +163,7 @@ function agregarItemsAlCarrito(nombreProd, precioProd, imgProd, cantidadProd) {
         nombreCarrito.className = 'navCart__items--nombre';
         nombreCarrito.textContent = `${
             producto.nombreProd
-        }`; // va dependiendo el producto ${prodctos.nombre}
+        }`;
         precioProducto.className = 'navCart__items--precio';
         precioProducto.textContent = `${
             producto.precioProd
@@ -154,7 +183,8 @@ function agregarItemsAlCarrito(nombreProd, precioProd, imgProd, cantidadProd) {
         chevAbajo.className = 'navCart__items__cantidad--flecha fas fa-chevron-down';
 
 
-        contenidoCarrito.appendChild(itemsCarrito);
+        contenidoCarrito.appendChild(itemsCarrito)
+
         itemsCarrito.appendChild(imgCarrito);
 
         descripcionCarrito.appendChild(nombreCarrito);

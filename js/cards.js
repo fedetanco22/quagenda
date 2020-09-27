@@ -1,5 +1,5 @@
 // Estructura de la CARD----
-document.addEventListener('DOMContentLoaded', crearCard => {
+document.addEventListener('DOMContentLoaded', () => {
     eventBotonAddToCart()
 })
 
@@ -9,6 +9,7 @@ crearCard();
 
 function crearCard() {
     productos.forEach((producto) => { // -------CARDS-----------
+
         let $div = document.createElement('div');
         $div.setAttribute('id', producto['id'])
         $div.setAttribute('class', 'cards', 'prod__cards');
@@ -87,13 +88,11 @@ function crearCard() {
         })
         $btnVerMas.addEventListener('click', openModal)
 
-
         let $btnCarrito = document.createElement('button');
         $btnCarrito.className = 'btn btn__modal addToCart';
 
         // $btnCarrito.addEventListener('click', agregarCarrito);
         setAttributes($btnCarrito, {
-            'onclick': 'agregarCarrito()',
             'type': 'button',
             'marcador': producto['id']
         })
@@ -248,10 +247,10 @@ function openModal() {
         }</li>
 													</ul>
 												</div>
-												<button type="button" onclick="agregarCarrito('${
+												<button type="button" class="btn btn__modal addToCartModal"
+													data-toggle="modal" data-target="#cart" marcador="${
             producto['id']
-        }')" class="btn btn__modal addToCart"
-													data-toggle="modal" data-target="#cart">
+        }">
 													<i class="fas fa-shopping-cart"></i>
 													<h4 class="agregar">Comprar</h4>
 												</button>
@@ -261,7 +260,8 @@ function openModal() {
         $modal.innerHTML = $modalBody;
         $quagenda.appendChild($modal);
     })
-    eventBotonAddToCart() // Event para reconocer los Butoons con class addToCart
+    // Event para reconocer los Butoons con class addToCart
+    // eventBotonAddToCartModal()
 };
 
 // Funcion

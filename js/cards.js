@@ -8,7 +8,7 @@ var $quagenda = document.querySelector('#quagenda');
 crearCard();
 
 function crearCard() {
-    productos.forEach((producto) => { // -------CARDS-----------
+    data.forEach((producto) => { // -------CARDS-----------
 
         let $div = document.createElement('div');
         $div.setAttribute('id', producto['id'])
@@ -90,8 +90,6 @@ function crearCard() {
 
         let $btnCarrito = document.createElement('button');
         $btnCarrito.className = 'btn btn__modal addToCart';
-
-        // $btnCarrito.addEventListener('click', agregarCarrito);
         setAttributes($btnCarrito, {
             'type': 'button',
             'marcador': producto['id']
@@ -270,3 +268,200 @@ function setAttributes(elem, attrs) {
         elem.setAttribute(key, attrs[key]);
     }
 }
+
+
+// ---Button CARDS
+function eventBotonAddToCart() {
+    const $eventoAgregarCarrito = document.querySelectorAll('.addToCart');
+    $eventoAgregarCarrito.forEach(addToCartButton => {
+        addToCartButton.addEventListener('click', clickAddToCart)
+    })
+};
+
+// ---Button MODAL
+function eventBotonAddToCartModal() {
+    const $eventoAgregarCarritoModal = document.querySelectorAll('.addToCartModal');
+    $eventoAgregarCarritoModal.forEach(addToCartButtonModal => {
+        addToCartButtonModal.addEventListener('click', clickAddToCartModal)
+    })
+};
+
+function clickAddToCart(event) { // capturamos el buttom y queremos todo el id del Prodcuto con el closest (elemento padre mas cercano con el id)
+    event.preventDefault();
+    const button = event.target;
+    console.log("clickAddToCart -> button ", button)
+    const producto = button.closest('.cards');
+    const nombreProd = producto.querySelector('.cards__titulo__h4').textContent;
+    let precioProd = producto.querySelector('.cards__precio-precio').textContent;
+    precioProd = Number(precioProd)
+    const imgProd = producto.querySelector('.cards__img').src;
+    const cantidadProd = 0;
+
+
+    agregarCarrito(nombreProd, precioProd, imgProd, cantidadProd);
+};
+
+// ---Button MODAL
+function clickAddToCartModal(event) {
+
+    const buttonModal = event.target;
+    const productoModal = buttonModal.closest('.modal-content')
+    console.log("clickAddToCartModal -> productoModal", productoModal)
+
+    // const nombreProdModal = producto.querySelector('.cards__titulo__h4').textContent;
+    // let precioProdModal = producto.querySelector('.cards__precio-precio').textContent;
+    // precioProdModal = Number(precioProd)
+    // const imgProdModal = producto.querySelector('.cards__img').src;
+    // const cantidadProdModal = 0;
+
+
+    // agregarCarrito(nombreProd, precioProd, imgProd, cantidadProd);
+};
+
+var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
+// Si carrito existe en Local, else array vacio []
+// ------------- Function declaration ------------------------------
+function agregarCarrito(nombreProd, precioProd, imgProd, cantidadProd) {
+
+    var encontrarProd = carrito.find(producto => producto.nombreProd == nombreProd)
+
+    if (encontrarProd) {
+        encontrarProd.cantidadProd ++
+
+    } else {
+        agregarProducto = {
+            nombreProd: nombreProd,
+            precioProd: precioProd,
+            imgProd: imgProd,
+            cantidadProd: 1
+        }
+        carrito.push(agregarProducto);
+    }
+    // ------------- Alerta cuando agregamos al carrito --------------------
+    // swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
+    agregarItemsAlCarrito();
+    localStorage.carrito = JSON.stringify(carrito);
+};
+
+// ----CREAMOS EL NAV CART PARA EL CARRITO DE COMPRAS------
+const cart = document.querySelector('.carrito');
+const botonCarrito = document.querySelector('.carrito-button').addEventListener('click', navCarritoCompras);
+const contenidoCarrito = document.createElement('div');
+
+
+function navCarritoCompras() { // Darle un target a un evento para generar la carga de los productos!
+
+    const overlayCarrito = document.createElement('div');
+    overlayCarrito.className = 'overlay';
+    cart.appendChild(overlayCarrito);
+    const navCarrito = document.createElement('div');
+    navCarrito.className = 'navCart';
+    cart.appendChild(navCarrito);
+
+    // ----BOTON CERRAR CARRITO------
+    const closeCarrito = document.createElement('span');
+    const closeIcon = document.createElement('i');
+    closeCarrito.className = 'navCart__close';
+    closeIcon.className = 'navCart__close--icon far fa-times-circle';
+    closeCarrito.appendChild(closeIcon);
+    navCarrito.appendChild(closeCarrito);
+
+
+    const tituloCarrito = document.createElement('h2');
+    tituloCarrito.className = 'navCart__titulo';
+    tituloCarrito.textContent = 'Carrito';
+    navCarrito.appendChild(tituloCarrito);
+
+    // -----Contendio GRAL----- variable en global scope
+    contenidoCarrito.className = 'navCart__contenido';
+    navCarrito.appendChild(contenidoCarrito);
+
+
+    // ---- -CART FOOTER -- -- -- -- -
+    const footerCarrito = document.createElement('div');
+    const totalCarrito = document.createElement('h3');
+    footerCarrito.className = 'navCart__footer';
+    totalCarrito.className = 'navCart__footer--h3';
+    totalCarrito.innerHTML = `total: <span class="navCart__cartTotal" > ${
+        productos.precio // Ver como poner esto
+    } </span>`;
+    const comprarCarrito = document.createElement('button');
+    comprarCarrito.className = 'navCart__footer--comprarBtn btn';
+    comprarCarrito.textContent = 'comprar';
+    // separar con un span el total del $precio total
+    footerCarrito.appendChild(totalCarrito);
+    navCarrito.appendChild(footerCarrito);
+    navCarrito.appendChild(comprarCarrito);
+
+};
+
+
+function agregarItemsAlCarrito() {
+
+    carrito.forEach(producto => { // ------------------ITEMS---------------
+        const itemsCarrito = document.createElement('div')
+        itemsCarrito.className = 'navCart__items';
+        contenidoCarrito.appendChild(itemsCarrito)
+
+        const imgCarrito = document.createElement('div');
+        // Imagen
+        imgCarrito.className = 'navCart__items--img';
+        imgCarrito.innerHTML = `<img src=" ${
+            producto.imgProd
+        }" >`
+        itemsCarrito.appendChild(imgCarrito);
+
+        const descripcionCarrito = document.createElement('div');
+        const nombreCarrito = document.createElement('h4');
+        // Nombre Productos
+        descripcionCarrito.className = 'navCart__items__producto';
+        nombreCarrito.className = 'navCart__items--nombre';
+        nombreCarrito.textContent = `${
+            producto.nombreProd
+        }`;
+        const precioProducto = document.createElement('h5');
+        precioProducto.className = 'navCart__items--precio';
+        precioProducto.textContent = `${
+            producto.precioProd
+        }`;
+        const quitarProd = document.createElement('span');
+        quitarProd.className = 'remove-item';
+        quitarProd.textContent = 'quitar'
+
+        descripcionCarrito.appendChild(nombreCarrito);
+        descripcionCarrito.appendChild(precioProducto);
+        descripcionCarrito.appendChild(quitarProd);
+        itemsCarrito.appendChild(descripcionCarrito)
+
+        // --------Cantidad---------
+        const cantidadCarrito = document.createElement('input');
+        cantidadCarrito.className = 'navCart__items__cantidad';
+        setAttributes(cantidadCarrito, {
+                'name': `${
+                producto.indexOf(carrito)
+            }`,
+            /* 'onchange': */
+        })
+        itemsCarrito.appendChild(cantidadCarrito);
+
+
+        const chevArriba = document.createElement('i');
+        const numCantCarrito = document.createElement('p');
+        const chevAbajo = document.createElement('i');
+        // flecha chevron arriba
+        chevArriba.className = 'navCart__items__cantidad--flecha fas fa-chevron-up';
+        // Cantidad Productos
+        numCantCarrito.className = 'navCart__items__cantidad--num';
+        numCantCarrito.textContent = `${
+            producto.cantidadProd
+        }`;
+        // flecha chevron abajo
+        chevAbajo.className = 'navCart__items__cantidad--flecha fas fa-chevron-down';
+
+        cantidadCarrito.appendChild(chevArriba);
+        cantidadCarrito.appendChild(numCantCarrito);
+        cantidadCarrito.appendChild(chevAbajo);
+
+    })
+
+};

@@ -1,4 +1,7 @@
 .carrito {
+    width: 240px;
+    right: 0px;
+
     &-button {
         display: flex;
         justify-content: center;
@@ -42,20 +45,24 @@
 }
 
 .overlay {
-    width: 100vmax;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(85, 85, 85, 0.534);
     position: fixed;
     top: 0;
     right: 0;
     z-index: 19000;
     transition: all 0.3s linear;
-    /* visibility: hidden; */
+    visibility: hidden;
+
+    &__transparentBcg {
+        visibility: visible;
+    }
 }
 
 .navCart {
     min-width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     background-color: rgb(211, 210, 210);
     top: 0;
@@ -64,6 +71,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
+    transition: all 0.3s linear;
+    transform: translateX(100%);
+
+
+    &__showCart {
+        transform: translateX(0);
+    }
 
     &__titulo {
         font-size: 3rem;
@@ -125,7 +140,7 @@
 
         &__producto {
             text-align: left;
-            max-width: 280px;
+            width: 250px;
             padding: 10px;
         }
 
@@ -147,6 +162,9 @@
 
         &__cantidad {
             text-align: center;
+            border: none;
+            background: #999;
+            width: 30px;
 
             &--num {
                 margin-bottom: 0;
@@ -155,8 +173,15 @@
             &--flecha {
                 color: #E4B937;
                 cursor: pointer;
+                padding: 10px 0;
             }
         }
+    }
+
+    &__cantidad {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__cartTotal {
@@ -190,7 +215,6 @@
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: $bp_potrait-phones) {
     .carrito {
-
         &-button {
             font-size: 35px;
             height: 75px;
@@ -207,6 +231,7 @@
     }
 
     .navCart {
-        min-width: 500px;
+        width: 30vw;
+        min-width: 450px;
     }
 }

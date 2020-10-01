@@ -1,7 +1,6 @@
 // Estructura de la CARD----
 document.addEventListener("DOMContentLoaded", () => {
     eventBotonAddToCart();
-    navCarritoCompras()
 
 });
 

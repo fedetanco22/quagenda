@@ -159,16 +159,19 @@
             }
         }
 
+    }
 
-        &__cantidad {
-            text-align: center;
-            border: none;
-            background: #999;
+    &__cantidad {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        background: #999;
+        width: 30px;
+
+        &__items {
             width: 30px;
-
-            &--num {
-                margin-bottom: 0;
-            }
+            text-align: center;
 
             &--flecha {
                 color: #E4B937;
@@ -178,15 +181,13 @@
         }
     }
 
-    &__cantidad {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
     &__cartTotal {
+        color: red;
+
         &::before {
-            content: 'AR$ '
+            content: 'AR$ ';
+            color: #333
         }
     }
 
@@ -205,11 +206,11 @@
         }
     }
 
-
 }
 
 .remove-item {
     color: #777;
+    cursor: pointer;
 }
 
 /* Small devices y horiz entre 576px y 768px*/

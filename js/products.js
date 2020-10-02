@@ -148,107 +148,97 @@ function openModal() {
             'aria-hidden': "true"
         })
 
-        const $modalBody = `<div class="modal-dialog modal-dialog-centered modal-lg">
-										<div class="modal-content">
-											<div class="modal-header">
-												<img class="modal-logo" src="images/Logo-web-AM.svg" alt="logo">
-												<button type="button" class="close" data-dismiss="modal"
-													aria-label="Close">
-													<span aria-hidden="true">&times;</span>
-											</div>
-											<div class="modal-body">
-												<div id="carouselExampleIndicators${
+        const $modalBody = `
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-logo" src="images/Logo-web-AM.svg" alt="logo">
+                    <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicators${
             producto['id']
-        }"                                          class="carousel slide"
-													data-ride="carousel">
-													<ol class="carousel-indicators">
-														<li class="bg-img bg-img-${
+        } class="carousel slide"
+                        data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li class="bg-img bg-img-${
             producto['id']
-        }-1"
-															data-target="#carouselExampleIndicators${
+        }-1" data-target="#carouselExampleIndicators${
             producto['id']
-        }"
-															data-slide-to="0" class="active"></li>
-														<li class="bg-img bg-img-${
+        }" data-slide-to="0" class="active"></li>
+                            <li class="bg-img bg-img-${
             producto['id']
-        }-2"
-															data-target="#carouselExampleIndicators${
+        }-2" data-target="#carouselExampleIndicators${
             producto['id']
-        }"
-															data-slide-to="1">
-														</li>
-														<li class="bg-img bg-img-${
+        }" data-slide-to="1">
+                            </li>
+                            <li class="bg-img bg-img-${
             producto['id']
-        }-3"
-                                                        data-target="#carouselExampleIndicators${
+        }-3" data-target="#carouselExampleIndicators${
             producto['id']
-        }"
-															data-slide-to="2">
-														</li>
-													</ol>
-													<div class="carousel-inner">
-														<div class="carousel-item active">
-															<img src=${
+        }" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src=${
             producto['img'].img2
-        }
-																class="d-block w-100" alt="viajar-frente">
-														</div>
-														<div class="carousel-item">
-															<img src=${
+        } class="d-block w-100" alt="viajar-frente">
+                            </div>
+                            <div class="carousel-item">
+                                <img src=${
             producto['img'].img3
-        }
-																class="d-block w-100" alt="viajar-dorso">
-														</div>
-														<div class="carousel-item">
-															<img src= ${
+        } class = "d-block w-100" alt = "viajar-dorso" >                                    
+                            </div>
+                            <div class="carousel-item">
+                                <img src= ${
             producto['img'].img4
-        } 
-                                                                class="d-block w-100"
-																alt="viaje-celular">
-														</div>
-													</div>
-
-												</div>
-											</div>
-											<div class="modal-footer">
-												<div class="modal-footer__caract">
-													<div class="modal-footer__caract__titulo">
-														<strong>CARACTER&Iacute;STICAS</strong>
-													</div>
-													<ul class="modal-footer__caract__list">
-														<li class="card__caract__item">
-															<strong>Tama&ntilde;o:&nbsp;</strong>${
+        } class="d-block w-100" alt="viaje-celular">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer__caract">
+                        <div class="modal-footer__caract__titulo">
+                            <strong>CARACTER&Iacute;STICAS</strong>
+                        </div>
+                        <ul class="modal-footer__caract__list">
+                            <li class="card__caract__item">
+                                <strong>Tama&ntilde;o:&nbsp;</strong>${
             producto['caracteristicas'].tamanio
         }
-														</li>
-														<li class="modal-footer__caract__item">
-															<strong>Interior:&nbsp;</strong>${
+                            </li>
+                            <li class="modal-footer__caract__item">
+                                <strong>Interior:&nbsp;</strong>${
             producto['caracteristicas'].interior
         }</li>
-														<li class="modal-footer__caract__item">
-															<strong>Encuadernacion:&nbsp;</strong>${
+                            <li class="modal-footer__caract__item">
+                                <strong>Encuadernacion:&nbsp;</strong>${
             producto['caracteristicas'].encuadernacion
         }</li>
-														<li class="modal-footer__caract__item">
-															<strong>Papel:&nbsp;</strong>${
+                            <li class="modal-footer__caract__item">
+                                <strong>Papel:&nbsp;</strong>${
             producto['caracteristicas'].papel
         }</li>
-														<li class="modal-footer__caract__item cards__precio--modal">
-															AR$ ${
+                            <li class="modal-footer__caract__item cards__precio--modal">
+                                AR$ ${
             producto['precio']
         }</li>
-													</ul>
-												</div>
-												<button type="button" class="btn btn__modal addToCartModal"
-													data-toggle="modal" data-target="#cart" marcador="${
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn__modal addToCartModal"
+                        data-toggle="modal" data-target="#cart" marcador="${
             producto['id']
         }">
-													<i class="fas fa-shopping-cart"></i>
-													<h4 class="agregar">Comprar</h4>
-												</button>
-											</div>
-										</div>
-                                    </div>`;
+                        <i class="fas fa-shopping-cart"></i>
+                        <h4 class="agregar">Comprar</h4>
+                    </button>
+                </div>
+            </div>
+        </div>`;
+
         $modal.innerHTML = $modalBody;
         $quagenda.appendChild($modal);
     })

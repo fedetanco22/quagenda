@@ -27,7 +27,7 @@ var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
 // Si carrito existe en Local, else array vacio []
 // ------------- Function declaration ------------------------------
 function agregarCarrito(nombreProd, precioProd, imgProd) {
-    const encontrarProd = carrito.find((producto) => producto.nombreProd == nombreProd);
+    const encontrarProd = carrito.find((producto) => producto.nombreProd === nombreProd);
 
     if (encontrarProd) {
         encontrarProd.cantidadProd ++;
@@ -41,14 +41,13 @@ function agregarCarrito(nombreProd, precioProd, imgProd) {
         carrito.push(agregarProducto);
     }
     // ------------- Alerta cuando agregamos al carrito --------------------
-    // swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
+    swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
     agregarItemsAlCarrito();
     localStorage.carrito = JSON.stringify(carrito);
 }
 
 // ----CREAMOS EL NAV CART PARA EL CARRITO DE COMPRAS------
-const cart = document.querySelector(".carrito");
-
+// const cart = document.querySelector(".carrito");
 
 const botonCarrito = document.querySelector(".carrito-button").addEventListener("click", navCarritoCompras);
 const overlayCarrito = document.querySelector('.overlay')
@@ -72,95 +71,49 @@ function closeCart() {
 }
 
 function agregarItemsAlCarrito() {
+
     carrito.forEach((producto) => { // ------------------ITEMS---------------
+
         const itemsCarrito = document.createElement("div");
         itemsCarrito.className = "navCart__items";
-        contenidoCarrito.appendChild(itemsCarrito);
-
-        const imgCarrito = document.createElement("div");
-        // Imagen
-        imgCarrito.className = "navCart__items--img";
-        imgCarrito.innerHTML = `<img src=" ${
+        // contenidoCarrito.appendChild(itemsCarrito);
+        const navCartItems = `
+            <div class="navCart__items--img">
+                <img src=${
             producto.imgProd
-        }" >`;
-        itemsCarrito.appendChild(imgCarrito);
-
-        const descripcionCarrito = document.createElement("div");
-        const nombreCarrito = document.createElement("h4");
-        // Nombre Productos
-        descripcionCarrito.className = "navCart__items__producto";
-        nombreCarrito.className = "navCart__items--nombre";
-        nombreCarrito.textContent = `${
+        } alt="img-prod">
+            </div>
+            <div class="navCart__items__producto">
+                <h4 class="navCart__items__nombre">${
             producto.nombreProd
-        }`;
-        const precioProducto = document.createElement("h5");
-        precioProducto.className = "navCart__items--precio";
-        precioProducto.textContent = `${
+        }</h4>
+                <h5 class="navCart__items--precio">${
             producto.precioProd
-        }`;
-        const quitarProd = document.createElement("span");
-        quitarProd.className = "remove-item";
-        quitarProd.textContent = "quitar";
+        }</h5>
+                <span class = "remove-item">quitar</span>
+            </div>
+            <div class="navCart__cantidad">
+                <input type = "number" name = "" class = "navCart__cantidad__items" value ="1">
+                </div>`;
 
-        descripcionCarrito.appendChild(nombreCarrito);
-        descripcionCarrito.appendChild(precioProducto);
-        descripcionCarrito.appendChild(quitarProd);
-        itemsCarrito.appendChild(descripcionCarrito);
+        itemsCarrito.innerHTML = navCartItems;
+        contenidoCarrito.append(itemsCarrito);
 
-        // --------Cantidad---------
-        const cantidad = document.createElement("div");
-        cantidad.className = "navCart__cantidad";
+        cartTotal()
 
-        itemsCarrito.appendChild(cantidad);
-
-        const cantidadCarrito = document.createElement("input");
-        cantidadCarrito.className = "navCart__items__cantidad";
-        setAttributes(cantidadCarrito, {
-                name: `${
-                carrito.indexOf(producto)
-            }`,
-            type: "change"
-        });
-        itemsCarrito.appendChild(cantidadCarrito);
-
-        const chevArriba = document.createElement("i");
-
-        const chevAbajo = document.createElement("i");
-        // flecha chevron arriba
-        chevArriba.className = "navCart__items__cantidad--flecha fas fa-chevron-up";
-
-        // flecha chevron abajo
-        chevAbajo.className = "navCart__items__cantidad--flecha fas fa-chevron-down";
-
-        cantidad.appendChild(chevArriba);
-        cantidad.appendChild(cantidadCarrito);
-        cantidad.appendChild(chevAbajo);
     });
-}
+};
 
-function inputCantidad() {
-    const inputOnChange = document.querySelector(".navCart__items__cantidad");
-    inputOnChange.forEach((inputChange) => {
-        inputChange.addEventListener("change", changeInput);
+function cartTotal() {
+    let total = 0;
+    const cartTotal = document.querySelector('.navCart__cartTotal');
+    const cartItems = document.querySelectorAll('.navCart__items');
+    cartItems.forEach(navCartItem => {
+        const itemPrice = parseInt(navCartItem.querySelector('.navCart__items--precio').textContent);
+        const itemCantidad = parseInt(document.querySelector('.navCart__cantidad__items').value);
+        total = total + itemPrice * itemCantidad;
     });
-}
-
-function changeInput(event) {
-    event.preventDefault();
-    const input = event.target;
-    console.log(input);
-}
-
-
-// Cerrar Carrito---------------------------
-
-let toggleStatus = false;
-function closeToggle() {
-    if (! toggleStatus) {
-        document.querySelector('.carrito').style.right = "-500px";
-
-    } else if (toggleStatus) {
-        document.querySelector('.carrito').style.right = "0px"
-
-    }
-}
+    cartTotal.innerHTML = `${
+        total.toFixed(2)
+    }`
+};

@@ -236,23 +236,25 @@ html {
       color: red; }
       .navCart__items--precio::before {
         content: 'AR$ '; }
-    .navCart__items__cantidad {
-      text-align: center;
-      border: none;
-      background: #999;
-      width: 30px; }
-      .navCart__items__cantidad--num {
-        margin-bottom: 0; }
-      .navCart__items__cantidad--flecha {
-        color: #E4B937;
-        cursor: pointer;
-        padding: 10px 0; }
   .navCart__cantidad {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-  .navCart__cartTotal::before {
-    content: 'AR$ '; }
+    align-items: center;
+    border: none;
+    background: #999;
+    width: 30px; }
+    .navCart__cantidad__items {
+      width: 30px;
+      text-align: center; }
+      .navCart__cantidad__items--flecha {
+        color: #E4B937;
+        cursor: pointer;
+        padding: 10px 0; }
+  .navCart__cartTotal {
+    color: red; }
+    .navCart__cartTotal::before {
+      content: 'AR$ ';
+      color: #333; }
   .navCart__footer {
     width: 85%;
     text-align: center; }
@@ -262,7 +264,8 @@ html {
       width: 50%; }
 
 .remove-item {
-  color: #777; }
+  color: #777;
+  cursor: pointer; }
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {

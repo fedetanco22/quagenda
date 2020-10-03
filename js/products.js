@@ -83,7 +83,7 @@ function crearCard() {
         $btnVerMas.addEventListener('click', openModal)
 
         const $btnCarrito = document.createElement('button');
-        $btnCarrito.className = 'btn btn__modal addToCart';
+        $btnCarrito.className = 'btn btn__modal addToCart'; // Ya tiene un Event Listener asignado
         setAttributes($btnCarrito, {
             'type': 'button',
             'marcador': producto['id']

@@ -246,7 +246,7 @@ function openModal() {
     // eventBotonAddToCartModal()
 };
 
-// Funcion
+// Function para ingresar mas de un atributo
 function setAttributes(elem, attrs) {
     for (var key in attrs) {
         elem.setAttribute(key, attrs[key]);

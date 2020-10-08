@@ -1,8 +1,10 @@
 // Estructura de la CARD----
-document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
     eventBotonAddToCart();
+}); */
 
-});
+// Dom content loaded en JQUERY $(document).ready(function())
+$(eventBotonAddToCart());
 
 // ---Button CARDS
 function eventBotonAddToCart() {
@@ -24,6 +26,7 @@ function clickAddToCart(event) { // capturamos el buttom y queremos todo el id d
 }
 
 var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
+
 // Si carrito existe en Local, else array vacio []
 // ------------- Function declaration ------------------------------
 function agregarCarrito(nombreProd, precioProd, imgProd) {
@@ -31,6 +34,7 @@ function agregarCarrito(nombreProd, precioProd, imgProd) {
 
     if (encontrarProd) {
         encontrarProd.cantidadProd ++;
+
     } else {
         agregarProducto = {
             nombreProd: nombreProd,
@@ -42,26 +46,25 @@ function agregarCarrito(nombreProd, precioProd, imgProd) {
     }
     // ------------- Alerta cuando agregamos al carrito --------------------
     swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
-    agregarItemsAlCarrito();
+    cargarItemsAlCarrito();
+
     localStorage.carrito = JSON.stringify(carrito);
 }
 
-// ----CREAMOS EL NAV CART PARA EL CARRITO DE COMPRAS------
-// const cart = document.querySelector(".carrito");
-
 const botonCarrito = document.querySelector(".carrito-button").addEventListener("click", navCarritoCompras);
-const overlayCarrito = document.querySelector('.overlay')
-const navCarrito = document.querySelector('.navCart')
-const contenidoCarrito = document.querySelector('.navCart__contenido')
+const overlayCarrito = document.querySelector('.overlay');
+const navCarrito = document.querySelector('.navCart');
+const contenidoCarrito = document.querySelector('.navCart__contenido');
+const totalCarrito = document.querySelector('.navCart__cartTotal');
+
 
 function navCarritoCompras() {
-    showCart()
+    showCart();
 }
 
-function agregarItemsAlCarrito() {
-
+function cargarItemsAlCarrito() {
+    contenidoCarrito.innerHTML = '';
     carrito.forEach((producto) => { // ------------------ITEMS---------------
-
         const itemsCarrito = document.createElement("div");
         itemsCarrito.className = "navCart__items";
         // contenidoCarrito.appendChild(itemsCarrito);
@@ -81,54 +84,96 @@ function agregarItemsAlCarrito() {
                 <span class = "remove-item">quitar</span>
             </div>
             <div class="navCart__cantidad">
-                <input type = "number" name = "" class = "navCart__cantidad__items" value ="1">
+                <input type="number" min="0" onchange="inputCantidad()" data-name= ${
+            producto.nombreProd
+        } class="navCart__cantidad__items" value= ${
+            producto.cantidadProd
+        }>
                 </div>`;
 
         itemsCarrito.innerHTML = navCartItems;
         contenidoCarrito.append(itemsCarrito);
 
-        cartTotal();
-        mostrarCantidadItems()
-
-
     });
+    cartTotal()
+    mostrarCantidadItems()
 };
 
 function cartTotal() {
     let total = 0;
     const cartTotal = document.querySelector('.navCart__cartTotal');
-    const cartItems = document.querySelectorAll('.navCart__items');
-    cartItems.forEach(navCartItem => {
-        const itemPrice = parseInt(navCartItem.querySelector('.navCart__items--precio').textContent);
-        const itemCantidad = parseInt(document.querySelector('.navCart__cantidad__items').value);
-        total = total + itemPrice * itemCantidad;
+    carrito.forEach(navCartItem => {
+        const itemPrice = navCartItem.precioProd
+        const itemCantidad = navCartItem.cantidadProd
+        total = total + (itemPrice * itemCantidad);
     });
     cartTotal.innerHTML = `${
         total.toFixed(2)
     }`
 };
 
+// ------------------Abrir y Cerrar Nav Cart------------------------
+// function showCart() {
+//     overlayCarrito.classList.add('overlay__transparentBcg');
+//     navCarrito.classList.add('navCart__showCart');
+//     cargarItemsAlCarrito();
+// }
+// const closeIcon = document.querySelector('.navCart__close--icon').addEventListener('click', closeCart)
+
+// function closeCart() {
+//     overlayCarrito.classList.remove('overlay__transparentBcg');
+//     navCarrito.classList.remove('navCart__showCart');
+// }
+// --------------------------------------------------------
+
+
+// -------------JQUERY NavCart Show & Close------------------------------
+
 function showCart() {
-    overlayCarrito.classList.add('overlay__transparentBcg');
-    navCarrito.classList.add('navCart__showCart');
+    $(overlayCarrito).addClass('overlay__transparentBcg')
+    $(navCarrito).addClass('navCart__showCart')
+    cargarItemsAlCarrito();
+
 }
 
-const closeIcon = document.querySelector('.navCart__close--icon').addEventListener('click', closeCart)
-
-function closeCart() {
-    overlayCarrito.classList.remove('overlay__transparentBcg');
-    navCarrito.classList.remove('navCart__showCart');
-}
+$('.navCart__close--icon').click(function () {
+    $(overlayCarrito).removeClass('overlay__transparentBcg')
+    $(navCarrito).removeClass('navCart__showCart')
+})
 
 
+// ---------------------------------------------------
+
+
+// -----------Icono Cantidad de Productos en el Carrito----------------
 function mostrarCantidadItems() {
     let totalItems = 0;
     const cantidadTotal = document.querySelector('.carrito-items');
     const cartItems = document.querySelectorAll('.navCart__items');
     cartItems.forEach(item => {
         const itemCantidad = parseInt(item.querySelector('.navCart__cantidad__items').value);
-        totalItems = totalItems + itemCantidad
+        totalItems += itemCantidad
     })
-
     cantidadTotal.innerHTML = `${totalItems}`
 };
+$(mostrarCantidadItems())
+// -------------------------------------------------------------------
+
+
+function inputCantidad() {
+    var hola = console.log('looooo')
+    hola.target
+}
+
+// function removeItem() {
+//     const quitarItem = querySelectorAll('remove-item').forEach((item) => {
+//         item.addEventListener('click', console.log('quitarItemCarrito'));
+//     });
+// }
+
+
+// function quitarItemCarrito(e) {
+//     if (e.target.value == 0) {
+//         carrito.splice()
+//     } else {}
+// }

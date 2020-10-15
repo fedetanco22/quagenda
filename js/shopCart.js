@@ -6,12 +6,20 @@
 // Dom content loaded en JQUERY $(document).ready(function())
 $(eventBotonAddToCart());
 
-// ---Button CARDS
+
+// ===================================================================
+// ======================== Button CARDS ==============================
+// ===================================================================
+
 function eventBotonAddToCart() {
     const $eventoAgregarCarrito = document.querySelectorAll(".addToCart").forEach((item) => {
         item.addEventListener("click", clickAddToCart); // Call Back function clickAddtoCart
     });
 }
+
+// ===================================================================
+// ==============CLICK EN EL BOTON PARA AGREGAR CARRITO ================
+// ===================================================================
 
 function clickAddToCart(event) { // capturamos el buttom y queremos todo el id del Prodcuto con el closest (elemento padre mas cercano con el id)
     event.preventDefault();
@@ -22,19 +30,22 @@ function clickAddToCart(event) { // capturamos el buttom y queremos todo el id d
     precioProd = parseFloat(precioProd); // convertir a numero
     const imgProd = producto.querySelector(".cards__img").src;
 
-    agregarCarrito(nombreProd, precioProd, imgProd);
+    agregarCarrito(nombreProd, precioProd, imgProd); // ===Invocamos la funcion con estos parametros====
 }
 
-var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
 
-// Si carrito existe en Local, else array vacio []
+// ===================================================================
 // ------------- Function declaration ------------------------------
+// ============== Busca en el ARRAY [Carrito] los productos==============
+
+var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
+// Si carrito existe en Local, parsear e; JSon. Else array vacio []
+
 function agregarCarrito(nombreProd, precioProd, imgProd) {
     const encontrarProd = carrito.find((producto) => producto.nombreProd === nombreProd);
 
     if (encontrarProd) {
         encontrarProd.cantidadProd ++;
-
     } else {
         agregarProducto = {
             nombreProd: nombreProd,
@@ -42,29 +53,26 @@ function agregarCarrito(nombreProd, precioProd, imgProd) {
             imgProd: imgProd,
             cantidadProd: 1
         };
-        carrito.push(agregarProducto);
+        carrito.push(agregarProducto); // Solo coloca en nuestro Array el producto nuevo con esas propiedades
     }
-    // ------------- Alerta cuando agregamos al carrito --------------------
+    // ===============Alerta cuando agregamos al carrito =====================
     swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
-    cargarItemsAlCarrito();
-
-    localStorage.carrito = JSON.stringify(carrito);
+    // =======================================================================
+    cargarItemsAlCarrito(); // Crea el porducto en el NAV Cart
+    localStorage.carrito = JSON.stringify(carrito); // Convertimo a string/JSON y guardamos en LOCAL STORAGE
 }
 
-const botonCarrito = document.querySelector(".carrito-button").addEventListener("click", navCarritoCompras);
+// ==================================================================================
+// ======================== Creamos el prodcuto en el NAV CART=======================
+// ==================================================================================
 const overlayCarrito = document.querySelector('.overlay');
 const navCarrito = document.querySelector('.navCart');
 const contenidoCarrito = document.querySelector('.navCart__contenido');
 const totalCarrito = document.querySelector('.navCart__cartTotal');
 
-
-function navCarritoCompras() {
-    showCart();
-}
-
 function cargarItemsAlCarrito() {
-    contenidoCarrito.innerHTML = '';
-    carrito.forEach((producto) => { // ------------------ITEMS---------------
+    contenidoCarrito.innerHTML = ''; // Vaciamos el contenido para que no se repitan los productos
+    carrito.forEach((producto) => {
         const itemsCarrito = document.createElement("div");
         itemsCarrito.className = "navCart__items";
         // contenidoCarrito.appendChild(itemsCarrito);
@@ -84,9 +92,9 @@ function cargarItemsAlCarrito() {
                 <span class = "remove-item">quitar</span>
             </div>
             <div class="navCart__cantidad">
-                <input type="number" min="0" onchange="inputCantidad()" data-name= ${
-            producto.nombreProd
-        } class="navCart__cantidad__items" value= ${
+            <input onchange="inputCantidad(event)" class="navCart__cantidad__items" type="number" min = "0" name = ${
+            carrito.indexOf(producto)
+        } value= ${
             producto.cantidadProd
         }>
                 </div>`;
@@ -112,7 +120,25 @@ function cartTotal() {
     }`
 };
 
-// ------------------Abrir y Cerrar Nav Cart------------------------
+// ==============================================================================
+// ===================== Clickeamos en el Icono de Carrrito =====================
+// ==============================================================================
+// ==============================================================================
+// =========================JQUERY NavCart Show & Close==========================
+// ==============================================================================
+
+$('.carrito-button').on('click', function () {
+    $(overlayCarrito).addClass('overlay__transparentBcg');
+    $(navCarrito).addClass('navCart__showCart');
+    cargarItemsAlCarrito();
+})
+
+$('.navCart__close--icon').on("click", function () {
+    $(overlayCarrito).removeClass('overlay__transparentBcg');
+    $(navCarrito).removeClass('navCart__showCart');
+})
+
+// ------------------Abrir y Cerrar Nav Cart JS nativo------------------------
 // function showCart() {
 //     overlayCarrito.classList.add('overlay__transparentBcg');
 //     navCarrito.classList.add('navCart__showCart');
@@ -124,28 +150,10 @@ function cartTotal() {
 //     overlayCarrito.classList.remove('overlay__transparentBcg');
 //     navCarrito.classList.remove('navCart__showCart');
 // }
-// --------------------------------------------------------
 
-
-// -------------JQUERY NavCart Show & Close------------------------------
-
-function showCart() {
-    $(overlayCarrito).addClass('overlay__transparentBcg')
-    $(navCarrito).addClass('navCart__showCart')
-    cargarItemsAlCarrito();
-
-}
-
-$('.navCart__close--icon').click(function () {
-    $(overlayCarrito).removeClass('overlay__transparentBcg')
-    $(navCarrito).removeClass('navCart__showCart')
-})
-
-
-// ---------------------------------------------------
-
-
+// ========================================================================
 // -----------Icono Cantidad de Productos en el Carrito----------------
+// ========================================================================
 function mostrarCantidadItems() {
     let totalItems = 0;
     const cantidadTotal = document.querySelector('.carrito-items');
@@ -156,24 +164,24 @@ function mostrarCantidadItems() {
     })
     cantidadTotal.innerHTML = `${totalItems}`
 };
-$(mostrarCantidadItems())
+
 // -------------------------------------------------------------------
 
+// ==============================================================================
+// ===========================INPUT CANTIDAD====================================
+// ==============================================================================
 
-function inputCantidad() {
-    var hola = console.log('looooo')
-    hola.target
+function inputCantidad(event) {
+    console.log(event.target.value);
+    // let indice = parseInt(event.target.name)
+    // let valor = (event.target.vaule)
+    // console.log(valor)
+    // console.log(carrito[indice])
+    // if (carrito[indice].value == 0) {
+    //     console.log('hola')
+    // }
+    // carrito.splice(indice, 1)
+    // cargarItemsAlCarrito()
+    // console.log(carrito);
 }
-
-// function removeItem() {
-//     const quitarItem = querySelectorAll('remove-item').forEach((item) => {
-//         item.addEventListener('click', console.log('quitarItemCarrito'));
-//     });
-// }
-
-
-// function quitarItemCarrito(e) {
-//     if (e.target.value == 0) {
-//         carrito.splice()
-//     } else {}
-// }
+// ========================================================================// ========================================================================// function removeItem() {//     const quitarItem = querySelectorAll('remove-item').forEach((item) => {//         item.addEventListener('click', console.log('quitarItemCarrito'));//     });// }// function quitarItemCarrito(e) {//     if (e.target.value == 0) {//         carrito.splice()//     } else {}// }

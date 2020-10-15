@@ -1,9 +1,8 @@
-var $quagenda = document.querySelector('#quagenda');
-crearCard();
+"use strict";
+const $quagenda = document.querySelector('#quagenda');
 
-function crearCard() {
-    data.forEach((producto) => { // -------CARDS-----------
-
+(function (arr) {
+    arr.forEach((producto) => { // -------CARDS-----------
         const $div = document.createElement('div');
         $div.setAttribute('id', producto['id'])
         $div.setAttribute('class', 'cards', 'prod__cards');
@@ -78,9 +77,9 @@ function crearCard() {
             'data-toggle': "modal",
             'data-target': `#exampleModal${
                 producto['id']
-            }`
+            }`,
+            'onclick': "openModal()"
         })
-        $btnVerMas.addEventListener('click', openModal)
 
         const $btnCarrito = document.createElement('button');
         $btnCarrito.className = 'btn btn__modal addToCart'; // Ya tiene un Event Listener asignado
@@ -115,7 +114,7 @@ function crearCard() {
         $dinero.appendChild($precio);
 
         $buttons.appendChild($btnVerMas);
-        $btnCarrito.appendChild($iconoCarrito)
+        $btnCarrito.appendChild($iconoCarrito);
         $buttons.appendChild($btnCarrito);
 
         $preVta.appendChild($iconoPreVta);
@@ -123,15 +122,12 @@ function crearCard() {
         $div.appendChild($divFoto);
         $div.appendChild($txt);
         $div.appendChild($dinero);
-        $div.appendChild($buttons)
-        $div.appendChild($preVta)
-
-
+        $div.appendChild($buttons);
+        $div.appendChild($preVta);
         $quagenda.appendChild($div);
-
     });
 
-};
+})(data); // (IIFE) Inmediatle Invoke Funtion expression
 
 
 function openModal() {
@@ -149,106 +145,101 @@ function openModal() {
         })
 
         const $modalBody = `
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="modal-logo" src="images/Logo-web-AM.svg" alt="logo">
-                    <button type="button" class="close" data-dismiss="modal"
-                        aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <div id="carouselExampleIndicators${
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="modal-logo" src="images/Logo-web-AM.svg" alt="logo">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="carouselExampleIndicators${
             producto['id']
-        } class="carousel slide"
-                        data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li class="bg-img bg-img-${
+        }" class= "carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li class="bg-img bg-img-${
             producto['id']
-        }-1" data-target="#carouselExampleIndicators${
+        }-1 active" data-target="#carouselExampleIndicators${
             producto['id']
-        }" data-slide-to="0" class="active"></li>
-                            <li class="bg-img bg-img-${
+        }" data-slide-to="0" ></li>
+                        <li class="bg-img bg-img-${
             producto['id']
         }-2" data-target="#carouselExampleIndicators${
             producto['id']
         }" data-slide-to="1">
-                            </li>
-                            <li class="bg-img bg-img-${
+                        </li>
+                        <li class="bg-img bg-img-${
             producto['id']
         }-3" data-target="#carouselExampleIndicators${
             producto['id']
         }" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src=${
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="${
             producto['img'].img2
-        } class="d-block w-100" alt="viajar-frente">
-                            </div>
-                            <div class="carousel-item">
-                                <img src=${
+        }" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="${
             producto['img'].img3
-        } class = "d-block w-100" alt = "viajar-dorso" >                                    
-                            </div>
-                            <div class="carousel-item">
-                                <img src= ${
+        }" class = "d-block w-100" alt = "" >
+                        </div>
+                        <div class="carousel-item">
+                            <img src= "${
             producto['img'].img4
-        } class="d-block w-100" alt="viaje-celular">
-                            </div>
+        }" class="d-block w-100" alt="">
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="modal-footer__caract">
-                        <div class="modal-footer__caract__titulo">
-                            <strong>CARACTER&Iacute;STICAS</strong>
-                        </div>
-                        <ul class="modal-footer__caract__list">
-                            <li class="card__caract__item">
-                                <strong>Tama&ntilde;o:&nbsp;</strong>${
-            producto['caracteristicas'].tamanio
-        }
-                            </li>
-                            <li class="modal-footer__caract__item">
-                                <strong>Interior:&nbsp;</strong>${
-            producto['caracteristicas'].interior
-        }</li>
-                            <li class="modal-footer__caract__item">
-                                <strong>Encuadernacion:&nbsp;</strong>${
-            producto['caracteristicas'].encuadernacion
-        }</li>
-                            <li class="modal-footer__caract__item">
-                                <strong>Papel:&nbsp;</strong>${
-            producto['caracteristicas'].papel
-        }</li>
-                            <li class="modal-footer__caract__item cards__precio--modal">
-                                AR$ ${
-            producto['precio']
-        }</li>
-                        </ul>
-                    </div>
-                    <button type="button" class="btn btn__modal addToCartModal"
-                        data-toggle="modal" data-target="#cart" marcador="${
-            producto['id']
-        }">
-                        <i class="fas fa-shopping-cart"></i>
-                        <h4 class="agregar">Comprar</h4>
-                    </button>
                 </div>
             </div>
-        </div>`;
+            <div class="modal-footer">
+                <div class="modal-footer__caract">
+                    <div class="modal-footer__caract__titulo">
+                        <strong>CARACTER&Iacute;STICAS</strong>
+                    </div>
+                    <ul class="modal-footer__caract__list">
+                        <li class="card__caract__item">
+                            <strong>Tama&ntilde;o:&nbsp;</strong>${
+            producto['caracteristicas'].tamanio
+        }
+                        </li>
+                        <li class="modal-footer__caract__item">
+                            <strong>Interior:&nbsp;</strong>${
+            producto['caracteristicas'].interior
+        }</li>
+                        <li class="modal-footer__caract__item">
+                            <strong>Encuadernacion:&nbsp;</strong>${
+            producto['caracteristicas'].encuadernacion
+        }</li>
+                        <li class="modal-footer__caract__item">
+                            <strong>Papel:&nbsp;</strong>${
+            producto['caracteristicas'].papel
+        }</li>
+                        <li class="modal-footer__caract__item cards__precio--modal">
+                            AR$ ${
+            producto['precio']
+        }</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>`;
 
         $modal.innerHTML = $modalBody;
-        $quagenda.appendChild($modal);
-    })
-    // Event para reconocer los Butoons con class addToCart
-    // eventBotonAddToCartModal()
+        const contenedor = document.getElementById(`${
+            producto.id
+        }`)
+        contenedor.appendChild($modal)
+
+    });
 };
 
-// Function para ingresar mas de un atributo
-function setAttributes(elem, attrs) {
+function setAttributes(elem, attrs) { // para ingresar mas de un atributofunction
     for (var key in attrs) {
         elem.setAttribute(key, attrs[key]);
     }
-}
+};

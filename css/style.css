@@ -1188,7 +1188,7 @@ a:hover {
     background: #999;
     width: 30px; }
     .navCart__cantidad__items {
-      width: 30px;
+      width: 40px;
       text-align: center; }
       .navCart__cantidad__items--flecha {
         color: #E4B937;
@@ -1228,299 +1228,263 @@ a:hover {
     width: 30vw;
     min-width: 450px; } }
 
-.carousel.slide {
+.carousel .slide {
   padding: 0; }
-  .carousel.slide .carousel-control-next,
-  .carousel.slide .carousel-control-prev {
+  .carousel .slide .carousel-control-next,
+  .carousel .slide .carousel-control-prev {
     filter: invert(100%); }
-  .carousel.slide .carousel-indicators .bg-img-1-1 {
-    background-image: url("../../images/quagenda-sol-frente.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-1-2 {
-    background-image: url("../../images/quagenda-sol-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-1-3 {
-    background-image: url("../../images/quagenda-sol-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-2-1 {
-    background-image: url("../../images/quagenda-sol2-frente.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-2-2 {
-    background-image: url("../../images/quagenda-sol2-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-2-3 {
-    background-image: url("../../images/quagenda-sol2-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-3-1 {
-    background-image: url("../../images/viajar-blanco-frente.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-3-2 {
-    background-image: url("../../images/viajar-blanco-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-3-3 {
-    background-image: url("../../images/mock-viaje-cel2.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-4-1 {
-    background-image: url("../../images/luna-blanco1.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-4-2 {
-    background-image: url("../../images/luna-blanco-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-4-3 {
-    background-image: url("../../images/mock-Luna.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-5-1 {
-    background-image: url("../../images/cuaderno1-frente.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-5-2 {
-    background-image: url("../../images/cuaderno1.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-5-3 {
-    background-image: url("../../images/mock-cuaderno1.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-6-1 {
-    background-image: url("../../images/cuaderno2.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-6-2 {
-    background-image: url("../../images/cuaderno2-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-6-3 {
-    background-image: url("../../images/mock-cuaderno2.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-7-1 {
-    background-image: url("../../images/bitacora1.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-7-2 {
-    background-image: url("../../images/bitacora1-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-7-3 {
-    background-image: url("../../images/mock-bitacora1.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-8-1 {
-    background-image: url("../../images/bitacora2.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-8-2 {
-    background-image: url("../../images/bitacora2-dorso.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
-  .carousel.slide .carousel-indicators .bg-img-8-3 {
-    background-image: url("../../images/mock-bitacora2.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: contain;
-    width: 30px;
-    height: 25px; }
+
+.carousel-indicators .bg-img-1-1 {
+  background-image: url("../../images/quagenda-sol-frente.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-1-2 {
+  background-image: url("../../images/quagenda-sol-dorso.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-1-3 {
+  background-image: url("../../images/quagenda-sol2-dorso.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-2-1 {
+  background-image: url("../../images/quagenda-sol2-frente.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-2-2 {
+  background-image: url("./../../images/quagenda-sol2-dorso.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-2-3 {
+  background-image: url("../../images/quagenda-sol2-dorso.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-3-1 {
+  background-image: url("../../images/viajar-blanco-frente.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-3-2 {
+  background-image: url("../../images/viajar-blanco-dorso.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-3-3 {
+  background-image: url("../../images/mock-viaje-cel2.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-4-1 {
+  background-image: url("../../images/luna-blanco1.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-4-2 {
+  background-image: url("../../images/luna-blanco-dorso.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-4-3 {
+  background-image: url("../../images/mock-Luna.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-5-1 {
+  background-image: url("../../images/cuaderno1-frente.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-5-2 {
+  background-image: url("../../images/cuaderno1.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-5-3 {
+  background-image: url("../../images/mock-cuaderno1.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-6-1 {
+  background-image: url("../../images/cuaderno2.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-6-2 {
+  background-image: url("../../images/cuaderno2-dorso.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
+
+.carousel-indicators .bg-img-6-3 {
+  background-image: url("../../images/mock-cuaderno2.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: contain;
+  width: 30px;
+  height: 25px; }
 
 @media screen and (min-width: 767.98px) {
-  .carousel.slide .carousel-indicators .bg-img-1-1 {
+  .carousel-indicators .bg-img-1-1 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-1-2 {
+  .carousel-indicators .bg-img-1-2 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-1-3 {
+  .carousel-indicators .bg-img-1-3 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-2-1 {
+  .carousel-indicators .bg-img-2-1 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-2-2 {
+  .carousel-indicators .bg-img-2-2 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-2-3 {
+  .carousel-indicators .bg-img-2-3 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-3-1 {
+  .carousel-indicators .bg-img-3-1 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-3-2 {
+  .carousel-indicators .bg-img-3-2 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-3-3 {
+  .carousel-indicators .bg-img-3-3 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-4-1 {
+  .carousel-indicators .bg-img-4-1 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-4-2 {
+  .carousel-indicators .bg-img-4-2 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-4-3 {
+  .carousel-indicators .bg-img-4-3 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-5-1 {
+  .carousel-indicators .bg-img-5-1 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-5-2 {
+  .carousel-indicators .bg-img-5-2 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-5-3 {
+  .carousel-indicators .bg-img-5-3 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-6-1 {
+  .carousel-indicators .bg-img-6-1 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-6-2 {
+  .carousel-indicators .bg-img-6-2 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-6-3 {
+  .carousel-indicators .bg-img-6-3 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-17-1 {
+  .carousel-indicators .bg-img-17-1 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-7-2 {
+  .carousel-indicators .bg-img-7-2 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-7-3 {
+  .carousel-indicators .bg-img-7-3 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-8-1 {
+  .carousel-indicators .bg-img-8-1 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-8-2 {
+  .carousel-indicators .bg-img-8-2 {
     width: 50px;
     height: 35px; }
-  .carousel.slide .carousel-indicators .bg-img-8-3 {
+  .carousel-indicators .bg-img-8-3 {
     width: 50px;
     height: 35px; } }
 

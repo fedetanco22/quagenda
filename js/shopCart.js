@@ -32,8 +32,6 @@ function clickAddToCart(event) { // capturamos el buttom y queremos todo el id d
 
     agregarCarrito(nombreProd, precioProd, imgProd); // ===Invocamos la funcion con estos parametros====
 }
-
-
 // ===================================================================
 // ------------- Function declaration ------------------------------
 // ============== Busca en el ARRAY [Carrito] los productos==============
@@ -151,6 +149,7 @@ $('.navCart__close--icon').on("click", function () {
 //     navCarrito.classList.remove('navCart__showCart');
 // }
 
+
 // ========================================================================
 // -----------Icono Cantidad de Productos en el Carrito----------------
 // ========================================================================
@@ -167,9 +166,9 @@ function mostrarCantidadItems() {
 
 // -------------------------------------------------------------------
 
-// ==============================================================================
+// =============================================================================
 // ===========================INPUT CANTIDAD====================================
-// ==============================================================================
+// =============================================================================
 
 function inputCantidad(event) {
     console.log(event.target.value);
@@ -184,4 +183,5 @@ function inputCantidad(event) {
     // cargarItemsAlCarrito()
     // console.log(carrito);
 }
-// ========================================================================// ========================================================================// function removeItem() {//     const quitarItem = querySelectorAll('remove-item').forEach((item) => {//         item.addEventListener('click', console.log('quitarItemCarrito'));//     });// }// function quitarItemCarrito(e) {//     if (e.target.value == 0) {//         carrito.splice()//     } else {}// }
+// ========================================================================
+// ========================================================================

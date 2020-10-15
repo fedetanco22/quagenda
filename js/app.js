@@ -3,11 +3,15 @@ document.addEventListener('DOMContentLoaded', cargar);
 
 function cargar() {
     $.ajax({
-        url: 'data.json',
-        success: function (data) {
-            console.log(data)
-            // data = data
-
+        url: '/js/data.json',
+        success: function (dataBase) { // console.log(data)
+            data = dataBase;
+            crearCards(data);
+            openModal();
+            eventBotonAddToCart();
+        },
+        error: function (error) {
+            console.log(error);
         }
     })
 }

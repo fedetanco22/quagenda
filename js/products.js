@@ -1,7 +1,7 @@
 "use strict";
 const $quagenda = document.querySelector('#quagenda');
 
-(function (arr) {
+function crearCards(arr) {
     arr.forEach((producto) => { // -------CARDS-----------
         const $div = document.createElement('div');
         $div.setAttribute('id', producto['id'])
@@ -127,7 +127,7 @@ const $quagenda = document.querySelector('#quagenda');
         $quagenda.appendChild($div);
     });
 
-})(data); // (IIFE) Inmediatle Invoke Funtion expression
+}; // (IIFE) Inmediatle Invoke Funtion expression
 
 
 function openModal() {

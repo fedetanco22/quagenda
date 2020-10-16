@@ -103,6 +103,8 @@ function cargarItemsAlCarrito() {
     });
     cartTotal()
     mostrarCantidadItems()
+    vaciarCarrito()
+
 };
 
 function cartTotal() {
@@ -167,4 +169,53 @@ function mostrarCantidadItems() {
 // var totalisimo = mostrarCantidadItems()// cantidadTotal.append(totalismo)// =============================================================================// ===========================INPUT CANTIDAD====================================// =============================================================================
 function inputCantidad(event) {
     console.log(event.target.value);
-} // ========================================================================// ========================================================================
+}
+// ==========================================================================
+// ==========================================================================
+
+
+// ==========================================================================
+// ========================= VACIAR COMPRA ==================================
+// ==========================================================================
+// ++++++++++++++ ver porque se repite===== estoy invocando la funcion en agregar carrito =======
+const vaciarCart = document.createElement('button');
+
+function vaciarCarrito() {
+    const buttons = document.querySelector('.navCart__buttons');
+
+    if (carrito.length != 0) {
+        vaciarCart.className = 'btn';
+        vaciarCart.textContent = 'vaciar';
+        buttons.appendChild(vaciarCart)
+        buttons.style.display = 'inline-block'
+
+
+    } else {
+        buttons.style.display = 'none'
+
+    }
+
+}
+
+
+// ==========================================================================
+// ========================= QUITAR iTEM DE CARRITO =========================
+// ==========================================================================
+
+
+// ==========================================================================
+// ========================= REALIZAR COMPRA ================================
+// ==========================================================================
+
+
+// SCOPES && CLOSURES VIDEO N19========
+
+
+// var a = 10;
+// var fn = function(){
+//     console.log(a);
+// };
+// setTimeout(fn, 5000);
+// console.log('Done');
+
+// =========================================================================

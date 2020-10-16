@@ -9,6 +9,9 @@ function cargar() {
             crearCards(data);
             openModal();
             eventBotonAddToCart();
+            mostrarCantidadItems()
+
+
         },
         error: function (error) {
             console.log(error);

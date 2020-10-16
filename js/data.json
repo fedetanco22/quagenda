@@ -64,7 +64,7 @@
 
       "precio": 1150,
       "oferta": 1350,
-      "auto": "Sol Martinez",
+      "autor": "Sol Martinez",
       "categoria": "Quagenda",
       "img": {
          "img": "images/img-disenia-solchus.jpg",

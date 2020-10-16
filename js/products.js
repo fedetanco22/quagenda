@@ -224,6 +224,11 @@ function openModal() {
         }</li>
                     </ul>
                 </div>
+                <button type = "button"  class = "btn btn__modal addToCart"
+                    data - toggle = "modal" data - target = "#cart" >
+                    <i class="fas fa-shopping-cart"></i>
+                    <h4 class="agregar">Comprar</h4> 
+                </button>
 
             </div>
         </div>

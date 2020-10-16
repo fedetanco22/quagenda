@@ -33,8 +33,7 @@ function clickAddToCart(event) { // capturamos el buttom y queremos todo el id d
     agregarCarrito(nombreProd, precioProd, imgProd); // ===Invocamos la funcion con estos parametros====
 }
 // ===================================================================
-// ------------- Function declaration ------------------------------
-// ============== Busca en el ARRAY [Carrito] los productos==============
+// ============== Busca en el ARRAY [Carrito] los productos===========
 
 var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
 // Si carrito existe en Local, parsear e; JSon. Else array vacio []
@@ -57,6 +56,7 @@ function agregarCarrito(nombreProd, precioProd, imgProd) {
     swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
     // =======================================================================
     cargarItemsAlCarrito(); // Crea el porducto en el NAV Cart
+    mostrarCantidadItems()
     localStorage.carrito = JSON.stringify(carrito); // Convertimo a string/JSON y guardamos en LOCAL STORAGE
 }
 
@@ -131,7 +131,7 @@ $('.carrito-button').on('click', function () {
     cargarItemsAlCarrito();
 })
 
-$('.navCart__close--icon').on("click", function () {
+$('.navCart__close--icon').on('click', function () {
     $(overlayCarrito).removeClass('overlay__transparentBcg');
     $(navCarrito).removeClass('navCart__showCart');
 })
@@ -156,32 +156,15 @@ $('.navCart__close--icon').on("click", function () {
 function mostrarCantidadItems() {
     let totalItems = 0;
     const cantidadTotal = document.querySelector('.carrito-items');
-    const cartItems = document.querySelectorAll('.navCart__items');
-    cartItems.forEach(item => {
-        const itemCantidad = parseInt(item.querySelector('.navCart__cantidad__items').value);
-        totalItems += itemCantidad
-    })
-    cantidadTotal.innerHTML = `${totalItems}`
+    if (carrito.length == 0) {
+        cantidadTotal.innerHTML = '0'
+    } else if (carrito.length != 0) {
+        totalItems = parseInt(carrito[0].cantidadProd)
+        cantidadTotal.innerHTML = `${totalItems}`
+    }
 };
 
-// -------------------------------------------------------------------
-
-// =============================================================================
-// ===========================INPUT CANTIDAD====================================
-// =============================================================================
-
+// var totalisimo = mostrarCantidadItems()// cantidadTotal.append(totalismo)// =============================================================================// ===========================INPUT CANTIDAD====================================// =============================================================================
 function inputCantidad(event) {
     console.log(event.target.value);
-    // let indice = parseInt(event.target.name)
-    // let valor = (event.target.vaule)
-    // console.log(valor)
-    // console.log(carrito[indice])
-    // if (carrito[indice].value == 0) {
-    //     console.log('hola')
-    // }
-    // carrito.splice(indice, 1)
-    // cargarItemsAlCarrito()
-    // console.log(carrito);
-}
-// ========================================================================
-// ========================================================================
+} // ========================================================================// ========================================================================

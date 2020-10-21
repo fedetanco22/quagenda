@@ -38,8 +38,6 @@
     color: $color-primario;
     font-family: $font-ppal;
     text-align: center;
-
-
 }
 
 @mixin bg-img {
@@ -54,5 +52,5 @@
     width: 100%;
     object-fit: cover;
     display: block;
-    
+
 }

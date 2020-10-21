@@ -93,6 +93,22 @@ html {
     .btn {
       padding: 23px 30px; } }
 
+.btn-comprar {
+  background-color: green;
+  color: #fff; }
+  .btn-comprar:hover {
+    background-color: green;
+    color: #fff;
+    opacity: .70; }
+
+.btn-danger {
+  background-color: red;
+  color: #fff; }
+  .btn-danger:hover {
+    background-color: red;
+    color: #fff;
+    opacity: .70; }
+
 .blog__btn {
   padding: 10px 10px;
   background-color: #333;
@@ -1151,6 +1167,8 @@ a:hover {
       cursor: pointer; }
   .navCart__contenido {
     width: 100%; }
+    .navCart__contenido--vacio {
+      display: none; }
   .navCart__items {
     padding: 0 10px;
     width: 100%;
@@ -1189,7 +1207,9 @@ a:hover {
     width: 30px; }
     .navCart__cantidad__items {
       width: 40px;
-      text-align: center; }
+      text-align: center;
+      border: none;
+      background-color: #d3d2d2; }
       .navCart__cantidad__items--flecha {
         color: #E4B937;
         cursor: pointer;
@@ -1206,13 +1226,19 @@ a:hover {
     text-align: center; }
     .navCart__footer--h3 {
       text-transform: uppercase; }
-    .navCart__footer--vaciarBtn {
-      width: 50%; }
 
 .remove-item {
   color: #777;
   cursor: pointer; }
 
+/* ============ ELIMINA LAS FLECHAS DE LOS INPUT EN CHROME ========================== */
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+/* ============ MUESTRA LAS FLECHAS DE LOS INPUT EN CHROME ========================== */
+/* input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+} */
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: 575.98px) {
   .carrito-button {

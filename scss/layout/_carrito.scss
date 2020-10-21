@@ -115,6 +115,11 @@
 
     &__contenido {
         width: 100%;
+
+        &--vacio {
+            display: none;
+        }
+
     }
 
     &__items {
@@ -173,6 +178,10 @@
         &__items {
             width: 40px;
             text-align: center;
+            border: none;
+            background-color: rgb(211, 210, 210);
+
+
 
             &--flecha {
                 color: #E4B937;
@@ -200,12 +209,6 @@
 
         &--h3 {
             text-transform: uppercase;
-
-        }
-
-        &--vaciarBtn {
-            width: 50%;
-
         }
     }
 
@@ -215,6 +218,16 @@
     color: #777;
     cursor: pointer;
 }
+
+/* ============ ELIMINA LAS FLECHAS DE LOS INPUT EN CHROME ========================== */
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* ============ MUESTRA LAS FLECHAS DE LOS INPUT EN CHROME ========================== */
+/* input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+} */
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: $bp_potrait-phones) {

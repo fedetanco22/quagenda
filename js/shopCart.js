@@ -67,6 +67,7 @@ const overlayCarrito = document.querySelector('.overlay');
 const navCarrito = document.querySelector('.navCart');
 const contenidoCarrito = document.querySelector('.navCart__contenido');
 const totalCarrito = document.querySelector('.navCart__cartTotal');
+// const cartTotal = document.querySelector('.navCart__cartTotal');
 
 function cargarItemsAlCarrito() {
     contenidoCarrito.innerHTML = ''; // Vaciamos el contenido para que no se repitan los productos
@@ -103,19 +104,18 @@ function cargarItemsAlCarrito() {
     });
     cartTotal()
     mostrarCantidadItems()
-    vaciarCarrito()
+    butonVaciarCarrito()
 
 };
 
 function cartTotal() {
     let total = 0;
-    const cartTotal = document.querySelector('.navCart__cartTotal');
     carrito.forEach(navCartItem => {
         const itemPrice = navCartItem.precioProd
         const itemCantidad = navCartItem.cantidadProd
         total = total + (itemPrice * itemCantidad);
     });
-    cartTotal.innerHTML = `${
+    totalCarrito.innerHTML = `${
         total.toFixed(2)
     }`
 };
@@ -138,32 +138,15 @@ $('.navCart__close--icon').on('click', function () {
     $(navCarrito).removeClass('navCart__showCart');
 })
 
-// ------------------Abrir y Cerrar Nav Cart JS nativo------------------------
-// function showCart() {
-//     overlayCarrito.classList.add('overlay__transparentBcg');
-//     navCarrito.classList.add('navCart__showCart');
-//     cargarItemsAlCarrito();
-// }
-// const closeIcon = document.querySelector('.navCart__close--icon').addEventListener('click', closeCart)
-
-// function closeCart() {
-//     overlayCarrito.classList.remove('overlay__transparentBcg');
-//     navCarrito.classList.remove('navCart__showCart');
-// }
-
-
 // ========================================================================
 // -----------Icono Cantidad de Productos en el Carrito----------------
 // ========================================================================
+const cantidadTotal = document.querySelector('.carrito-items');
+
 function mostrarCantidadItems() {
-    let totalItems = 0;
-    const cantidadTotal = document.querySelector('.carrito-items');
-    if (carrito.length == 0) {
-        cantidadTotal.innerHTML = '0'
-    } else if (carrito.length != 0) {
-        totalItems = parseInt(carrito[0].cantidadProd)
-        cantidadTotal.innerHTML = `${totalItems}`
-    }
+    const totalItems = carrito.reduce((acum, item) => acum + item.cantidadProd, 0)
+    cantidadTotal.innerHTML = `${totalItems}`
+
 };
 
 // var totalisimo = mostrarCantidadItems()// cantidadTotal.append(totalismo)// =============================================================================// ===========================INPUT CANTIDAD====================================// =============================================================================
@@ -177,27 +160,46 @@ function inputCantidad(event) {
 // ==========================================================================
 // ========================= VACIAR COMPRA ==================================
 // ==========================================================================
-// ++++++++++++++ ver porque se repite===== estoy invocando la funcion en agregar carrito =======
+
 const vaciarCart = document.createElement('button');
+const buttons = document.querySelector('.navCart__buttons');
 
-function vaciarCarrito() {
-    const buttons = document.querySelector('.navCart__buttons');
-
+function butonVaciarCarrito() {
     if (carrito.length != 0) {
-        vaciarCart.className = 'btn';
+        vaciarCart.className = 'btn btn-danger';
         vaciarCart.textContent = 'vaciar';
-        buttons.appendChild(vaciarCart)
-        buttons.style.display = 'inline-block'
+        buttons.prepend(vaciarCart);
+        // append node like first child
+        buttons.style.display = 'inline-block';
 
+        contenidoCarrito.classList.remove('navCart__contenido--vacio')
+
+        const vaciarCarritoEvent = document.querySelector('.btn-danger');
+        vaciarCarritoEvent.addEventListener('click', vaciarCarrito);
 
     } else {
         buttons.style.display = 'none'
-
     }
+    localStorage.carrito = JSON.stringify(carrito)
 
-}
+
+};
+
+function vaciarCarrito(event) { //
+
+    event.preventDefault()
+    // contenidoCarrito.remove()
+
+    contenidoCarrito.classList.add('navCart__contenido--vacio')
+
+    buttons.style.display = 'none';
+    cantidadTotal.innerHTML = '0'
+    totalCarrito.innerHTML = '0.00'
+    localStorage.clear()
+    carrito = []
 
 
+};
 // ==========================================================================
 // ========================= QUITAR iTEM DE CARRITO =========================
 // ==========================================================================

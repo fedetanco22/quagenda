@@ -10,8 +10,6 @@ function cargar() {
             openModal();
             eventBotonAddToCart();
             mostrarCantidadItems()
-
-
         },
         error: function (error) {
             console.log(error);

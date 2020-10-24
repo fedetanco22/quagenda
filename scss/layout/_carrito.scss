@@ -173,6 +173,7 @@
         border: none;
         background: #999;
         width: 30px;
+        background-color: rgb(211, 210, 210);
 
 
         &__items {
@@ -186,7 +187,7 @@
             &--flecha {
                 color: #E4B937;
                 cursor: pointer;
-                padding: 10px 0;
+
             }
         }
     }
@@ -214,7 +215,7 @@
 
 }
 
-.remove-item {
+.quitar-item {
     color: #777;
     cursor: pointer;
 }

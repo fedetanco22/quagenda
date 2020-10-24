@@ -1,50 +1,49 @@
-// Estructura de la CARD----
-/* document.addEventListener("DOMContentLoaded", () => {
-    eventBotonAddToCart();
-}); */
-
 // Dom content loaded en JQUERY $(document).ready(function())
+
 $(eventBotonAddToCart());
 
 
-// ===================================================================
-// ======================== Button CARDS ==============================
-// ===================================================================
+// ===============================================================================
+// ======================== Button CARDS =========================================
+// ===============================================================================
 
 function eventBotonAddToCart() {
     const $eventoAgregarCarrito = document.querySelectorAll(".addToCart").forEach((item) => {
         item.addEventListener("click", clickAddToCart); // Call Back function clickAddtoCart
     });
 }
-
-// ===================================================================
-// ==============CLICK EN EL BOTON PARA AGREGAR CARRITO ================
-// ===================================================================
+// =================================================================================
+// ==============CLICK EN EL BOTON PARA AGREGAR CARRITO ============================
+// =================================================================================
 
 function clickAddToCart(event) { // capturamos el buttom y queremos todo el id del Prodcuto con el closest (elemento padre mas cercano con el id)
     event.preventDefault();
     const button = event.target;
     const producto = button.closest(".cards");
+    const idProd = producto.id
     const nombreProd = producto.querySelector(".cards__titulo__h4").textContent;
     let precioProd = producto.querySelector(".cards__precio-precio").textContent;
     precioProd = parseFloat(precioProd); // convertir a numero
     const imgProd = producto.querySelector(".cards__img").src;
 
-    agregarCarrito(nombreProd, precioProd, imgProd); // ===Invocamos la funcion con estos parametros====
+    agregarCarrito(idProd, nombreProd, precioProd, imgProd); // ===Invocamos la funcion con estos parametros====
 }
-// ===================================================================
-// ============== Busca en el ARRAY [Carrito] los productos===========
+// ==================================================================================
+// ============== Busca en el ARRAY [Carrito] los productos==========================
+// ==================================================================================
 
 var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
-// Si carrito existe en Local, parsear e; JSon. Else array vacio []
+// Si carrito existe en Local, parsear e; JSon. sino q me de un array vacio []
 
-function agregarCarrito(nombreProd, precioProd, imgProd) {
+function agregarCarrito(idProd, nombreProd, precioProd, imgProd) {
+
     const encontrarProd = carrito.find((producto) => producto.nombreProd === nombreProd);
 
     if (encontrarProd) {
         encontrarProd.cantidadProd ++;
     } else {
         agregarProducto = {
+            idProd: idProd,
             nombreProd: nombreProd,
             precioProd: precioProd,
             imgProd: imgProd,
@@ -56,13 +55,15 @@ function agregarCarrito(nombreProd, precioProd, imgProd) {
     swal("Excelente!", 'Producto agregado al carrito de compras!', "success");
     // =======================================================================
     cargarItemsAlCarrito(); // Crea el porducto en el NAV Cart
-    mostrarCantidadItems()
+    mostrarCantidadItems(); // Icono en el carrito
     localStorage.carrito = JSON.stringify(carrito); // Convertimo a string/JSON y guardamos en LOCAL STORAGE
 }
 
 // ==================================================================================
+// ================================ Renderizamos ====================================
 // ======================== Creamos el prodcuto en el NAV CART=======================
 // ==================================================================================
+
 const overlayCarrito = document.querySelector('.overlay');
 const navCarrito = document.querySelector('.navCart');
 const contenidoCarrito = document.querySelector('.navCart__contenido');
@@ -72,8 +73,10 @@ const totalCarrito = document.querySelector('.navCart__cartTotal');
 function cargarItemsAlCarrito() {
     contenidoCarrito.innerHTML = ''; // Vaciamos el contenido para que no se repitan los productos
     carrito.forEach((producto) => {
+
         const itemsCarrito = document.createElement("div");
         itemsCarrito.className = "navCart__items";
+
         // contenidoCarrito.appendChild(itemsCarrito);
         const navCartItems = `
             <div class="navCart__items--img">
@@ -88,14 +91,26 @@ function cargarItemsAlCarrito() {
                 <h5 class="navCart__items--precio">${
             producto.precioProd
         }</h5>
-                <span class = "remove-item">quitar</span>
+        <span class = "quitar-item" data-id = ${
+            producto.idProd
+        }>quitar</span>
+
             </div>
             <div class="navCart__cantidad">
-            <input onchange="inputCantidad(event)" class="navCart__cantidad__items" type="number" min = "0" name = ${
+                <i class = "fas fa-chevron-up navCart__cantidad__items--flecha" data-id=${
+            producto.idProd
+        } > </i>
+
+                <input class="navCart__cantidad__items" type="number" min = "0" name = ${
             carrito.indexOf(producto)
         } value= ${
             producto.cantidadProd
         }>
+                <i class = "fas fa-chevron-down navCart__cantidad__items--flecha" data-id=${
+            producto.idProd
+        }> </i>
+
+
                 </div>`;
 
         itemsCarrito.innerHTML = navCartItems;
@@ -105,9 +120,11 @@ function cargarItemsAlCarrito() {
     cartTotal()
     mostrarCantidadItems()
     butonVaciarCarrito()
-
 };
 
+// ==============================================================================
+// =========================== Suma TOTAL Compra ================================
+// ==============================================================================
 function cartTotal() {
     let total = 0;
     carrito.forEach(navCartItem => {
@@ -120,10 +137,9 @@ function cartTotal() {
     }`
 };
 
+
 // ==============================================================================
 // ===================== Clickeamos en el Icono de Carrrito =====================
-// ==============================================================================
-// ==============================================================================
 // =========================JQUERY NavCart Show & Close==========================
 // ==============================================================================
 
@@ -139,22 +155,86 @@ $('.navCart__close--icon').on('click', function () {
 })
 
 // ========================================================================
-// -----------Icono Cantidad de Productos en el Carrito----------------
+// =========== Icono Cantidad de Productos en el Carrito ==================
 // ========================================================================
 const cantidadTotal = document.querySelector('.carrito-items');
 
 function mostrarCantidadItems() {
     const totalItems = carrito.reduce((acum, item) => acum + item.cantidadProd, 0)
     cantidadTotal.innerHTML = `${totalItems}`
-
 };
 
-// var totalisimo = mostrarCantidadItems()// cantidadTotal.append(totalismo)// =============================================================================// ===========================INPUT CANTIDAD====================================// =============================================================================
-function inputCantidad(event) {
-    console.log(event.target.value);
+
+// ==============================================================================
+// ============================ EVENT BUBBLING ==================================
+// ==============================================================================
+// ============================ QUITAR ELEMENTO =================================
+// ==============================================================================
+// =========================== Sumar y Restar ===================================
+// =========================== Cantidad Items====================================
+// ==============================================================================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    contenidoCarrito.addEventListener('click', event => {
+
+        if (event.target.classList.contains('quitar-item')) {
+            let quitarItem = event.target;
+            let id = Number(quitarItem.dataset.id);
+
+            let item = buscarItem(id); // cuardamos el valor devuelto de la funcion
+            let indexItem = carrito.indexOf(item);
+            carrito.splice(indexItem, 1);
+            // eliminamos desde el index del item 1 lugar
+            // Eliminamos el hijo de navCart__contenido
+            contenidoCarrito.removeChild(quitarItem.parentElement.parentElement);
+
+        } else if (event.target.classList.contains('fa-chevron-up')) {
+            let itemCart = event.target;
+            let id = Number(itemCart.dataset.id);
+
+            let input = itemCart.nextElementSibling; // Sibling de la flecha
+            let inputCantidad = Number(itemCart.nextElementSibling.value); // extraemos el valor en Numero
+            let item = buscarItem(id); // buscamos nustro prod en el array
+            inputCantidad++;
+            item.cantidadProd ++;
+
+            input.value = inputCantidad;
+
+        } else if (event.target.classList.contains('fa-chevron-down')) {
+
+            let itemCart = event.target;
+            let id = Number(itemCart.dataset.id);
+
+            let input = itemCart.previousSibling.previousSibling; // Sibling de la flecha
+            let inputCantidad = Number(itemCart.previousSibling.previousSibling.value); // extraemos el valor en Numero
+            let item = buscarItem(id); // buscamos nustro prod en el array
+            inputCantidad--;
+            item.cantidadProd --;
+
+            input.value = inputCantidad;
+
+            if (input.value == 0) {
+                let indexItem = carrito.indexOf(item);
+                carrito.splice(indexItem, 1);
+                contenidoCarrito.removeChild(itemCart.parentElement.parentElement);
+            }
+
+        };
+        butonVaciarCarrito()
+        cartTotal()
+        mostrarCantidadItems()
+
+        localStorage.carrito = JSON.stringify(carrito)
+    })
+
+
+})
+
+function buscarItem(id) {
+    const encontrarItem = carrito.find((item) => item.idProd == id)
+    return encontrarItem
 }
-// ==========================================================================
-// ==========================================================================
 
 
 // ==========================================================================
@@ -165,7 +245,7 @@ const vaciarCart = document.createElement('button');
 const buttons = document.querySelector('.navCart__buttons');
 
 function butonVaciarCarrito() {
-    if (carrito.length != 0) {
+    if (carrito.length > 0) {
         vaciarCart.className = 'btn btn-danger';
         vaciarCart.textContent = 'vaciar';
         buttons.prepend(vaciarCart);
@@ -186,10 +266,8 @@ function butonVaciarCarrito() {
 };
 
 function vaciarCarrito(event) { //
-
     event.preventDefault()
     // contenidoCarrito.remove()
-
     contenidoCarrito.classList.add('navCart__contenido--vacio')
 
     buttons.style.display = 'none';
@@ -200,9 +278,6 @@ function vaciarCarrito(event) { //
 
 
 };
-// ==========================================================================
-// ========================= QUITAR iTEM DE CARRITO =========================
-// ==========================================================================
 
 
 // ==========================================================================
@@ -221,3 +296,7 @@ function vaciarCarrito(event) { //
 // console.log('Done');
 
 // =========================================================================
+// ==============================================================================
+// ==============================================================================
+// ==============================================================================
+// ==============================================================================

@@ -22,9 +22,9 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 	<link rel="manifest" href="images/site.webmanifest">
-	<script defer src="js/app.js"></script>
 
-	<script defer src="./js/shopCart.js"></script> <!-- Relative Path -->
+	<script defer src="./js/products.js"></script>
+	<script defer src="./js/shopCart.js"></script>
 
 </head>
 
@@ -242,11 +242,31 @@
 				class="fab fa-whatsapp text-white"></i></a>
 		<!-- fin boton whatsapp -->
 		<!-- inicio boton Carrito -->
-		<div class="carrito">
-			<button class="carrito-button" type="button"><i class="fas fa-shopping-cart"></i></button>
-			<div class="carrito-items">0</div>
-		</div>
+		<button class="carrito-button" type="button"><i class="fas fa-shopping-cart"></i></button>
+
+		<div class="carrito-items"></div>
+
 		<!-- fin boton Carrito -->
+		<!-- Nav Cart -->
+		<div id="overlay" class="overlay">
+			<div class="navCart">
+				<span class="navCart__close"><i class="navCart__close--icon far fa-times-circle"></i></span>
+				<h2 class="navCart__titulo">tu carrito</h2>
+				<div class="navCart__contenido">
+
+					<!-- ACA VAN LOS ITEMS -->
+
+				</div>
+				<div class="navCart__footer">
+					<h3 class="navCart__footer--h3">total <span class="navCart__cartTotal"></span>
+					</h3>
+				</div>
+				<div class="navCart__buttons">
+					<button class="btn-comprar btn">comprar</button>
+				</div>
+			</div>
+		</div>
+		<!-- Fin Nav Cart -->
 
 		<footer class="footer">
 

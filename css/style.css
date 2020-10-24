@@ -1204,7 +1204,8 @@ a:hover {
     align-items: center;
     border: none;
     background: #999;
-    width: 30px; }
+    width: 30px;
+    background-color: #d3d2d2; }
     .navCart__cantidad__items {
       width: 40px;
       text-align: center;
@@ -1212,8 +1213,7 @@ a:hover {
       background-color: #d3d2d2; }
       .navCart__cantidad__items--flecha {
         color: #E4B937;
-        cursor: pointer;
-        padding: 10px 0; }
+        cursor: pointer; }
   .navCart__cartTotal {
     color: red;
     font-size: 2.5rem;
@@ -1227,7 +1227,7 @@ a:hover {
     .navCart__footer--h3 {
       text-transform: uppercase; }
 
-.remove-item {
+.quitar-item {
   color: #777;
   cursor: pointer; }
 

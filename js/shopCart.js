@@ -3,18 +3,18 @@
 $(eventBotonAddToCart());
 
 
-// ===============================================================================
-// ======================== Button CARDS =========================================
-// ===============================================================================
+// ===========================================================================
+// ======================== Button CARDS =====================================
+// ===========================================================================
 
 function eventBotonAddToCart() {
     const $eventoAgregarCarrito = document.querySelectorAll(".addToCart").forEach((item) => {
         item.addEventListener("click", clickAddToCart); // Call Back function clickAddtoCart
     });
 }
-// =================================================================================
-// ==============CLICK EN EL BOTON PARA AGREGAR CARRITO ============================
-// =================================================================================
+// =============================================================================
+// ==============CLICK EN EL BOTON PARA AGREGAR CARRITO ========================
+// =============================================================================
 
 function clickAddToCart(event) { // capturamos el buttom y queremos todo el id del Prodcuto con el closest (elemento padre mas cercano con el id)
     event.preventDefault();
@@ -28,10 +28,9 @@ function clickAddToCart(event) { // capturamos el buttom y queremos todo el id d
 
     agregarCarrito(idProd, nombreProd, precioProd, imgProd); // ===Invocamos la funcion con estos parametros====
 }
-// ==================================================================================
-// ============== Busca en el ARRAY [Carrito] los productos==========================
-// ==================================================================================
-
+// =============================================================================
+// ============== Busca en el ARRAY [Carrito] los productos=====================
+// =============================================================================
 var carrito = localStorage.carrito ? JSON.parse(localStorage.carrito) : [];
 // Si carrito existe en Local, parsear e; JSon. sino q me de un array vacio []
 
@@ -59,10 +58,10 @@ function agregarCarrito(idProd, nombreProd, precioProd, imgProd) {
     localStorage.carrito = JSON.stringify(carrito); // Convertimo a string/JSON y guardamos en LOCAL STORAGE
 }
 
-// ==================================================================================
-// ================================ Renderizamos ====================================
-// ======================== Creamos el prodcuto en el NAV CART=======================
-// ==================================================================================
+// =============================================================================
+// ================================ Renderizamos ===============================
+// ======================== Creamos el prodcuto en el NAV CART==================
+// =============================================================================
 
 const overlayCarrito = document.querySelector('.overlay');
 const navCarrito = document.querySelector('.navCart');
@@ -152,11 +151,13 @@ $('.carrito-button').on('click', function () {
 $('.navCart__close--icon').on('click', function () {
     $(overlayCarrito).removeClass('overlay__transparentBcg');
     $(navCarrito).removeClass('navCart__showCart');
-})
+});
+
 
 // ========================================================================
 // =========== Icono Cantidad de Productos en el Carrito ==================
 // ========================================================================
+document.addEventListener('DOMContentLoaded', mostrarCantidadItems)
 const cantidadTotal = document.querySelector('.carrito-items');
 
 function mostrarCantidadItems() {
@@ -236,7 +237,6 @@ function buscarItem(id) {
     return encontrarItem
 }
 
-
 // ==========================================================================
 // ========================= VACIAR COMPRA ==================================
 // ==========================================================================
@@ -284,10 +284,50 @@ function vaciarCarrito(event) { //
 // ========================= REALIZAR COMPRA ================================
 // ==========================================================================
 
+// ANIMACION DATOS PERSONALES
+const datos = document.querySelector('.datos')
+const btnComprarCarrito = document.querySelector('.btn-comprar')
+const comprar = btnComprarCarrito.addEventListener('click', comprarTotal)
 
-// SCOPES && CLOSURES VIDEO N19========
+const spinner = document.querySelector('.sk-folding-cube')
+const pagarTotalBtn = document.querySelector('.datos__form__grupo--btn')
+const pagar = pagarTotalBtn.addEventListener('click', pagarTotal)
+
+const festejoCompra = document.createElement('div');
+
+function comprarTotal() {
+    navCarrito.classList.remove('navCart__showCart');
+    datos.classList.add('animate__backInDown', 'datos__mostrar');
+}
+
+function pagarTotal() {
+
+    datos.classList.add('animate__backOutDown')
+
+    var fn = function () {
+        spinner.classList.add('mostrar-spinner');
+    };
+    setTimeout(fn, 1000);
+
+    var fn = function () {
+        spinner.classList.remove('mostrar-spinner');
 
 
+        festejoCompra.className = 'gracias';
+        festejoCompra.innerHTML = `<h2>muchas gracias por tu compra!</h2>`;
+        overlayCarrito.appendChild(festejoCompra)
+
+
+        overlayCarrito.classList.remove('overlay__transparentBcg'); // Se puede salir desp de X segundos o dejar boton para cerrar cuando quiera el usuario
+        localStorage.clear();
+        carrito = [];
+        mostrarCantidadItems();
+        localStorage.carrito = json.stringify(carrito);
+
+
+    };
+    setTimeout(fn, 5000);
+}
 // var a = 10;
 // var fn = function(){
 //     console.log(a);

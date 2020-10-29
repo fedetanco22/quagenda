@@ -1,0 +1,232 @@
+// ==================== Formularios de pago=====================
+.datos {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    @include flex-col-center;
+    position: fixed;
+    background-color: rgb(211, 210, 210);
+
+    &__close {
+        align-self: flex-start;
+
+        &--icon {
+            font-size: 3rem;
+            margin: 30px 0 0 30px;
+            cursor: pointer;
+        }
+    }
+
+    &__mostrar {
+        visibility: visible;
+    }
+
+    &__retirar {
+        transform: translateY(-100%);
+    }
+
+    &__titulo {
+        font-size: 3rem;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::after {
+            content: "";
+            background-color: #E4B937;
+            display: inline-block;
+            width: 125px;
+            height: 3px;
+            margin-top: 1rem;
+        }
+
+    }
+
+    &__form {
+        width: 90%;
+        max-width: 400px;
+        height: 90%;
+        padding: 0 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &__titulo {
+            font-size: 1.5rem;
+            margin: 10px 0 20px 0;
+        }
+
+        &__personales,
+        &__facturacion {
+            font-size: 1.25rem;
+            @include flex-col-center;
+            width: 100%;
+
+        }
+
+        &__grupo {
+            width: 100%;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+            &--label {
+                margin-bottom: 5px;
+                font-size: 1.5rem;
+            }
+
+            &--input {
+                background-color: rgb(211, 210, 210);
+                font-family: $font-sec;
+                font-size: 1.5rem;
+                font-weight: 800;
+                margin-bottom: 5px;
+                border: 0;
+                border-bottom: 1px solid $color-quinto;
+                color: $color-secundario;
+
+            }
+
+            &--input:hover {
+                color: #333;
+            }
+
+            &--sel {
+                // group--sel
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            &--flex {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: space-evenly;
+
+            }
+
+            &--expira {
+                width: 100%;
+            }
+
+            &--ccv {
+                width: 50%;
+                height: 100%;
+
+                & .ccv {
+                    margin-bottom: 0;
+                    padding: 5px;
+                }
+            }
+
+            &--btn {
+                width: 100%;
+            }
+        }
+
+        &__select {
+            position: relative;
+            width: 100%;
+            padding: 5px 5px 0 0;
+
+            &--sel {
+                // select--sel
+                width: 100%;
+                padding: 5px;
+                transition: .3s ease all;
+                border-radius: 5px;
+                -webkit-appearance: none;
+            }
+
+        }
+
+        &__select i {
+            position: absolute;
+            color: #CED6E0;
+            top: 15px;
+            right: 15px;
+            transition: .3s ease all;
+        }
+
+        &__select:hover i {
+            color: #333;
+        }
+    }
+}
+
+
+
+/* Small devices y horiz entre 576px y 768px*/
+@media screen and (min-width: $bp_potrait-phones) {}
+
+@media screen and (min-width: 767.98px) {
+
+    .datos {
+        width: 90vw;
+        max-width: 1000px;
+        height: 70vh;
+        max-height: 500px;
+
+        &__form {
+            width: 80vw;
+            max-width: 800px;
+            height: 90%;
+            padding: 20px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+            &__titulo {
+                width: 100%;
+                font-size: 2rem;
+            }
+
+            &__personales,
+            &__facturacion {
+                width: 40%;
+            }
+
+            &__grupo {
+                width: 100%;
+
+                &--ccv {
+                    width: 50%;
+                }
+
+                &--flex {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: space-evenly;
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .datos {
+
+        &__form {
+
+            &__personales,
+            &__facturacion {
+                width: 50%;
+                padding: 0 15px;
+            }
+
+        }
+
+    }
+}

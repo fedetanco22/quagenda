@@ -54,6 +54,10 @@
     z-index: 19000;
     transition: all 0.3s linear;
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &__transparentBcg {
         visibility: visible;
@@ -230,6 +234,7 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 } */
 
+
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: $bp_potrait-phones) {
     .carrito {
@@ -252,4 +257,6 @@ input[type=number]::-webkit-inner-spin-button {
         width: 30vw;
         min-width: 450px;
     }
+
+
 }

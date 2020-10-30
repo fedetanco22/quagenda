@@ -133,7 +133,8 @@ function cartTotal() {
     });
     totalCarrito.innerHTML = `${
         total.toFixed(2)
-    }`
+    }`;
+    return total
 };
 
 
@@ -151,6 +152,7 @@ $('.carrito-button').on('click', function () {
 $('.navCart__close--icon').on('click', function () {
     $(overlayCarrito).removeClass('overlay__transparentBcg');
     $(navCarrito).removeClass('navCart__showCart');
+    $(datos).hide()
 });
 
 
@@ -279,7 +281,6 @@ function vaciarCarrito(event) { //
 
 };
 
-
 // ==========================================================================
 // ========================= REALIZAR COMPRA ================================
 // ==========================================================================
@@ -287,53 +288,54 @@ function vaciarCarrito(event) { //
 // ANIMACION DATOS PERSONALES
 const datos = document.querySelector('.datos')
 const btnComprarCarrito = document.querySelector('.btn-comprar')
-const comprar = btnComprarCarrito.addEventListener('click', comprarTotal)
-
-const spinner = document.querySelector('.sk-folding-cube')
 const pagarTotalBtn = document.querySelector('.datos__form__grupo--btn')
-const pagar = pagarTotalBtn.addEventListener('click', pagarTotal)
 
-const festejoCompra = document.createElement('div');
+
+const comprar = btnComprarCarrito.addEventListener('click', comprarTotal)
 
 function comprarTotal() {
     navCarrito.classList.remove('navCart__showCart');
+    datos.style.display = 'flex'
     datos.classList.add('animate__backInDown', 'datos__mostrar');
+
+    // Asignamos variable a la function de cart total q me devuelve el totaL a pagar
+    let totalCompra = cartTotal();
+    pagarTotalBtn.innerHTML = `Total a Pagar $${
+        totalCompra.toFixed(2)
+    }`;
+    yearVencimiento()
+    mesVencimiento()
 }
 
-function pagarTotal() {
+// ======================================================
+// OPTIONS VENCIMIENTO TARJETA ==========================
+// ======================================================
 
-    datos.classList.add('animate__backOutDown')
+function yearVencimiento() {
+    const yearHoy = new Date().getFullYear();
+    const max = yearHoy + 15
 
-    var fn = function () {
-        spinner.classList.add('mostrar-spinner');
-    };
-    setTimeout(fn, 1000);
+    const yearExpira = document.getElementById('year')
 
-    var fn = function () {
-        spinner.classList.remove('mostrar-spinner');
-
-
-        festejoCompra.className = 'gracias';
-        festejoCompra.innerHTML = `<h2>muchas gracias por tu compra!</h2>`;
-        overlayCarrito.appendChild(festejoCompra)
-
-
-        overlayCarrito.classList.remove('overlay__transparentBcg'); // Se puede salir desp de X segundos o dejar boton para cerrar cuando quiera el usuario
-        localStorage.clear();
-        carrito = [];
-        mostrarCantidadItems();
-        localStorage.carrito = json.stringify(carrito);
-
-
-    };
-    setTimeout(fn, 5000);
+    for (let i = yearHoy; i <= max; i++) {
+        let option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        yearExpira.appendChild(option)
+    }
 }
-// var a = 10;
-// var fn = function(){
-//     console.log(a);
-// };
-// setTimeout(fn, 5000);
-// console.log('Done');
+function mesVencimiento() {
+    const mesExpira = document.getElementById('mes')
+
+    for (let i = 1; i <= 12; i++) {
+        let option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        mesExpira.appendChild(option)
+    }
+}
+// ========================================================
+
 
 // =========================================================================
 // ==============================================================================

@@ -71,10 +71,11 @@
 
         &__grupo {
             width: 100%;
-            margin: 5px;
+            margin: 5px 0 5px 5px;
             display: flex;
             flex-direction: column;
             justify-content: start;
+            position: relative;
 
             &--label {
                 margin-bottom: 5px;
@@ -123,13 +124,40 @@
 
                 & .ccv {
                     margin-bottom: 0;
-                    padding: 5px;
+                    padding: 5px 0;
+
                 }
             }
 
             &--btn {
                 width: 100%;
             }
+        }
+
+        &__error {
+            position: absolute;
+            display: none;
+
+
+            & p {
+                margin: 0;
+                padding: 2px 2px 0 2px;
+            }
+
+            & i {
+                padding: 3px 3px 0 3px;
+            }
+
+            &--activo {
+                display: block;
+                top: 30px;
+                right: 0px;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-end;
+            }
+
+
         }
 
         &__select {
@@ -158,11 +186,45 @@
 
         &__select:hover i {
             color: #333;
+
         }
     }
 }
 
 
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .datos__form__grupo--input {
+    border-color: #1ed12d;
+    opacity: 1;
+    align-items: center;
+
+
+}
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+
+    color: #1ed12d;
+    opacity: 1;
+
+}
+
+.formulario__grupo-incorrecto .datos__form__grupo--input {
+    color: #bb2929;
+    border: 1px solid #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+
+
+
+
+.gracias {
+    @include titulos-h2
+}
 
 /* Small devices y horiz entre 576px y 768px*/
 @media screen and (min-width: $bp_potrait-phones) {}

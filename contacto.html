@@ -18,6 +18,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800;900&display=swap"
 		rel="stylesheet">
 	<script src="https://kit.fontawesome.com/8ee6cf5ee4.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -166,56 +167,136 @@
 					<button class="btn-comprar btn">comprar</button>
 				</div>
 			</div>
+
+
+			<div class="datos animate__animated ">
+
+				<span class="navCart__close"><i class="navCart__close--icon far fa-times-circle"></i></span>
+
+				<form action="" id="form__tarjeta" class="datos__form">
+					<!--DATOS PERSONALES  -->
+					<div class="datos__form__personales">
+						<h3 class="datos__form__titulo datos__titulo">Datos Personales</h3>
+
+						<li class="datos__form__grupo">
+							<label class="datos__form__grupo--label" for="input__nombre">Nombre y Apellido</label>
+							<input class="datos__form__grupo--input" type="text" id="input__nombre" maxlength="19"
+								autocomplete="off">
+						</li>
+						<li class="datos__form__grupo">
+							<label class="datos__form__grupo--label" for="input__dir">Direcci&oacute;n</label>
+							<input class="datos__form__grupo--input" type="text" id="input__dir" maxlength="19"
+								autocomplete="off">
+						</li>
+						<li class="datos__form__grupo">
+							<label class="datos__form__grupo--label" for="input__email">E-mail</label>
+							<input class="datos__form__grupo--input" type="email" id="input__email" maxlength="19"
+								autocomplete="off">
+						</li>
+					</div>
+
+					<!--DATOS FACTURACION  -->
+					<div class="datos__form__facturacion">
+						<h3 class="datos__titulo datos__form__titulo">Datos Facturaci&oacute;n</h3>
+
+						<li class="datos__form__grupo">
+							<label class="datos__form__grupo--label" for="input__numero">Numero Tarjeta</label>
+							<input class="datos__form__grupo--input" type="text" id="input__numero" maxlength="19"
+								autocomplete="off" placeholder="################">
+						</li>
+						<li class="datos__form__grupo">
+							<label class="datos__form__grupo--label" for="input__tarj">Nombre Tarjeta</label>
+							<input class="datos__form__grupo--input" type="text" id="input__tarj" maxlength="19"
+								autocomplete="off">
+						</li>
+
+						<li class="datos__form__grupo--flex">
+							<div class="datos__form__grupo datos__form__grupo--sel">
+								<label class="datos__form__grupo--label" class="datos__form__grupo--expira"
+									for="mes">Expira</label>
+								<div class="datos__form__grupo--flex datos__form__grupo--flex-gr">
+									<div class="datos__form__select">
+										<select class="datos__form__select--sel" id="mes">
+											<option value="">Mes</option>
+										</select>
+										<i class="fas fa-angle-down"></i>
+									</div>
+									<div class="datos__form__select">
+										<select class="datos__form__select--sel" id=" year">
+											<option value="">Año</option>
+										</select>
+										<i class="fas fa-angle-down"></i>
+									</div>
+								</div>
+							</div>
+
+							<div id="ccv" class="datos__form__grupo datos__form__grupo--ccv">
+								<label class="datos__form__grupo--label" for="input__ccv">CCV</label>
+								<input class="datos__form__grupo--input ccv" type=" text" id="input__ccv" maxlength="3"
+									autocomplete="off">
+							</div>
+						</li>
+					</div>
+					<button class="datos__form__grupo--btn btn" type="submit">Total a Pagar $ </button>
+				</form>
+			</div>
+			<div class="sk-folding-cube">
+				<div class="sk-cube1 sk-cube"></div>
+				<div class="sk-cube2 sk-cube"></div>
+				<div class="sk-cube4 sk-cube"></div>
+				<div class="sk-cube3 sk-cube"></div>
+			</div>
 		</div>
-		<!-- Fin Nav Cart -->
 
-		<footer class="footer footer__contacto--mt0">
+	</div>
+	<!-- Fin Nav Cart -->
 
-			<div class="footer__txt txt txt--contacto">
-				<div class="txt__cont">
-					<h3 class="txt__h3">Veni a visitarnos. </h3>
-					<h3 class="txt__h3">Tomemos algo. </h3>
-					<h3 class="txt__h3">Compartamos pensamientos. </h3>
-				</div>
+	<footer class="footer footer__contacto--mt0">
 
-				<div class="footer__enlaces">
-					<div class="footer__titulo">
-						<div class="footer__titulo__txt">CONTACTO</div>
-					</div>
-					<div class="footer__enlaces__info">
-						<a class="footer__enlaces__link" target="blank" href="www.gmail.com"><i
-								class="far fa-envelope"></i>
-							<span class="footer__enlaces__txt">quagendaoficial@gmail.com </span></a>
-					</div>
-
-					<div class="footer__enlaces__info">
-						<a class="footer__enlaces__link" target="blank"
-							href="https://www.instagram.com/quagenda_/?hl=es-la"><i
-								class="footer__enlaces__insta-icon fab fa-instagram"></i>
-							<span class="footer__enlaces__txt">instagram.com/quagenda_</span></a>
-					</div>
-
-					<div class="footer__enlaces__info">
-						<a class="footer__enlaces__link" target="blank"
-							href="https://www.instagram.com/quagenda_/?hl=es-la"><i class="fas fa-phone-alt"></i>
-							<span class="footer__enlaces__txt">351-6367968</span></a>
-					</div>
-
-					<div class="footer__enlaces__info">
-						<a class="footer__enlaces__link" target="blank"
-							href="https://www.instagram.com/quagenda_/?hl=es-la"><i class="fas fa-map-marker-alt"></i>
-							<span class="footer__enlaces__txt">Cordoba, Argentina</span></a>
-					</div>
-
-				</div>
+		<div class="footer__txt txt txt--contacto">
+			<div class="txt__cont">
+				<h3 class="txt__h3">Veni a visitarnos. </h3>
+				<h3 class="txt__h3">Tomemos algo. </h3>
+				<h3 class="txt__h3">Compartamos pensamientos. </h3>
 			</div>
 
-			<!--Copyrights -->
-			<div class="footer__copyright">
-				<h6 class="footer__copyright__txt">&copy; Quagenda 2020 - Todos los derechos reservados</h6>
-			</div>
+			<div class="footer__enlaces">
+				<div class="footer__titulo">
+					<div class="footer__titulo__txt">CONTACTO</div>
+				</div>
+				<div class="footer__enlaces__info">
+					<a class="footer__enlaces__link" target="blank" href="www.gmail.com"><i class="far fa-envelope"></i>
+						<span class="footer__enlaces__txt">quagendaoficial@gmail.com </span></a>
+				</div>
 
-		</footer>
+				<div class="footer__enlaces__info">
+					<a class="footer__enlaces__link" target="blank"
+						href="https://www.instagram.com/quagenda_/?hl=es-la"><i
+							class="footer__enlaces__insta-icon fab fa-instagram"></i>
+						<span class="footer__enlaces__txt">instagram.com/quagenda_</span></a>
+				</div>
+
+				<div class="footer__enlaces__info">
+					<a class="footer__enlaces__link" target="blank"
+						href="https://www.instagram.com/quagenda_/?hl=es-la"><i class="fas fa-phone-alt"></i>
+						<span class="footer__enlaces__txt">351-6367968</span></a>
+				</div>
+
+				<div class="footer__enlaces__info">
+					<a class="footer__enlaces__link" target="blank"
+						href="https://www.instagram.com/quagenda_/?hl=es-la"><i class="fas fa-map-marker-alt"></i>
+						<span class="footer__enlaces__txt">Cordoba, Argentina</span></a>
+				</div>
+
+			</div>
+		</div>
+
+		<!--Copyrights -->
+		<div class="footer__copyright">
+			<h6 class="footer__copyright__txt">&copy; Quagenda 2020 - Todos los derechos reservados</h6>
+		</div>
+
+	</footer>
 	</div> <!-- FIN CONTENEDOR GRAL -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"

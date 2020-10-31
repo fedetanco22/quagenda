@@ -47,7 +47,7 @@
     }
 
     &__form {
-        width: 90%;
+        // width: 90%;
         max-width: 400px;
         height: 90%;
         padding: 0 20px 20px 20px;
@@ -63,7 +63,7 @@
 
         &__personales,
         &__facturacion {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             @include flex-col-center;
             width: 100%;
 
@@ -84,18 +84,20 @@
 
             &--input {
                 background-color: rgb(211, 210, 210);
+                color: $color-secundario;
                 font-family: $font-sec;
                 font-size: 1.5rem;
                 font-weight: 800;
                 margin-bottom: 5px;
                 border: 0;
                 border-bottom: 1px solid $color-quinto;
-                color: $color-secundario;
+                height: 25px;
 
             }
 
             &--input:hover {
                 color: #333;
+
             }
 
             &--sel {
@@ -131,6 +133,8 @@
 
             &--btn {
                 width: 100%;
+                margin: 0;
+                margin-left: 0;
             }
         }
 
@@ -150,7 +154,7 @@
 
             &--activo {
                 display: block;
-                top: 30px;
+                top: 25px;
                 right: 0px;
                 display: flex;
                 justify-content: space-around;
@@ -188,7 +192,57 @@
             color: #333;
 
         }
+
+        &__mensaje {
+            width: 100%;
+        }
     }
+}
+
+.formulario__mensaje {
+
+    height: 45px;
+    line-height: 15px;
+    font-size: 1rem;
+    background: #F66060;
+    padding: 7.5px 15px;
+    border-radius: 3px;
+    display: none;
+    text-align: center;
+
+
+    & p {
+        margin: 0;
+    }
+}
+
+.formulario__mensaje-activo {
+    display: block;
+    width: 99%;
+
+    & p {
+        width: 100%;
+    }
+
+    & i {
+
+        color: #bb2929;
+        padding-right: 5px;
+        ;
+    }
+}
+
+
+
+
+.formulario__mensaje-exito {
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
 }
 
 
@@ -217,7 +271,6 @@
     color: #bb2929;
     opacity: 1;
 }
-
 
 
 
@@ -274,7 +327,14 @@
             }
         }
     }
+
+    .formulario__mensaje-activo {
+        width: 60%;
+        font-size: 1.2rem;
+        padding: 15px
+    }
 }
+
 
 @media screen and (min-width: 992px) {
 

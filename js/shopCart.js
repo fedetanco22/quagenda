@@ -307,15 +307,16 @@ function comprarTotal() {
     mesVencimiento()
 }
 
-// ======================================================
-// OPTIONS VENCIMIENTO TARJETA ==========================
-// ======================================================
+// =================================================================
+// ========== OPTIONS VENCIMIENTO TARJETA ==========================
+// =================================================================
+
+const yearExpira = document.getElementById('year'); // usamos para validar tambien
+const mesExpira = document.getElementById('mes');
 
 function yearVencimiento() {
     const yearHoy = new Date().getFullYear();
     const max = yearHoy + 15
-
-    const yearExpira = document.getElementById('year')
 
     for (let i = yearHoy; i <= max; i++) {
         let option = document.createElement('option');
@@ -324,9 +325,8 @@ function yearVencimiento() {
         yearExpira.appendChild(option)
     }
 }
-function mesVencimiento() {
-    const mesExpira = document.getElementById('mes')
 
+function mesVencimiento() {
     for (let i = 1; i <= 12; i++) {
         let option = document.createElement('option');
         option.value = i;
@@ -335,10 +335,4 @@ function mesVencimiento() {
     }
 }
 // ========================================================
-
-
-// =========================================================================
-// ==============================================================================
-// ==============================================================================
-// ==============================================================================
-// ==============================================================================
+// validamos tarjeta en VALIDATION.JS=====================

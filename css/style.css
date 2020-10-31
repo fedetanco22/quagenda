@@ -838,7 +838,6 @@ body {
       height: 3px;
       margin-top: 1rem; }
   .datos__form {
-    width: 90%;
     max-width: 400px;
     height: 90%;
     padding: 0 20px 20px 20px;
@@ -850,7 +849,7 @@ body {
       font-size: 1.5rem;
       margin: 10px 0 20px 0; }
     .datos__form__personales, .datos__form__facturacion {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       display: flex;
       flex-flow: column;
       align-items: center;
@@ -868,13 +867,14 @@ body {
         font-size: 1.5rem; }
       .datos__form__grupo--input {
         background-color: #d3d2d2;
+        color: #444;
         font-family: "Lustria", serif;
         font-size: 1.5rem;
         font-weight: 800;
         margin-bottom: 5px;
         border: 0;
         border-bottom: 1px solid #999;
-        color: #444; }
+        height: 25px; }
       .datos__form__grupo--input:hover {
         color: #333; }
       .datos__form__grupo--sel {
@@ -896,7 +896,9 @@ body {
           margin-bottom: 0;
           padding: 5px 0; }
       .datos__form__grupo--btn {
-        width: 100%; }
+        width: 100%;
+        margin: 0;
+        margin-left: 0; }
     .datos__form__error {
       position: absolute;
       display: none; }
@@ -907,7 +909,7 @@ body {
         padding: 3px 3px 0 3px; }
       .datos__form__error--activo {
         display: block;
-        top: 30px;
+        top: 25px;
         right: 0px;
         display: flex;
         justify-content: space-around;
@@ -930,6 +932,37 @@ body {
       transition: .3s ease all; }
     .datos__form__select:hover i {
       color: #333; }
+    .datos__form__mensaje {
+      width: 100%; }
+
+.formulario__mensaje {
+  height: 45px;
+  line-height: 15px;
+  font-size: 1rem;
+  background: #F66060;
+  padding: 7.5px 15px;
+  border-radius: 3px;
+  display: none;
+  text-align: center; }
+  .formulario__mensaje p {
+    margin: 0; }
+
+.formulario__mensaje-activo {
+  display: block;
+  width: 99%; }
+  .formulario__mensaje-activo p {
+    width: 100%; }
+  .formulario__mensaje-activo i {
+    color: #bb2929;
+    padding-right: 5px; }
+
+.formulario__mensaje-exito {
+  font-size: 14px;
+  color: #119200;
+  display: none; }
+
+.formulario__mensaje-exito-activo {
+  display: block; }
 
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario__grupo-correcto .datos__form__grupo--input {
@@ -985,7 +1018,11 @@ body {
           width: 100%;
           display: flex;
           justify-content: space-evenly;
-          align-items: space-evenly; } }
+          align-items: space-evenly; }
+  .formulario__mensaje-activo {
+    width: 60%;
+    font-size: 1.2rem;
+    padding: 15px; } }
 
 @media screen and (min-width: 992px) {
   .datos__form__personales, .datos__form__facturacion {

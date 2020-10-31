@@ -12,6 +12,7 @@
 	<title> Quagenda &reg; | Productos </title>
 	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/fontello.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lustria&family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
@@ -228,7 +229,19 @@
 							</div>
 						</li>
 					</div>
-					<button class="datos__form__grupo--btn btn" type="submit"></button>
+					<div class=" formulario__mensaje" id="formulario__mensaje">
+						<p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> Por favor rellena el formulario
+							correctamente.
+						</p>
+					</div>
+					<div class="datos__form__grupo formulario__grupo formulario__grupo-btn-enviar">
+						<button type="submit" class="formulario__btn datos__form__grupo--btn btn "></button>
+					</div>
+					<div class="formulario__grupo formulario__grupo-btn-enviar">
+						<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado
+							exitosamente!</p>
+					</div>
+
 				</form>
 			</div>
 
@@ -316,8 +329,6 @@
 	</script>
 	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
 
 </body>
 

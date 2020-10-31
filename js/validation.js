@@ -1,6 +1,9 @@
 const formulario = document.getElementById('form__tarjeta');
 const inputs = document.querySelectorAll('#form__tarjeta input');
 
+// ===========================================================================
+// ========= REGULAR EXPRESSION PARA VALIDACION DE CAMPOS ====================
+// ===========================================================================
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
     tarjeta: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -8,7 +11,6 @@ const expresiones = {
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     ccv: /^\d{3,3}$/, // 3 numeros.
     direccion: /^[a-zA-Z0-9\s,'-]{2,40}$/, // Letras, numeros, guion y guion_bajo
-
 }
 
 const campos = {
@@ -38,25 +40,24 @@ const validarFormulario = (e) => {
 };
 
 const validarCampo = (expresion, input, campo) => {
-    const error = document.querySelector('.formulario__input-error')
+
     if (expresion.test(input.value)) {
         document.getElementById(`input__${campo}`).classList.remove('formulario__grupo-incorrecto');
         document.getElementById(`input__${campo}`).classList.add('formulario__grupo-correcto');
-
-
         document.querySelector(`#input__${campo} div i`).classList.remove('fa-times-circle');
         document.querySelector(`#input__${campo} div i`).classList.add('fa-check-circle');
         document.querySelector(`#input__${campo} .datos__form__error`).classList.add('datos__form__error--activo');
-        document.querySelector(`#input__${campo} .datos__form__error`).removeChild(error)
+        document.querySelector(`#input__${campo} .datos__form__error p`).style.display = 'none'
+        // Si es true asigno True a las propiedades de CAMPOS
         campos[campo] = true;
+
     } else {
         document.getElementById(`input__${campo}`).classList.add('formulario__grupo-incorrecto');
         document.getElementById(`input__${campo}`).classList.remove('formulario__grupo-correcto');
         document.querySelector(`#input__${campo} i`).classList.add('fa-times-circle');
         document.querySelector(`#input__${campo} i`).classList.remove('fa-check-circle');
         document.querySelector(`#input__${campo} .datos__form__error`).classList.add('datos__form__error--activo');
-        document.querySelector(`#input__${campo} .datos__form__error`).appendChild(error)
-
+        document.querySelector(`#input__${campo} .datos__form__error p`).style.display = 'flex'
         campos[campo] = false;
     }
 };
@@ -70,5 +71,33 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
+    const mes = new Date().getMonth() // 9
+    const year = new Date().getFullYear() // 2020
 
-})
+    const vencimiento = document.querySelector('.datos__form__select--sel');
+    if (campos.nombre && campos.direccion && campos.correo && campos.ccv && campos.tarjeta && campos.numero && vencimiento.value > 0) {
+
+        if (!(mes >= mesExpira.value && year == yearExpira.value)) { // const error =
+
+            document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+
+            document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+            setTimeout(() => {
+                document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+            }, 5000);
+
+            document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+                icono.classList.remove('formulario__grupo-correcto');
+            });
+            const padreGracias = document.getElementById('resultado')
+            const compraRealizada = document.createElement('h1')
+            compraRealizada.textContent = ' GRACIASSSSS'
+            padreGracias.appendChild(compraRealizada)
+        }
+
+    } else {
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+    };
+
+
+});

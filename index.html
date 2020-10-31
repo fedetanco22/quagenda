@@ -11,6 +11,7 @@
 		content="agenda, cuaderno, bitacora, quagenda, venta de cuadernos, venta de agendas, agenda 2021, cuadernos A4, bitacoras de viaje, sketch books, bitacora de dibujo">
 	<title> Quagenda &reg; | Agendas y Cuadernos </title>
 	<link rel="stylesheet" href="css/fontello.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lustria&family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
@@ -26,6 +27,7 @@
 
 	<script defer src="./js/products.js"></script>
 	<script defer src="./js/shopCart.js"></script>
+	<script defer src="./js/validation.js"></script>
 
 
 </head>
@@ -268,30 +270,39 @@
 				</div>
 			</div>
 
-
 			<div class="datos animate__animated ">
-
 				<span class="navCart__close"><i class="navCart__close--icon far fa-times-circle"></i></span>
-
 				<form action="" id="form__tarjeta" class="datos__form">
 					<!--DATOS PERSONALES  -->
 					<div class="datos__form__personales">
 						<h3 class="datos__form__titulo datos__titulo">Datos Personales</h3>
 
-						<li class="datos__form__grupo">
+						<li class="datos__form__grupo" id="input__nombre">
 							<label class="datos__form__grupo--label" for="input__nombre">Nombre y Apellido</label>
-							<input class="datos__form__grupo--input" type="text" id="input__nombre" maxlength="19"
-								autocomplete="off">
+							<input class="datos__form__grupo--input" type="text" id="input__nom" name="nombre"
+								maxlength="19" autocomplete="off">
+							<div class="datos__form__error ">
+								<i class="formulario__validacion-estado fas fa-times-circle"></i>
+								<p class="formulario__input-error ">Error</p>
+							</div>
 						</li>
-						<li class="datos__form__grupo">
+						<li class="datos__form__grupo" id="input__direccion">
 							<label class="datos__form__grupo--label" for="input__dir">Direcci&oacute;n</label>
-							<input class="datos__form__grupo--input" type="text" id="input__dir" maxlength="19"
-								autocomplete="off">
+							<input class="datos__form__grupo--input" type="text" id="input__dir" name="direccion"
+								maxlength="19" autocomplete="off">
+							<div class="datos__form__error ">
+								<i class="formulario__validacion-estado fas fa-times-circle"></i>
+								<p class="formulario__input-error datos__form__error--activo">Error</p>
+							</div>
 						</li>
-						<li class="datos__form__grupo">
+						<li class="datos__form__grupo" id="input__correo">
 							<label class="datos__form__grupo--label" for="input__email">E-mail</label>
-							<input class="datos__form__grupo--input" type="email" id="input__email" maxlength="19"
-								autocomplete="off">
+							<input class="datos__form__grupo--input" type="email" id="input__email" name="correo"
+								maxlength="19" autocomplete="off">
+							<div class="datos__form__error ">
+								<i class="formulario__validacion-estado fas fa-times-circle "></i>
+								<p class="formulario__input-error datos__form__error--activo">Error</p>
+							</div>
 						</li>
 					</div>
 
@@ -299,15 +310,23 @@
 					<div class="datos__form__facturacion">
 						<h3 class="datos__titulo datos__form__titulo">Datos Facturaci&oacute;n</h3>
 
-						<li class="datos__form__grupo">
+						<li class="datos__form__grupo" id="input__numero">
 							<label class="datos__form__grupo--label" for="input__numero">Numero Tarjeta</label>
-							<input class="datos__form__grupo--input" type="text" id="input__numero" maxlength="19"
-								autocomplete="off" placeholder="################">
+							<input class="datos__form__grupo--input" type="text" id="input__num" name="numero"
+								maxlength="16" autocomplete="off">
+							<div class="datos__form__error " id="input__numero__error">
+								<i class="formulario__validacion-estado fas fa-times-circle"></i>
+								<p class="formulario__input-error ">Error</p>
+							</div>
 						</li>
-						<li class="datos__form__grupo">
+						<li class="datos__form__grupo" id="input__tarjeta">
 							<label class="datos__form__grupo--label" for="input__tarj">Nombre Tarjeta</label>
-							<input class="datos__form__grupo--input" type="text" id="input__tarj" maxlength="19"
-								autocomplete="off">
+							<input class="datos__form__grupo--input" type="text" id="input__tarj" name="tarjeta"
+								maxlength="19" autocomplete="off">
+							<div class="datos__form__error ">
+								<i class="formulario__validacion-estado fas fa-times-circle"></i>
+								<p class="formulario__input-error datos__form__error--activo">Error</p>
+							</div>
 						</li>
 
 						<li class="datos__form__grupo--flex">
@@ -322,7 +341,7 @@
 										<i class="fas fa-angle-down"></i>
 									</div>
 									<div class="datos__form__select">
-										<select class="datos__form__select--sel" id=" year">
+										<select class="datos__form__select--sel" id="year">
 											<option value="">Año</option>
 										</select>
 										<i class="fas fa-angle-down"></i>
@@ -330,27 +349,25 @@
 								</div>
 							</div>
 
-							<div id="ccv" class="datos__form__grupo datos__form__grupo--ccv">
+							<div id="input__ccv" class="datos__form__grupo datos__form__grupo--ccv">
 								<label class="datos__form__grupo--label" for="input__ccv">CCV</label>
-								<input class="datos__form__grupo--input ccv" type=" text" id="input__ccv" maxlength="3"
-									autocomplete="off">
+								<input class="datos__form__grupo--input ccv" type=" text" id="input__ccv" name="ccv"
+									maxlength="3" autocomplete="off">
+								<div class="datos__form__error ">
+									<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									<p class="formulario__input-error datos__form__error--activo">Error</p>
+								</div>
 							</div>
 						</li>
 					</div>
-					<button class="datos__form__grupo--btn btn" type="submit">Total a Pagar $ </button>
+					<button class="datos__form__grupo--btn btn" type="submit"></button>
 				</form>
 			</div>
-			<div class="sk-folding-cube">
-				<div class="sk-cube1 sk-cube"></div>
-				<div class="sk-cube2 sk-cube"></div>
-				<div class="sk-cube4 sk-cube"></div>
-				<div class="sk-cube3 sk-cube"></div>
-			</div>
+
+			<div id="resultado"></div>
 		</div>
 
 	</div>
-
-
 	<!-- Fin Nav Cart -->
 
 	<footer class="footer">

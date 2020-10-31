@@ -152,7 +152,7 @@ $('.carrito-button').on('click', function () {
 $('.navCart__close--icon').on('click', function () {
     $(overlayCarrito).removeClass('overlay__transparentBcg');
     $(navCarrito).removeClass('navCart__showCart');
-    $(datos).hide()
+    $(datos).hide() // Esconde el formulario de pago (display:none)
 });
 
 

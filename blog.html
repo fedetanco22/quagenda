@@ -26,8 +26,8 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 	<link rel="manifest" href="images/site.webmanifest">
 
-	<script defer src="./js/app.js"></script>
-	<script defer src="./js/products.js"></script>
+	<!-- <script defer src="./js/app.js"></script> -->
+	<!-- <script defer src="./js/products.js"></script> -->
 	<script defer src="./js/shopCart.js"></script>
 	<script defer src="./js/validation.js"></script>
 
@@ -836,16 +836,22 @@
 							</div>
 						</li>
 					</div>
-					<button class="datos__form__grupo--btn btn" type="submit"></button>
+					<div class=" formulario__mensaje" id="formulario__mensaje">
+						<p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> Por favor rellena el formulario
+							correctamente.
+						</p>
+					</div>
+					<div class="datos__form__grupo formulario__grupo formulario__grupo-btn-enviar">
+						<button type="submit" class="formulario__btn datos__form__grupo--btn btn "></button>
+					</div>
+					<div class="formulario__grupo formulario__grupo-btn-enviar">
+						<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado
+							exitosamente!</p>
+					</div>
 				</form>
 			</div>
-
-			<div id="resultado"></div>
 		</div>
-
 	</div>
-
-
 	<!-- Fin Nav Cart -->
 
 	<footer class="footer">

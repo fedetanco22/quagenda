@@ -90,14 +90,24 @@ formulario.addEventListener('submit', (e) => {
                 icono.classList.remove('formulario__grupo-correcto');
             });
             const padreGracias = document.getElementById('resultado')
-            const compraRealizada = document.createElement('h1')
-            compraRealizada.textContent = ' GRACIASSSSS'
-            padreGracias.appendChild(compraRealizada)
+
+            // =============== MENSAJE DE EXITO DE COMPRA! TERMINE EL PROYECTO----GRACIAS MARTIN ===========
+
+            datos.classList.remove('datos__mostrar')
+            overlayCarrito.classList.remove('overlay__transparentBcg')
+            localStorage.clear()
+            carrito = []
+            mostrarCantidadItems()
+
+            swal("Muchisimas Gracias!", 'Tu Compra se realizo con éxito!', "success");
+
+
+        } else {
+            document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+
         }
 
     } else {
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     };
-
-
 });

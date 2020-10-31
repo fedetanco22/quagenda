@@ -274,27 +274,6 @@ html {
       background-color: rgba(255, 255, 255, 0.075);
       padding: 15px;
       border-radius: 5px; }
-    .menu__sub-list {
-      position: absolute;
-      list-style-type: none; }
-    .menu__sub-item {
-      background-color: #333;
-      margin: 0;
-      padding: 10px; }
-    .menu__item:hover .menu__sub-list {
-      display: block; }
-    .menu__sub-link {
-      text-decoration: none;
-      font-family: "Ubuntu", sans-serif;
-      font-weight: bold;
-      font-size: 1.25rem;
-      color: #fff;
-      display: block;
-      padding: 20px; }
-      .menu__sub-link:hover {
-        color: #E4B937;
-        background-color: rgba(255, 255, 255, 0.075);
-        border-radius: 5px; }
     .menu__link-insta {
       display: none; }
   .articulo--bg {
@@ -1616,7 +1595,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 25px; }
 
 .carousel-indicators .bg-img-5-1 {
-  background-image: url("../../images/cuaderno1-frente.jpg");
+  background-image: url("../../images/luna-blanco1.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1626,7 +1605,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 25px; }
 
 .carousel-indicators .bg-img-5-2 {
-  background-image: url("../../images/cuaderno1.jpg");
+  background-image: url("../../images/luna-blanco-dorso.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1636,7 +1615,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 25px; }
 
 .carousel-indicators .bg-img-5-3 {
-  background-image: url("../../images/mock-cuaderno1.jpg");
+  background-image: url("../../images/mock-Luna.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1646,7 +1625,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 25px; }
 
 .carousel-indicators .bg-img-6-1 {
-  background-image: url("../../images/cuaderno2.jpg");
+  background-image: url("../../images/luna-blanco1.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1656,7 +1635,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 25px; }
 
 .carousel-indicators .bg-img-6-2 {
-  background-image: url("../../images/cuaderno2-dorso.jpg");
+  background-image: url("../../images/luna-blanco-dorso.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1666,7 +1645,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 25px; }
 
 .carousel-indicators .bg-img-6-3 {
-  background-image: url("../../images/mock-cuaderno2.jpg");
+  background-image: url("../../images/mock-Luna.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1728,24 +1707,6 @@ input[type=number]::-webkit-inner-spin-button {
     width: 50px;
     height: 35px; }
   .carousel-indicators .bg-img-6-3 {
-    width: 50px;
-    height: 35px; }
-  .carousel-indicators .bg-img-17-1 {
-    width: 50px;
-    height: 35px; }
-  .carousel-indicators .bg-img-7-2 {
-    width: 50px;
-    height: 35px; }
-  .carousel-indicators .bg-img-7-3 {
-    width: 50px;
-    height: 35px; }
-  .carousel-indicators .bg-img-8-1 {
-    width: 50px;
-    height: 35px; }
-  .carousel-indicators .bg-img-8-2 {
-    width: 50px;
-    height: 35px; }
-  .carousel-indicators .bg-img-8-3 {
     width: 50px;
     height: 35px; } }
 

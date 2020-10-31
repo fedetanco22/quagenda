@@ -1,17 +1,17 @@
-.header{
+.header {
     text-align: left;
     width: 100%;
     position: fixed;
-    z-index: 100; 
+    z-index: 100;
 
-    &__contenedor{
+    &__contenedor {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;    
+        align-items: center;
     }
 
-    &__logo{
+    &__logo {
         display: flex;
         width: 100px;
         height: 100px;
@@ -19,25 +19,25 @@
     }
 }
 
-.hamb{
+.hamb {
     display: none;
 
-    &__label{
+    &__label {
         position: absolute;
         font-size: 3.5rem;
-        color:$color-blanco;
+        color: $color-blanco;
         text-shadow: 2px 2px 4px rgba(51, 51, 51, 0.61);
         top: 0;
         right: 0;
         margin-right: 20px;
         height: 100%;
         display: flex;
-        align-items: center ;    
-    }  
+        align-items: center;
+    }
 }
 
 .menu {
-    &__list{
+    &__list {
         position: fixed;
         margin-top: 40px;
         width: 100%;
@@ -49,82 +49,86 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        justify-content: center;    
+        justify-content: center;
     }
 
-    &__item{
+    &__item {
         margin-bottom: 15px;
-        margin-left: 15px;    
+        margin-left: 15px;
     }
-    &__link{
+
+    &__link {
         text-decoration: none;
         color: $color-blanco;
         font-size: 3.5rem;
         font-weight: 800;
     }
-    &__link:hover{
+
+    &__link:hover {
         color: $color-logo;
         transition: ease-in .1s;
     }
 
-    &__sub-list{
+    &__sub-list {
         display: none;
     }
 }
 
-.hamb:checked ~ .menu .menu__list{
+.hamb:checked~.menu .menu__list {
     left: 0;
 }
 
 /* Small devices y horiz entre 576px y 768px*/
-@media screen and (min-width: $bp_potrait-phones){
+@media screen and (min-width: $bp_potrait-phones) {
     .menu {
-        &__list{
+        &__list {
             padding-left: 150px;
         }
     }
 }
 
-@media screen and (min-width: $bp_landscape-phones){
+@media screen and (min-width: $bp_landscape-phones) {
     .menu {
-        &__list{
-            padding-left: 200px ;
+        &__list {
+            padding-left: 200px;
         }
-        &__link{
+
+        &__link {
             font-size: 4rem;
         }
     }
 }
 
-@media screen and (min-width: $bp_tablets){
-    
-    .header{
+@media screen and (min-width: $bp_tablets) {
+
+    .header {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
         flex-basis: 100%;
         flex: 1 1 auto;
-    
-        &__logo{
+
+        &__logo {
             margin-left: 50px;
         }
     }
-    .hamb__label{
+
+    .hamb__label {
         display: none;
     }
-    
+
     .menu {
         height: 70px;
-        background-color: rgba(51, 51, 51, 0.788) ;
+        background-color: rgba(51, 51, 51, 0.788);
         border-radius: .5rem;
         margin-right: 25px;
         display: flex;
         align-items: center;
         flex: 0 1 auto;
 
-        &__list{
-            all:unset;
+        &__list {
+            all: unset;
             padding-left: 15px;
             list-style: none;
             display: flex;
@@ -133,86 +137,92 @@
             align-items: center;
         }
 
-        &__item{
+        &__item {
             padding: 1rem;
             margin: 0;
-            position: relative;   
+            position: relative;
         }
-        &__link{
+
+        &__link {
             text-decoration: none;
             display: block;
             padding: 1.5rem;
-            text-align: center;   
+            text-align: center;
             font-size: 1.5rem;
-            
+
         }
-        &__link:hover{
+
+        &__link:hover {
             background-color: rgba(255, 255, 255, 0.075);
             padding: 15px;
-            border-radius: 5px;           
+            border-radius: 5px;
         }
-    
-        &__sub-list{
-            position: absolute;
-            list-style-type: none;  
-        }
-        &__sub-item{
-            background-color: $color-primario;
-            margin: 0; 
-            padding: 10px; 
-            
-        }
-        &__item:hover &__sub-list{
-            display: block;
-        }
-        &__sub-link{
-            text-decoration: none;
-            font-family: $font-ppal;
-            font-weight: bold;
-            font-size: 1.25rem;
-            color: #fff;
-            display: block; 
-            padding: 20px; 
-            
-            &:hover{
-                color: $color-logo;
-                background-color:rgba(255, 255, 255, 0.075);
-                border-radius: 5px; 
-            }
-        }
-        &__link-insta{
+
+        // &__sub-list{
+        //     position: absolute;
+        //     list-style-type: none;  
+        // }
+        // &__sub-item{
+        //     background-color: $color-primario;
+        //     margin: 0; 
+        //     padding: 10px; 
+
+        // }
+        // &__item:hover &__sub-list{
+        //     display: block;
+        // }
+        // &__sub-link{
+        //     text-decoration: none;
+        //     font-family: $font-ppal;
+        //     font-weight: bold;
+        //     font-size: 1.25rem;
+        //     color: #fff;
+        //     display: block; 
+        //     padding: 20px; 
+
+        //     &:hover{
+        //         color: $color-logo;
+        //         background-color:rgba(255, 255, 255, 0.075);
+        //         border-radius: 5px; 
+        //     }
+        // }
+        &__link-insta {
             display: none;
         }
     }
-    .articulo{
-        &--bg{
+
+    .articulo {
+        &--bg {
             margin: 70px 0;
         }
     }
 }
-@media screen and (max-height:280px){
-    .menu{
-        &__list{
+
+@media screen and (max-height:280px) {
+    .menu {
+        &__list {
             margin-top: 20px;
             padding: 15px 0 0 100px;
             justify-content: flex-start;
         }
-        &__link{
+
+        &__link {
             font-size: 2rem;
             line-height: 1rem;
         }
     }
 }
 
-@media screen and (max-height:470px){
-    .menu{
-        &__list{
+@media screen and (max-height:470px) {
+    .menu {
+        &__list {
             margin-top: 20px;
             margin-bottom: 20px;
             padding: 0 0 0 100px;
             justify-content: center;
         }
-        &__link{
+
+        &__link {
             font-size: 2rem;
             line-height: 1rem;
         }

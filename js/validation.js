@@ -99,7 +99,7 @@ formulario.addEventListener('submit', (e) => {
             carrito = []
             mostrarCantidadItems()
 
-            swal("Muchisimas Gracias!", 'Tu Compra se realizo con éxito!', "success");
+            swal("Muchas gracias!", 'Su Compra se realizó con éxito!', "success");
 
 
         } else {

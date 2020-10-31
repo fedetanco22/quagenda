@@ -117,7 +117,7 @@
 
 .carousel-indicators .bg-img-5-1 {
 
-    background-image: url('../../images/cuaderno1-frente.jpg');
+    background-image: url('../../images/luna-blanco1.jpg');
     @include bg-img();
     width: 30px;
     height: 25px;
@@ -126,7 +126,7 @@
 
 .carousel-indicators .bg-img-5-2 {
 
-    background-image: url('../../images/cuaderno1.jpg');
+    background-image: url('../../images/luna-blanco-dorso.jpg');
     @include bg-img();
     width: 30px;
     height: 25px;
@@ -135,7 +135,7 @@
 
 .carousel-indicators .bg-img-5-3 {
 
-    background-image: url('../../images/mock-cuaderno1.jpg');
+    background-image: url('../../images/mock-Luna.jpg');
     @include bg-img();
     width: 30px;
     height: 25px;
@@ -144,7 +144,7 @@
 
 .carousel-indicators .bg-img-6-1 {
 
-    background-image: url('../../images/cuaderno2.jpg');
+    background-image: url('../../images/luna-blanco1.jpg');
     @include bg-img();
     width: 30px;
     height: 25px;
@@ -153,7 +153,7 @@
 
 .carousel-indicators .bg-img-6-2 {
 
-    background-image: url('../../images/cuaderno2-dorso.jpg');
+    background-image: url('../../images/luna-blanco-dorso.jpg');
     @include bg-img();
     width: 30px;
     height: 25px;
@@ -162,12 +162,14 @@
 
 .carousel-indicators .bg-img-6-3 {
 
-    background-image: url('../../images/mock-cuaderno2.jpg');
+    background-image: url('../../images/mock-Luna.jpg');
     @include bg-img();
     width: 30px;
     height: 25px;
 
 }
+
+
 
 
 
@@ -263,33 +265,5 @@
         height: 35px;
     }
 
-    .carousel-indicators .bg-img-17-1 {
-        width: 50px;
-        height: 35px;
-    }
 
-    .carousel-indicators .bg-img-7-2 {
-        width: 50px;
-        height: 35px;
-    }
-
-    .carousel-indicators .bg-img-7-3 {
-        width: 50px;
-        height: 35px;
-    }
-
-    .carousel-indicators .bg-img-8-1 {
-        width: 50px;
-        height: 35px;
-    }
-
-    .carousel-indicators .bg-img-8-2 {
-        width: 50px;
-        height: 35px;
-    }
-
-    .carousel-indicators .bg-img-8-3 {
-        width: 50px;
-        height: 35px;
-    }
 }

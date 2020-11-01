@@ -104,7 +104,10 @@ function cargarItemsAlCarrito() {
             carrito.indexOf(producto)
         } value= ${
             producto.cantidadProd
-        }>
+        } data-id = ${
+            producto.idProd
+        } >
+
                 <i class = "fas fa-chevron-down navCart__cantidad__items--flecha" data-id=${
             producto.idProd
         }> </i>
@@ -223,11 +226,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 contenidoCarrito.removeChild(itemCart.parentElement.parentElement);
             }
 
+        } else {
+            cambiarValorInput() // event listener onchange en el input
         };
         butonVaciarCarrito()
         cartTotal()
         mostrarCantidadItems()
-
         localStorage.carrito = JSON.stringify(carrito)
     })
 
@@ -237,6 +241,32 @@ document.addEventListener('DOMContentLoaded', function () {
 function buscarItem(id) {
     const encontrarItem = carrito.find((item) => item.idProd == id)
     return encontrarItem
+}
+
+// ==========================================================================
+// =============Input change=================================================
+// ========== La invocamos el conditional de ================================
+// ==========los eventos dentro del NavCART==================================
+// ==========================================================================
+
+function cambiarValorInput() {
+    const valorInput = document.querySelector('.navCart__cantidad__items')
+    contenidoCarrito.addEventListener('change', event => {
+        const itemCart = event.target
+        let id = Number(itemCart.dataset.id)
+        let input = itemCart
+        const cambioInputCantidad = Number(event.target.value);
+        let item = buscarItem(id)
+        item.cantidadProd = cambioInputCantidad
+        input.value = cambioInputCantidad;
+
+        if (input.value == 0) {
+            let indexItem = carrito.indexOf(item);
+            carrito.splice(indexItem, 1);
+            contenidoCarrito.removeChild(itemCart.parentElement.parentElement);
+        }
+        cartTotal()
+    })
 }
 
 // ==========================================================================
@@ -291,8 +321,7 @@ const btnComprarCarrito = document.querySelector('.btn-comprar')
 const pagarTotalBtn = document.querySelector('.datos__form__grupo--btn')
 
 
-const comprar = btnComprarCarrito.addEventListener('click', comprarTotal)
-
+const comprar = btnComprarCarrito.addEventListener('click', comprarTotal);
 function comprarTotal() {
     navCarrito.classList.remove('navCart__showCart');
     datos.style.display = 'flex'

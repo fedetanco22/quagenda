@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', cargar);
 
 function cargar() {
     $.ajax({
-        url: './js/data.json',
-        dataType:'json'
+        url: '/js/data.json',
         success: function (dataBase) { // console.log(data)
             data = dataBase;
             crearCards(data);
